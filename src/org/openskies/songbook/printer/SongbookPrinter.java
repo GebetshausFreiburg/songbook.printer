@@ -9,6 +9,7 @@ public class SongbookPrinter {
 		List<SongElement> elements = LexicalSongParser.parse("A191_en_Arms_Wide_Open.txt");
 		for (SongElement songElement : elements) {
 			System.out.println(songElement);
+			//
 		}
 	}
 
