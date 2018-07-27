@@ -1,0 +1,25 @@
+{title: Der Herr ist mein Hirte (A307)}
+{artist: Johannes Hartl}
+
+Der [E]Herr ist mein [B]Hirte, nichts [C#m]fehlt mir,
+nichts [A]fehlt [B]mir bei [E]Dir.
+Er [E]füllt meinen [B]Kelch mit [C#m]Genügen,
+nichts [A]fehlt [B]mir bei [E]Dir.
+
+{comment: Pre-Chorus:}
+Und [F#m]alle Deine [C#m]Wege sind [B]gut.
+Du [F#m]weißt, was Du [C#m]willst und Du [B]weißt, was Du [F#]tust.[A]
+
+{soc}
+ Ohne [E]Angst, ohne Sorgen
+ und [B]ohne Gedanken an [C#m]morgen
+ geb ich Dir mein [A]Ja, heute neu mein [B]Ja.
+ {eoc}
+
+{comment: Bridge:}
+Denn [E]gestern ist vergangen und [G#m]morgen ist noch nicht,
+doch [C#m]heute will ich sagen]liebe dich,
+im [A]Hier und Jetzt, im [F#m]Jetzt und Hier;
+ich vert[B]raue dir einmal mehr.
+{copyright: (c) 2010 Hartl, Johannes}
+{ccli: 7007219}

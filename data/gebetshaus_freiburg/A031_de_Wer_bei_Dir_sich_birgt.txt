@@ -1,0 +1,28 @@
+{title: Wer bei Dir sich birgt (A031)}
+{artist: Johannes Hartl}
+
+W[E]er bei Dir sich birgt steht [A]fest auf einem Berg
+denn [C#m]Du bist seine Burg sein [A]fester Turm.
+
+
+[E]Meine Augen richten [A]sich auf Dich allein
+denn [C#m]Du bist meine Burg mein [A]fester Turm.
+
+
+{soc}
+  [E]Ich vertrau auf Deinen Namen, oh Herr[A] 
+  [C#m]und ich preise Deinen Namen oh Herr,[A] 
+ nur Du bist für mich Sonne und Sch[E]ild. [zur Bridge B] 
+ {eoc}
+
+
+
+Bridge
+[B]Und so hoch der Himmel [F#]ist,
+ist Deine Gnade über [C#m]mir,
+ist Deine Gnade über m[E]ir.
+[B]Wenn mein Herz voll Schatten [F#]ist
+strahlt Dein Lächeln über [C#m]mir
+strahlt Dein Lächeln über m[E]ir.
+{copyright: (c) 2009 Johannes Hartl, Gebetshaus Augsburg}
+{ccli: 6478793}

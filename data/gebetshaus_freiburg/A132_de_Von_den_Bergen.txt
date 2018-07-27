@@ -1,0 +1,28 @@
+{title: Von den Bergen (A132)}
+{artist: Reuben Morgan, Daniel Jacobi}
+
+1.[C]Fülle [Csus]unser Haus mit [C]Freude,[G/B]
+[Am]unser [F]Land mit Deinem [Gsus]Lied.
+[C]Alles [Csus]Unrecht muss sich [C]beugen,[G/B]
+[Am]während [F]Dein Volk vor Dir [Gsus]kniet.
+
+
+{soc}
+ Von den [C]Bergen[G/B]zu den [F/A]Tälern 
+ steigt mein [Am7]Lobpreis[Em]auf zu [F]Dir. [Gsus] 
+ Von den [C]Himmeln[G/B]zu den [F/A]Völkern 
+ dringt Dein [Am7]Lied in[Em]alle [F]Welt. [Gsus] 
+ {eoc}
+
+
+2.[C]Herr, Dein [Csus]Licht erhellt das [C]Dunkel,[G/B]
+[Am]denn wir [F]sehen auf das [Gsus]Kreuz.
+[C]Herr, Dein [Csus]Ruhm erfüllt die [C]Erde[G/B]
+[Am]wie das [F]Wasser jedes [Gsus]Meer.
+
+
+{comment: Post-Chorus}
+Hallel[F]ujah![Dm7]Halle[Am7]lujah![Em7]
+Hallel[F]ujah![Dm7]Halle[Gsus]lujah![G]
+{copyright: (c) 1998 Reuben Morgan, Hillsong Publishing}
+{ccli: 5186550}

@@ -1,0 +1,27 @@
+{title: Nur Einem will ich singen (A333)}
+{artist: Rainer Harter}
+
+1. [Bm]  Nur Einem will ich [F#m]singen. [Em]  Nur an Einen [A]denken.
+[Bm]  Ihm Anbetung [F#m]bringen. [Em]  Tag und [A]Nacht.
+
+
+2. [Bm]  Nur Einem will ich [F#m]leben. [Em]  Einem will ich [A]folgen.
+[Bm]  Einem alles [F#m]geben. [Em]  Tag und [A]Nacht.
+
+
+3. [Bm]  Nur Einen will ich [F#m]lieben. [Em]  Einem ganz ge[A]hören.
+[Bm]  Ihm zu Füßen [F#m]sitzen. [Em]  Tag und [A]Nacht.
+
+
+{soc}
+  [G]Je - [A]sus, [Bm]Höchster [A]über [G]allen. 
+  [G]Je - [A]sus, [F#m]heller Morgen[Bm]stern. 
+  [G]Je - [A]sus, [Bm]Du bist [A]mein Ge[G]fallen. 
+  [G]Je - [A]sus, mein [Bm]Gott. 
+ {eoc}
+
+
+{comment: Bridge:}
+Und [Bm]alles was ich hab, und [F#m]alles was ich bin,
+was [G]ich mein Eigen nenn', ist [A]Dein.
+{copyright: (c) Rainer Harter 2015}

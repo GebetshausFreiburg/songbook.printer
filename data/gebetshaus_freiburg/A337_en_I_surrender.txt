@@ -1,0 +1,29 @@
+{title: I surrender (A337)}
+{artist: Matt Crocker}
+key: Bm
+
+1. [Bm]Here I am, down on my [D]knees again
+Surrendering [A]all, surrendering [G]all 
+[Bm]Find me here, Lord, as You [D]draw me near
+Desperate for [A]You, desperate for [G]You 
+I Surren[Bm]der   [D]   [A]   [G]
+
+2. [Bm]Drench my soul as mercy and [D]grace unfold 
+I hunger and [A]thirst, I hunger and [G]thirst
+With [Bm]arms stretched wide I know You [D]hear my cry
+Speak to me [A]now, speak to me [G]now.
+
+
+{soc}
+ I sur[Bm]render, I sur[D]render
+ I want to [Em]know You more, I want to [G]know You more
+ {eoc}
+
+
+{comment: Bridge:} 
+Like a [G]rushing [D]wind, Jesus, [A]breathe within
+Lord have your [Em]way, Lord have your [Bm]way in [A]me
+Like a [G]mighty [D]storm stir with[A]in my soul
+Lord have your [Em]way, Lord have your [Bm]way in [A]me.
+{copyright: (c) 2011 Hillsong Music Publishing}
+{ccli: 6177317}

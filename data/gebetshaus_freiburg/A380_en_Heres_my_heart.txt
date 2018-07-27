@@ -1,0 +1,29 @@
+{title: Here's my heart (A380)}
+{artist: Chris Tomlin, Jason Ingram, Louie Giglio}
+
+
+{soc}
+  [Em]Here's my [C]heart [G]Lord, [Em]here's my [C]heart [G]Lord 
+  [Em]Here's my [C]heart [G]Lord, [Em]speak [C]what is [G]true 
+ {eoc}
+
+
+1. I am [C]found, I am yours, I am [Em]loved, I'm made [D]pure
+I have [C]life, I can breathe, I am [Em]healed, I am [D]free
+
+
+2. You are [C]strong, You are sure, You are [Em]life, You en[D]dure
+You are [C]good, always true, You are [Em]light breaking [D]through
+
+
+{soc}
+  [Em]Here's my [C]life [G]Lord, [Em]here's my [C]life [G]Lord 
+  [Em]Here's my [C]life [G]Lord, [Em]speak [C]what is [G]true 
+ {eoc}
+
+
+Bridge:
+You are [C]more than en[Am7]ough, you are [G]here, you are [D]love
+You are [C]hope, you are [Am7]grace, you're all I [G]have, you're everyt[D]hing
+{copyright: (c) Open Hands Music, So Essential Tunes, S. D. G. Publishing, sixsteps Music, Sixsteps Songs, Worship Together Music}
+{ccli: 6517898}

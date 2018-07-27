@@ -1,0 +1,15 @@
+{title: Ein Lied wird man hören (A087)}
+{artist: Isreaelisches Volkslied, Gitta Leuschner}
+{capo: 5}
+
+Ein [Dm]Lied wird man hören in den Städten von Juda
+[Gm]und in den Gassen von Je[A7]rusa[Dm]lem. (x2)
+
+{soc}
+ Ein [F]Lied voller Freude, 
+ ein Lied voller [Gm]Wonne, 
+ ein Lied von dem Bräut'gam,
+ ein [A7]Lied von seiner [Dm]Braut. (x2) 
+ {eoc}
+
+{copyright: (c) GlaubensZentrum Music, Bad Gandersheim}

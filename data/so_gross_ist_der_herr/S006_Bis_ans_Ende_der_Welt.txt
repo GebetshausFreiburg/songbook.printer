@@ -1,0 +1,28 @@
+{title: Bis ans Ende der Welt (S006)}
+{artist: Lothar Kosse}
+{capo: 2}
+
+{comment: Chorus 1}
+[E]Bis ans der Welt.
+Bis ans Ende der Zeit.
+[C#m7]Deine Liebe hält [F#m7]bis in Ewigkeit.
+[B]Sie wird niemals vergehn.
+[E]Sie steht fest und sie bleibt.
+[C#m7]Wenn der Vorhang fällt [F#m7]und der Tag sich neigt[B].
+
+{comment: Vers}
+[F#m7]Niemand und nichts kann uns tren[E/G#]nen von dir,
+deine Li[A]ebe ist stark wie der Tod. [C#m] [B/D#] [E]
+Wenn [F#m7]du für uns bist, wer kann ge[E/G#]gen uns sein,
+denn auf e[D]wig bist du [A/C#]unser Gott.
+
+{comment: Chorus 2}
+[B]Bis ans Ende der Welt.
+[E]Bis ans Ende der Zeit.
+[C#m7]Deine Liebe hält bis in Ewigkeit.
+[B]Sie wird niemals vergehn.
+[E]Sie steht fest und sie bleibt[C#m7].
+Wenn der Vorhang fällt, [F#m7]deine Liebe rei[B4]cht
+bis ans Ende der Wel[E]t.
+{copyright: (c) Praize Republic, Köln}
+{ccli: 4331007}

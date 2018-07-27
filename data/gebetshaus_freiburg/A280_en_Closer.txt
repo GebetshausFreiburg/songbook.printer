@@ -1,0 +1,23 @@
+{title: Closer (A280)}
+{artist: Amanda Cook}
+key: E
+
+1. Your [C#m]love has ravished my [B]heart
+And taken me [E/G#]over, taken me [A]over
+And [C#m]all I want is to [B]be
+With you for[E/G#]ever, with you for[A]ever
+
+
+{soc}
+ [E]  Pull me a little [B/D#]closer, take me a little [C#m]deeper 
+ I want to know your [A]heart, I want to know your [E]heart 
+ 'Cause your love is so much [B/D#]sweeter than anything I've [C#m]tasted 
+ I want to know your [A]heart, I want to know your [E]heart 
+ {eoc}
+
+
+{comment: Bridge}
+[A]  Who[E]a, who[B]a, how great your [C#m]love is for me
+[A]  Who[E]a, who[B]a, how great is [C#m]your love
+{copyright: (c) 2012 Bethel Music Publishing}
+{ccli: 6227047}

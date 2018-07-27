@@ -1,0 +1,33 @@
+{title: Beautiful Things (A196)}
+{artist: Lisa Gungor, Michael Gungor}
+
+1. [G]All [A/G]this [D]pain, I wonder if I’ll [G]ever [A/G]find my [D]way
+I wonder if my [G]life could [A/G]really [Bm]change [Asus]at [G]all
+[G]All [A/G]this [D]earth, could all that is [G]lost e[A/G]ver be [D]found
+Could a garden [G]come up [A/G]from this [Bm]ground [Asus]at [G]all [A/G] [D]
+
+{soc}
+  [D]You make beautiful things, You make beautiful things out of the dust 
+  [D]You make beautiful things, You make beautiful things out of us 
+ {eoc}
+
+
+2. [G]All [A/G]ar[D]ound, hope is springing [G]up from [A/G]this old [D]ground
+Out of chaos [G]life is [A]being [Bm]found [Asus]in [G]You [A/G] [D]
+
+{soc}
+  [Gmaj7]You make beautiful things, You make beautiful things out of the dust 
+  [D]You make beautiful things, You make beautiful things out of us 
+ {eoc}
+
+
+Bridge:
+[D]You make me [F#m]new, You are [G]making me [D]new
+
+{soc}
+  [D]You make beautiful [F#m]things, You make beauti[G]ful things out of the [D]dust 
+  [D]You make beautiful [F#m]things, You make beauti[G]ful things out of [D]us 
+ {eoc}
+
+{copyright: (c) Lisa Gungor and Michael Gungor}
+{ccli: 5665521}

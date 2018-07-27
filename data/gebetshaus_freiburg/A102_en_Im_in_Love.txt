@@ -1,0 +1,26 @@
+{title: I'm in Love (A102)}
+{artist: Tim Reimherr}
+
+[Emaj7]You are good, I a[Amaj7]dore
+[E/G#]As I should, I want [F#m7]more
+[Emaj7]You are kind, I [Amaj7]bow
+[E/G#]All my life, I pour [F#m7]out
+
+
+I've [C#m]never known another
+As [G#m7]kind in this l[A]ife, as [B]You
+[C#m]All the others cross the [G#m7]road
+And pass me [A]by, but nor [B]You
+
+{soc}
+ I'm in [E]love, 
+ From the moment that I saw Your face
+ I'm in [Amaj7]love, 
+ You never turn away Your gaze
+ I'm in [C#m7]love, 
+ Now the reason for the rest of my days
+ Is to [B]love You, I will love You 
+ {eoc}
+
+{copyright: (c) Tim Reimherr}
+{ccli: 4797861}

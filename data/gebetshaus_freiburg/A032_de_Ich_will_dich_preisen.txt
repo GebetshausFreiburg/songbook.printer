@@ -1,0 +1,30 @@
+{title: Ich will dich preisen (A032)}
+{artist: David Brymer}
+
+
+{comment: Verse 1}
+Du hast mich aus [F#m]Tiefen gehoben
+Aus Sch[C#m]lamm mich gezogen, d[D]u hast gerufen nach m[A]ir
+
+
+{comment: PreChorus}
+Und nur dein Bl[D]ut gen[E]ügt. Das [F#m]reine G[E]ottesl[D]amm
+Und nur dein Bl[D]ut gen[E]ügt. Du kamst vom H[D]immel [E]
+
+
+{soc}
+ Ich will dich [Asus4]preis[A]en. Von ganzem H[G/B]erzen dich lieben, Herr 
+ Ich will dir d[D]ank[A]en, jetzt und für [Esus4]immer [E] 
+ {eoc}
+
+
+
+{comment: Verse 2}
+Ich hatte deine G[F#m]nade nicht verdient
+Und zu [C#m]Recht hieß das Urteil: [D]Ewige Trennung von d[A]ir
+
+
+{comment: Bridge}
+Welche H[A]öhe aus d[D]er du regierst, welche T[A]iefe in die du k[Bm]amst
+Welche H[A]öhe auf d[F#m]ie du mich führtest, welche T[Esus4]iefe aus der du mich n[E]ahmst
+{copyright: (c) David Brymer, Deutsch: Rainer Harter}

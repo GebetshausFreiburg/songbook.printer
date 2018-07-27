@@ -1,0 +1,15 @@
+{title: Unser Gott ist ein mächtiger Gott (S007)}
+{artist: Rich Mullins}
+
+Unser [C]Gott ist ein [G]mächtiger Gott!
+Er [D]herrscht vom [Em]Himmel herab
+mit [C]Weisheit, [G]Liebe und Kraft.
+Unser [Am]Gott ist ein [B7]mächtiger [Em]Gott!
+
+{comment: Englisch}
+Our God is an awesome God!
+He reigns from heaven above,
+with wisdom, pow'r and love,
+our God is an awesome God!
+{copyright: (c) 1988 BMG Songs, Inc.}
+{ccli: 5770492}

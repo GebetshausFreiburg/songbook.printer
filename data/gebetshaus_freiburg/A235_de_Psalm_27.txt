@@ -1,0 +1,21 @@
+{title: Psalm 27 (A235)}
+{artist: Rainer Harter}
+{capo: 3}
+
+[D]Der Herr ist mein [F#m]Licht und mein Heil,
+vor [Bm]wem sollte ich [G]mich fürchten?
+D[D]er Herr ist mir ein [F#m]Zufluchtsort,
+vor [Bm]wem sollte ich [G]erschrecken?
+
+{soc}
+ Gott ist [D]mein [F#m]Licht. 
+ Gott ist [Bm]mein Heil und ich für[G]chte mich nicht. 
+ {eoc}
+
+
+[G]Eines habe ich vom [D]Herrn erbeten,
+[G]nur nach diesem ein[D]en trachte ich:
+'In [G]seinem Haus für [Bm]immer zu leben,
+um [Em]anzuschauen wie freu[A]ndlich er ist'.
+{copyright: (c) Rainer Harter}
+{ccli: 0}

@@ -1,0 +1,21 @@
+{title: Du bist für uns gestorben (S028)}
+{artist: Martin Pepper}
+
+Du bist für uns ge[Cm/G]stor[G]ben, wurdest be[G]gra[Cm/G]ben,
+bist [D/E]aufer[Em7]standen von den [D/C]To[C]ten,
+[Am7]aufgefahr'n zum [G9/B]Himmel
+[C]dennoch ganz nah [D9]bei uns.
+Wir spüren Deine [Cm/G]Nä[G]he, Lie[Cm/G]be,
+[D/E]Freundlich[Em7]keit und [D/C]Gü[C]te.
+[Am7]Du bist hier, [C/D]wirke unter [G]uns. [Cm/G]
+
+
+{soc}
+  [G]Wirke [D/G]unter [C/G]uns, [G] [D/F#] 
+  [Em7]wirke [D/E]unter [C9/E]uns. [D/F#] [D/F#]] 
+  [G]Wirke [D/G]unter [C/G]uns, [G] 
+  [Am7]wirke [C/D]unter [Em]uns. [D] [C9] 
+ {eoc}
+
+{copyright: (c) 1993 mc-peppersongs}
+{ccli: 4677936}

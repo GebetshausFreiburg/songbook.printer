@@ -1,0 +1,26 @@
+{title: Alles wird still (A060)}
+{artist: Rainer Harter}
+{capo: 3}
+
+[Gm] [Eb] [Gm] [Eb]
+
+
+Alles wird [Gm]still vor [Eb]dir.
+In deiner [Gm]Gegenwart bleibt alles zu[Eb]rück.
+
+
+
+{comment: PreChorus:}
+Und deine [F]Herrlichkeit erfüllt unser [Gm]Sein.
+Deine [F]Herrlichkeit erfüllt unser [Gm]Sein.
+Und deine [F]Herrlichkeit erfüllt unser [Gm]Sein.
+Deine [F]Herrlichkeit erfüllt unser [Gm]Sein.
+
+{soc}
+ Und so rufen wir: [Gm]Heilig, [Eb]heilig, [F]heilig bist du Herr. 
+ Und so rufen wir: [Gm]Heilig, [Eb]heilig, [F]heilig bist du Herr. 
+ Und so rufen wir: [Gm]Heilig, [Eb]heilig, [F]heilig bist du Herr. 
+ Unser [Gm]Gott! [Eb] 
+ {eoc}
+
+{copyright: (c) Rainer Harter}

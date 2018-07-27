@@ -1,0 +1,20 @@
+{title: Gott ich suche dich (A197)}
+{artist: Albert Frey}
+
+1. [G]Gott, ich suche [Am7]dich, [Bm]Gott ich sehne [C]mich nach [D]dir
+[G]Gott, nur du al[Am7]lein bist mein [Bm]Gott und keiner [C]außer [D]dir
+
+
+Pre-Chorus:
+Dafür [G/B]schlägt das Herz in [C]mir
+Meine [B7/D#]Seele schwingt sich [Em]auf zu [Dsus]dir [D]
+
+{soc}
+  [G/B]Wieder hier in [C]deiner Gegenwart [D]will ich [G]sein[G/B] 
+ Lobpreis und An[C]betung bringe ich [D]dir all[Cm]ein[G] 
+  [G/B]Dein Erbarmen [C]gilt mir jeden Tag [D]wieder [Em]neu,[Em/D] 
+ und weil du mich [A7/C#]wie auf Flügeln [Dsus]trägst [D]bin ich [Cm/G]frei [G] 
+ {eoc}
+
+{copyright: (c) 2005 D&D Medien, D-88287 Grünkraut (Verwaltet von D&D Medien GmbH)}
+{ccli: 4932248}

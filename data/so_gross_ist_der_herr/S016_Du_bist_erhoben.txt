@@ -1,0 +1,14 @@
+{title: Du bist erhoben (S016)}
+{artist: Mirjana Angelina, Twila Paris}
+
+[F]Du bist erhoben, für [F/A]immer gehört dir der [Bb]Thron. Wir beten dich [C]an!
+[F]Du bist erhoben, in [F/A]Ewigkeit loben und [Bb]be[C]ten [Bb/D]wir [C/E]dich [D/F#]an![D]
+
+{soc}
+  [Gm]Du [Gm/F]bist der [C]He[C7]rr, [F]der in [Am7]Wahrheit re[Bb]giert.[F/A] 
+  [Gm]Deiner [Gm/F]Majes[C]tät[C7] [F]alle [Am7]Ehre ge[Bb]bü[F/A]hrt! 
+  [Gm]Du bist er[Gm/F]hoben, für [Eb]immer ge[C]hört dir der [F]Thron! 
+ {eoc}
+
+{copyright: (c) 1985 Mountain Spring Music}
+{ccli: 5414734}

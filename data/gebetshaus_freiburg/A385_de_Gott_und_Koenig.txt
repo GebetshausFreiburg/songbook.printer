@@ -1,0 +1,25 @@
+{title: Gott und König (A385)}
+{artist: Mia Friesen, Stefan Schöpfle}
+
+1. Du bist g[D]nädig, [E]du bist [F#m]treu, Du bist [D]voller Fr[E]eundlichkeit
+Deine [D]Liebe ﬂ[E]ießt aus den [F#m]Strömen Deiner [C#m]Güte zu [D]uns [E]
+
+
+2. Du bist [D]heilig [E]und ge[F#m]recht, voller [D]Sanftmut [E]und Ge[F#m]duld
+Tiefer [D]Friede [E]liegt in dem [F#m]Schatten Deiner [C#m]Flügel für [D]uns [E]
+
+{soc}
+ (Wir singen) [D]Majes[E]tät, du [F#m]thronst in Herrlich[Amaj7]keit 
+ Deine [D]Güte [E]währet [F#m]ewig. 
+ Wir ver[D]ehren [E]Dich, denn [F#m]niemand kommt Dir [Amaj7]gleich 
+ Du bist [D]unser [E]Gott und [F#m]König 
+ {eoc}
+
+
+Bridge:
+Wir er[F#m]heben Deinen [D]Namen, Herr
+Dir sei [Bm]Ehre, Ruhm und [E]Macht[Fdim]
+Wir er[F#m]heben Deinen [D]Namen, Herr
+Dir sei [Bm]Ehre, Ruhm und [E]Macht
+{copyright: (c) 2012 Outbreakband Musik}
+{ccli: 6352761}

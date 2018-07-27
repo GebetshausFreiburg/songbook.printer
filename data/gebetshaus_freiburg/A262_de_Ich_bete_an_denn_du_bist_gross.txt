@@ -1,0 +1,22 @@
+{title: Ich bete an, denn du bist groß (A262)}
+{artist: Rainer Harter}
+{capo: 3}
+{key: Bb}
+
+1.[Eb]  All meine [Bb]Sehnsucht,
+[Eb] all mein Ver[Bb]langen
+[Eb]  und alle [Bb]Hoffnung gilt [F]dir.
+
+2.[Eb]  Herr, deine [Bb]Güte,
+[Eb]  dein großes Er[Bb]barmen
+[Eb]  und deine [Bb]Liebe gilt [F]mir.
+
+{soc}
+  [Eb]  Herr, deine [Bb]Schönheit füllt mein [F]Herz 
+  [Eb]  und deine [Bb]Gnade lässt mich [Gm]niemals wieder [F]los. 
+  [Eb]  Deine [Bb]Freundlichkeit erst[F]aunt mich. 
+  [Eb]  Ich bete [F]an, denn du bist [Bb]groß. 
+ {eoc}
+
+{copyright: (c) Rainer Harter, Open Skies}
+{ccli: 0}

@@ -1,0 +1,10 @@
+{title: Mein Herz, meinen Leib (A028)}
+{artist: Larry Lea, Gitta Leuschner}
+
+Mein H[E]erz, [E/D#]meinen [C#m]Leib,
+meine S[A]eele, meinen [Bsus]Sinn, [B]
+ich g[E]eb [E/D#]sie [C#m]dir, herrsche [A]über m[B]ich.
+Ich g[A]ebe den L[B]eib als leb[E]end'ges [G#7]Opfer [C#m]dir.
+H[A]err, nimm mich h[B]in, nimm mich h[A]in! [E]
+{copyright: (c) 1981 Larry Lea, JmeM}
+{ccli: 5376078}

@@ -1,0 +1,29 @@
+{title: Jesus, lover of my soul (A259)}
+{artist: Daniel Grul, John Ezzy, Steve McPherson}
+
+{comment: Vers}
+[G]  Jesus, [D]lover of my [B]soul
+[Em]  Jesus, I will [Am7]never let you [C/D]go
+[G]  You've taken me [D]from the mirey [B]clay
+[Em]  You set my feet upon the [Am7]rock and now I [C/D]know
+
+{soc}
+  [G]  I love you, [D/F#]  I need you 
+  [Em]  Though my [Dm11]world may fall I'll [Cmaj7]never let you go 
+  [G]  My savior, [D/F#]  my closest friend
+  [Em]  I will [Dm11]worship you un[Cmaj7]til the very end 
+ {eoc}
+
+
+{comment: Deutsch}
+Jesus, Liebe meines Lebens
+Jesus, ich lass dich niemals los
+Du holtest mich aus der tiefsten Finsternis
+Du stelltest mich auf festen Grund und jetzt weiß ich
+
+Ich liebe dich, ich brauch dich
+Auch wenn die Welt vergeht, ich lass dich niemals los
+Mein Retter, mein bester Freund
+Ich verehre dich in alle Ewigkeit
+{copyright: 1992 Hillsong Music Publishing}
+{ccli: 1198817}

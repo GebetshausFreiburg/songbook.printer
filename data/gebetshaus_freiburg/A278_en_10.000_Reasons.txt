@@ -1,0 +1,30 @@
+{title: 10.000 Reasons (A278)}
+{subtitle: Bless the lord oh my soul}
+{artist: Jonas Myrin, Matt Redman}
+key: D
+
+
+{soc}
+  Bless the [G]Lord, O my [D]soul, [A]O my [Bm]soul 
+  [G]Worship His [D]holy [A]name 
+ Sing like [G]never be[Bm]fore, [G]O [A]my [Bm]soul 
+ I'll [G]worship Your [A]holy [G/D]name [D]   [G/D]   [D]
+ {eoc}
+
+
+1. The [G]sun comes [D]up; it's a [A]new day [Bm]dawning
+[G]  It's time to [D]sing Your [A]song a[Bm]gain
+What[G]ever may [D]pass and what[A]ever lies be[Bm]fore me
+[G]  Let me be [D]singing when the [A]evening [D]comes
+
+2. You're rich in love and You're slow to anger
+Your name is great and Your heart is kind
+For all Your goodness, I will keep on singing
+10,000 reasons for my heart to find
+
+3. And on that day when my strength is failing
+The end draws near and my time has come
+Still my soul will sing Your praise unending
+10,000 years and then forever more
+{copyright: (c) Jonas Myrin, Matt Redman}
+{ccli: 6016351}

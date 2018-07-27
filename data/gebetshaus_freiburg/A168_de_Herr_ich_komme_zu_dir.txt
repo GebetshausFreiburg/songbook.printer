@@ -1,0 +1,29 @@
+{title: Herr, ich komme zu dir (A168)}
+{artist: Albert Frey}
+
+1. [A]Herr, ich [D/A]komme zu [A]dir
+und ich [D]steh' vor dir, [A]so wie ich [E]bin.
+[A]Alles [Bm7]was mich be[C#m7]wegt, lege [D]ich vor dich [Esus]hin.[E]
+
+
+2. [A]Herr, ich [D/A]komme zu [A]dir
+und ich sc[D]hütte mein [A]Herz bei dir [E]aus.
+[A]Was mich [Bm7]hindert ganz [C#m7]bei dir zu [D]sein, räume [Esus]aus![E]
+
+
+Prechorus:
+[F#m]Meine Sorgen sind [C#m]dir nicht verborgen,
+[D]du wirst sorgen für [A]mich.
+[F#m]Voll Vertrauen will [C#m]ich auf dich schauen.
+[B/D#]Herr, ich baue auf [Bm7/E]dich!
+
+
+{soc}
+ Gib mir ein [D]neues, [A/C#]ungeteiltes [E]Herz. 
+  [A/C#]Lege ein [D]neues [A/C#]Lied in meinen [E]Mund. 
+  [A/C#]Fülle mich [D]neu mit [A/C#]deinem Geist, 
+ denn [Bm7]du be[D/E]wirkst dein [E]Lob in [A]mir. 
+ {eoc}
+
+{copyright: (c) 1992 Immanuel Music}
+{ccli: 4331784}

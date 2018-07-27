@@ -1,0 +1,19 @@
+{title: Majestät, herrliche Majestät (A042)}
+{artist: Hajo Klösel, Jack Hayford}
+
+{comment: Vers 1}
+M[G]ajestät, herrliche M[C]ajestät, [Am]
+dir sei [G]Ehre, H[Em]errlichkeit und L[F]ob![D]
+M[G]ajestät, herrliche M[C]ajestät, [Am]
+von dir fließt Kr[G]aft in großer M[D]acht zu deinem V[C]olk. [G]
+
+{soc}
+ Hebt ihn h[D]och, hebt ihn h[D]och, den Namen J[G]es[Em]us.[G] 
+ Macht ihn gr[D]oß, kommt und ver[D]ehrt 
+ Christus den H[G]errn.[Em] [D] 
+ M[G]ajestät, herrliche M[C]ajestät, [Am] 
+ Jesus, du st[G]arbst, bliebst nicht im Gr[D]ab, Halleluj[C]a![G] 
+ {eoc}
+
+{copyright: (c) 1981 New Spring}
+{ccli: 5416701}

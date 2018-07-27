@@ -1,0 +1,17 @@
+{title: I Love Your Presence (A170)}
+{artist: Darren Clarke, Jesse Lane}
+
+In the [C#m]glory[B] [A]of your [C#m]presence[B] [A]
+I find [C#m]rest[B] [A]for my [C#m]soul[B] [A]
+In the [C#m]depths[B] [A]of your [C#m]love[B] [A]
+I find [C#m]peace,[B] [A]makes me [C#m]whole[B] [A]
+
+{soc}
+  [E]I love, I [B]love, [F#m]I love your [A]presence 
+  [E]I love, I [B]love, [F#m]I love your [A]presence 
+  [E]I love, I [B]love, [F#m]I love you [A]Jesus 
+  [E]I love, I [B]love, [F#m]I love your [A]presence 
+ {eoc}
+
+{copyright: (c) 1999 Darren Clarke, Jesse Lane, Mercy/Vineyard Publishing}
+{ccli: 1596342}

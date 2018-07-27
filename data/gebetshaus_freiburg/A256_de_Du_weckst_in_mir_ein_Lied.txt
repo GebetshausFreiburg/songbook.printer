@@ -1,0 +1,30 @@
+{title: Du weckst in mir ein Lied (A256)}
+{artist: Rainer Harter}
+
+1. [D2]Du weckst in mir [Asus4]ein Lied für dich.
+[D2]Du weckst in mir [Asus4]ein Lied für dich.
+[Em/D]Eine Melodie der Hoffnung [Asus4]und der Liebe.
+[Em/D]Eine Melodie der Sehn[Asus4]sucht nach Dir.
+
+
+{soc}
+ Ich sing [Gsus4]für Dich. 
+ Ich sing [D2]für Dich. 
+ {eoc}
+
+
+
+{soc}
+ Du singst [Gsus4]über mich. 
+ Du singst [D2]über mich. 
+ {eoc}
+
+
+
+{soc}
+  [Gsus4]Du singst Lieder über mir. 
+  [D2]Ich singe Lieder zu dir. 
+ {eoc}
+
+{copyright: (c) Rainer Harter}
+{ccli: 0}

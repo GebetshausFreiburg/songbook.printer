@@ -1,0 +1,21 @@
+{title: Alle Ehre (A080)}
+{artist: Rainer Harter}
+
+[E]Alle Ehre,[Esus4]alle Stärke,[A]alle Schönheit,[H]alle Macht.
+[E]All mein Lobpreis,[Esus4]meine Anbetung
+[A]und mein Leben,[H]meine Kraft.
+
+{soc}
+  [A]Gehört allein dem Einzig[H]en, der retten kann. 
+  [A]Ihm, den meine Seele [H]liebt. 
+  [A]Der mein Leben vor dem [H]Tod gerettet hat. 
+  [A]Und der meine [A]Schuld ver[H]gibt. 
+ {eoc}
+
+
+[E]Alles, was ich sagen kann, [Esus4]wenn ich vor dir steh, ist
+[A]'heilig bist du, Herr; [H]heilig bist du, Herr'.
+[E]Alles, was ich denken kann, wenn [Esus4]ich dich vor mir seh, ist
+[A]'würdig bist du, Herr; [H]würdig bist du Herr'.
+{copyright: (c) 2002, Rainer Harter, Open Skies}
+{ccli: 0}

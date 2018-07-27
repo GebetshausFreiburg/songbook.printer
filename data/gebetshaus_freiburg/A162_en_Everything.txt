@@ -1,0 +1,29 @@
+{title: Everything (A162)}
+{artist: Tim Hughes}
+
+1. God in my [C]living, there in my [Fmaj7]breathing.
+God in my [Am]waking, God in my [G6]sleeping.
+God in my [C]resting, there in my [Fmaj7]working.
+God in my [Am]thinking, God in my [G6]speaking.
+
+{soc}
+ Be my ev[Fmaj7]erything[G], be my ev[Am]erything[G]. 
+ Be my ev[Fmaj7]erything[G], be my ever[C]ything. 
+ {eoc}
+
+
+2. God in my [C]hoping, there in my [Fmaj7]dreaming.
+God in my [Am]watching, God in my [G6]waiting.
+God in my [C]laughing, there in my [Fmaj7]weeping.
+God in my [Am]hurting, God in my [G6]healing.
+
+
+{comment: Bridge}
+[F]Christ in me,[G]Christ in me
+[Am]Christ in me the hope of glory.
+[F]Y[G]ou are every[Am]thing.
+[F]Christ in me,[G]Christ in me
+[Am]Christ in me the hope of glory.
+[F]B[G]e my every[Am]thing.
+{copyright: (c) Tim Hughes}
+{ccli: 4685258}

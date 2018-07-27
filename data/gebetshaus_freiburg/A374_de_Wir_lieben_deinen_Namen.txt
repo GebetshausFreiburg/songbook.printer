@@ -1,0 +1,29 @@
+{title: Wir lieben deinen Namen (A374)}
+{artist: Sebastian und Veronika Lohmer}
+
+1.[C]Wunder gesc[G/B]hehen wenn du sp[Am]richst, [G/B]
+[C]alles ist [G/B]möglich, wenn du [Am]hier bist. [G/B]
+[C]Nichts bleibt [G/B]wie es ist, weil dein [C]Name unser [D/F#]Leben [G]ist
+
+{soc}
+  [G]Wir lieben deinen Namen, [D/G] 
+  [Em]Wir lieben deinen Namen, [Bm] 
+  [C]und wir hören nicht auf, 
+  [G/B]wir hören nicht auf, 
+  [Dsus4 ]wir hören nicht auf zu [D]singen. 
+ {eoc}
+
+
+2.[C]Wer einst [G/B]Bettler war wird [Am]reich, [G/B]
+[C]und den [G/B]Kranken schenkst du [Am]Heil.
+[C]Waisen[G/B]kindern reichst du [C]deine Hand
+und [D/F#]trägst sie [G]heim (so bist bist nur du Herr)
+
+
+{comment: Bridge}
+Es ist recht dich zu [G]lieben Herr! [D]
+Es ist recht dich zu [Em]loben Herr! [Bm]
+Es ist recht dich zu [C]lieben Herr, [G]
+denn [Dsus4]niemand kommt dir [D]gleich.
+{copyright: (c) 2014 Gebetshaus Augsburg}
+{ccli: 7068510}

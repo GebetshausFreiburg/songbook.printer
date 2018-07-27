@@ -1,0 +1,27 @@
+{title: Ich will hören, was du sagst (A056)}
+{artist: Albert Frey}
+
+1. Ich will [Hm]hören, was du sagst
+und dein [A6]Reden mehr verstehn,
+Oh [Em7]Herr, sprich dein [D/A]Wort und lehre [A6]mich.
+Ich will [Hm]deinen Willen tun und auf [A6]deinen Wegen gehen,
+Oh [Em7]Herr, sprich dein [D/A]Wort und leite [A6]mich.
+
+{comment: Bridge}
+[Em7]Nur ein Wort [D/A]aus deinem [A]Mund,
+[Em7]so wird meine [D/A]Seele ge[A]sund.
+
+{soc}
+  [G]Dein [D/F#]Wort ist [G]Leben für [A]mich. 
+  [G]Dein [D/F#]Wort ist [G]Wahrheit und [A]Licht. 
+  [G]Dein [D/F#]Wort leuchtet [E/G#]hell auf [F#/A#]meinem [Hm]Weg. 
+ Es hat [Gmaj7]Kraft und bleibt in [A6]Ewigkeit be[Hm]stehn. 
+ {eoc}
+
+
+2. Ich such [Hm]deine Gegenwart wenn ich [A6]nicht mehr weiter weiß,
+Oh [Em7]Herr, sprich dein [D/A]Wort und tröste [A6]mich.
+Ich vert[Hm]raue dir allein, wenn mich [A6]meine Kraft verlässt,
+Oh [Em7]Herr, sprich dein [D/A]Wort und stärke [A6]mich.
+{copyright: 1997 Immanuel Music}
+{ccli: 4895660}

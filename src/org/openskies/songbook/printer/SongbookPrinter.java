@@ -1,16 +1,28 @@
+/*
+ * Songbook.Printer
+ * 
+ * @author Matthias Wegner
+ * @version 0.1
+ * @since 27.07.2018
+ * 
+ */
 package org.openskies.songbook.printer;
 
-import java.util.List;
-
+/**
+ * 
+ * Printer for Song-Files in ChordPro and OnSong-Format.
+ * 
+ * @author Matthias Wegner
+ * @since 27. Juli 2018
+ *
+ */
 public class SongbookPrinter {
 
 	public static void main(String[] args) {
 
-		List<SongElement> elements = LexicalSongParser.parse("A191_en_Arms_Wide_Open.txt");
-		for (SongElement songElement : elements) {
-			System.out.println(songElement);
-			//test
-		}
+		Songs.getInstance().load();
+		System.out.println(Songs.getInstance().count() + " songs loaded.");
+
 	}
 
 }

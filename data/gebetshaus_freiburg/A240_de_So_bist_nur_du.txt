@@ -1,0 +1,28 @@
+{title: So bist nur du (A240)}
+{artist: Chris Tomlin, Jesse Reeves, Jonas Myrin, Matt Redman; Deutsch: Albert Frey, Arne Kopfermann}
+
+1.[Em]Wasser wird [C]Wein, Blinde [G]sehn,
+[Em]Brot wird ver[C]mehrt, Lahme [G]gehn.
+So bist nur [Am7]du, Herr, du all[D]ein.
+
+
+2. [Em]Licht scheint in [C]dunkelste [G]Nacht,
+[Em]Armen wird [C]Hoffnung geb[G]racht.
+So bist nur [Am7]du, Herr, du all[D]ein.
+
+
+{soc}
+  [Em]Gott, du bist größer, [C]Gott, du bist stärker, 
+  [G]Gott, du stehst höher als [D]alles andre. 
+  [Em]Gott, unser Heiler, [C]starker Befreier, 
+ so [G]bist nur [D]du. 
+ {eoc}
+
+
+Bridge:
+[Em]Und steht uns Gott zur Seite,
+[C]was kann uns jemals hindern?
+[G]Und steht uns Gott zur Seite,
+[D]wer kann uns widerstehn?
+{copyright: (c) 2010 Atlas Mountain Songssixsteps MusicThankyou MusicVamos Publishingworshiptogether.com songs}
+{ccli: 5906981}
