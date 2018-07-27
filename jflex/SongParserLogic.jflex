@@ -5,8 +5,7 @@ import java.util.*;
 %line
 %column
 
-WORD=[a-zA-Z]+
-NUMBER=[0-9]+
+WORD=[a-zA-Z\x21-\x40\xA1-\xFF]+
 CHORD=\[[^\]]*\]
 CHORDPRO=\{[^\}]*\}
 WHITE_SPACE_CHAR=[\ \t\r]
