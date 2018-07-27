@@ -39,6 +39,9 @@ public class SongElement {
 	 * @param content the content
 	 */
 	public SongElement(String type, int line, int column, String content) {
+		
+		//TODO Type must be enum, not string
+		
 		this.setType(type);
 		this.line = line;
 		this.column = column;

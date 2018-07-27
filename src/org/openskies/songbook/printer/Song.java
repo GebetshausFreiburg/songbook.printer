@@ -42,6 +42,9 @@ public class Song {
 	 * @param path the path
 	 */
 	public Song(Path path) {
+		
+		//TODO Needs exception-handling for wrong filenames.
+		
 		source = path.toFile().toString();
 		elements = LexicalSongParser.parse(source);
 

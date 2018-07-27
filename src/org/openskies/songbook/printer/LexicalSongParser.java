@@ -8,6 +8,9 @@ import java.util.*;
  */
 class LexicalSongParser {
 
+	//TODO Needs logger for better Exception-handling and loading-information.
+	//TODO Parser needs to be extended with OnSong-Syntax. For that regular-expressions must be found and jflex needs to used.
+	
 	private static List<SongElement> songElements = new ArrayList<SongElement>();
 
 	public static List<SongElement> parse(String file) {
