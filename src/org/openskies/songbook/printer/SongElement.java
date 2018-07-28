@@ -46,6 +46,7 @@ public class SongElement {
 		this.line = line;
 		this.column = column;
 		this.setContent(content);
+		
 	}
 
 	/**

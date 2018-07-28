@@ -655,7 +655,7 @@ class LexicalSongParser {
             }
           case 12: break;
           case 6: 
-            { songElements.add(new SongElement("CHORD", yyline, yycolumn, yytext().replace("[", "").replace("]", "")));
+            { songElements.add(new SongElement("CHORD", yyline, yycolumn, yytext().replace("[", "").replace("]", "")););
             }
           case 13: break;
           case 7: 
