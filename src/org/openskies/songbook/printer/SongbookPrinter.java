@@ -20,7 +20,7 @@ public class SongbookPrinter {
 
 	public static void main(String[] args) {
 
-		//Test commit
+		//Test commit BN
 
 		Songs.getInstance().load();
 		System.out.println(Songs.getInstance().count() + " songs loaded.");
