@@ -8,6 +8,7 @@
  */
 package org.openskies.songbook.printer;
 
+import java.io.File;
 import java.nio.file.Path;
 import java.util.List;
 
@@ -21,8 +22,6 @@ import java.util.List;
  */
 public class Song {
 
-	// Comment
-	
 	/** The source. */
 	private String source;
 	
@@ -47,14 +46,18 @@ public class Song {
 		
 		//TODO Needs exception-handling for wrong filenames.
 		
-		source = path.toFile().toString();
+		File file = path.toFile();
+		source = file.toString();
 		elements = LexicalSongParser.parse(source);
 
-		String[] p = source.split("/");
-		String[] n = p[2].split("_");
-		book = p[1];
+		String[] n = file.getName().split("_");
+		book = file.getParentFile().getName();
 		id = n[0];
 		language = n[1];
+	}
+	
+	public String getMeta() {
+		return "book="+book+", id="+id+", language="+language+", source="+source;
 	}
 
 	/* (non-Javadoc)

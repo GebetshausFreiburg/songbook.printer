@@ -55,7 +55,7 @@ public class Songs {
 			Files.walk(Paths.get("data")).filter(Files::isRegularFile).forEach(file -> {
 				Song song = new Song(file);
 				songs.add(song);
-				// System.out.println(song);
+				System.out.println("Load "+song.getMeta());
 			});
 		} catch (IOException e) {
 			e.printStackTrace();
