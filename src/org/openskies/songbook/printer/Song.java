@@ -14,7 +14,8 @@ import java.util.List;
 
 /**
  * 
- * Song represents a loaded file and holds the language, id and content of a song.
+ * Song represents a loaded file and holds the language, id and content of a
+ * song.
  * 
  * @author Matthias Wegner
  * @since 27. Juli 2018
@@ -24,16 +25,16 @@ public class Song {
 
 	/** The source. */
 	private String source;
-	
+
 	/** The id. */
 	private String id;
-	
+
 	/** The language. */
 	private String language;
-	
+
 	/** The book. */
 	private String book;
-	
+
 	/** The elements. */
 	private List<SongElement> elements;
 
@@ -42,25 +43,40 @@ public class Song {
 	 *
 	 * @param path the path
 	 */
-	public Song(Path path) {
-		
-		//TODO Needs exception-handling for wrong filenames.
-		
+	public Song(Path path) throws SongParserException {
+
+		// TODO Needs exception-handling for wrong IDs. Stichwort: regexr.com
+		// TODO Needs exception-handling for wrong Book.
+		// TODO Sprachprüfung über enumeration lösen. Ziel: Text in Enum pflegen
+		// TODO Ausgabe testen mit CCS + HTML, Stichwort jsfiddle.com
+
 		File file = path.toFile();
 		source = file.toString();
-		elements = LexicalSongParser.parse(source);
+		
 
 		String[] n = file.getName().split("_");
 		book = file.getParentFile().getName();
 		id = n[0];
 		language = n[1];
-	}
-	
-	public String getMeta() {
-		return "book="+book+", id="+id+", language="+language+", source="+source;
+		// System.out.println(this); //
+		// X
+		
+		if (language.equals("en") || language.equals("de")) {
+			elements = LexicalSongParser.parse(source);
+		} else{
+			throw new SongParserException("Songlanguage invalid");
+//			System.out.println(elements);
+//			System.out.println("Fehlerhafte Sprachangabe");
+		}
 	}
 
-	/* (non-Javadoc)
+	public String getMeta() {
+		return "book=" + book + ", id=" + id + ", language=" + language + ", source=" + source;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -152,5 +168,5 @@ public class Song {
 	public void setLanguage(String language) {
 		this.language = language;
 	}
-	
+
 }

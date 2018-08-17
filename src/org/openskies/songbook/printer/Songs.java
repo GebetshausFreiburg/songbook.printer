@@ -36,7 +36,7 @@ public class Songs {
 
 	/** The instance. */
 	private static Songs instance;
-	
+
 	/**
 	 * Gets the songs.
 	 *
@@ -53,9 +53,18 @@ public class Songs {
 		songs = new ArrayList<Song>();
 		try {
 			Files.walk(Paths.get("data")).filter(Files::isRegularFile).forEach(file -> {
-				Song song = new Song(file);
-				songs.add(song);
-				System.out.println("Load "+song.getMeta());
+				Song song = null;
+				try {
+
+					song = new Song(file);
+					songs.add(song);
+					System.out.println("try Loading " + song.getMeta());
+				} catch (SongParserException e) {
+					// TODO Auto-generated catch block
+//					e.printStackTrace();
+					System.out.println(e.getMessage());
+				}
+
 			});
 		} catch (IOException e) {
 			e.printStackTrace();
