@@ -14,8 +14,7 @@ import java.util.List;
 
 /**
  * 
- * Song represents a loaded file and holds the language, id and content of a
- * song.
+ * Song represents a loaded file and holds the language, id and content of a song.
  * 
  * @author Matthias Wegner
  * @since 27. Juli 2018
@@ -41,32 +40,40 @@ public class Song {
 	/**
 	 * Instantiates a new song.
 	 *
-	 * @param path the path
+	 * @param path
+	 *            the path
 	 */
 	public Song(Path path) throws SongParserException {
 
 		// TODO Needs exception-handling for wrong IDs. Stichwort: regexr.com
 		// TODO Needs exception-handling for wrong Book.
-		// TODO Sprachprüfung über enumeration lösen. Ziel: Text in Enum pflegen
+		// TODO Sprachprï¿½fung ï¿½ber enumeration lï¿½sen. Ziel: Text in Enum pflegen
 		// TODO Ausgabe testen mit CCS + HTML, Stichwort jsfiddle.com
 
 		File file = path.toFile();
 		source = file.toString();
-		
 
 		String[] n = file.getName().split("_");
 		book = file.getParentFile().getName();
 		id = n[0];
 		language = n[1];
-		// System.out.println(this); //
-		// X
+
+		//Check if book exists
+		if (book.trim().equalsIgnoreCase("data")) {
+			throw new SongParserException("No directory/songbook set which contains song '" + file.getName() + "'");		
+		}
 		
-		if (language.equals("en") || language.equals("de")) {
+		//Check if id is correct
+		boolean isCorrectId = id.matches("[A-Z]{1}[0-9]{3}");
+		if (!isCorrectId) {
+			throw new SongParserException("ID is invalid in File '" + file.getName() + "'");
+		}
+
+		//Check if language exists
+		if (SongLanguage.isLanguage(language)) {
 			elements = LexicalSongParser.parse(source);
-		} else{
-			throw new SongParserException("Songlanguage invalid");
-//			System.out.println(elements);
-//			System.out.println("Fehlerhafte Sprachangabe");
+		} else {
+			throw new SongParserException("Songlanguage invalid in File '" + file.getName() + "'");
 		}
 	}
 
@@ -100,7 +107,8 @@ public class Song {
 	/**
 	 * Sets the source-path of the song
 	 *
-	 * @param source the new source
+	 * @param source
+	 *            the new source
 	 */
 	public void setSource(String source) {
 		this.source = source;
@@ -118,7 +126,8 @@ public class Song {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the new id
+	 * @param id
+	 *            the new id
 	 */
 	public void setId(String id) {
 		this.id = id;
@@ -136,7 +145,8 @@ public class Song {
 	/**
 	 * Sets the book.
 	 *
-	 * @param book the new book
+	 * @param book
+	 *            the new book
 	 */
 	public void setBook(String book) {
 		this.book = book;
@@ -163,7 +173,8 @@ public class Song {
 	/**
 	 * Sets the language.
 	 *
-	 * @param language the new language
+	 * @param language
+	 *            the new language
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
