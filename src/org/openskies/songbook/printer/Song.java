@@ -45,9 +45,6 @@ public class Song {
 	 */
 	public Song(Path path) throws SongParserException {
 
-		// TODO Needs exception-handling for wrong IDs. Stichwort: regexr.com
-		// TODO Needs exception-handling for wrong Book.
-		// TODO Sprachpr�fung �ber enumeration l�sen. Ziel: Text in Enum pflegen
 		// TODO Ausgabe testen mit CCS + HTML, Stichwort jsfiddle.com
 
 		File file = path.toFile();
