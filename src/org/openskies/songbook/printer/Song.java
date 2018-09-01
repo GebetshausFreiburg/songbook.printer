@@ -55,22 +55,27 @@ public class Song {
 		id = n[0];
 		language = n[1];
 
-		//Check if book exists
+		// Check if book exists
 		if (book.trim().equalsIgnoreCase("data")) {
-			throw new SongParserException("No directory/songbook set which contains song '" + file.getName() + "'");		
+			throw new SongParserException("No directory/songbook set which contains song '" + file.getName() + "'");
 		}
-		
-		//Check if id is correct
+
+		// Check if id is correct
 		boolean isCorrectId = id.matches("[A-Z]{1}[0-9]{3}");
 		if (!isCorrectId) {
 			throw new SongParserException("ID is invalid in File '" + file.getName() + "'");
 		}
 
-		//Check if language exists
+		// Check if language exists
 		if (SongLanguage.isLanguage(language)) {
 			elements = LexicalSongParser.parse(source);
 		} else {
 			throw new SongParserException("Songlanguage invalid in File '" + file.getName() + "'");
+		}
+		
+		String title = this.getTitle();
+		if (Utils.isNE(title)) {
+			throw new SongParserException("Song contains no valid title in File '" + file.getName() + "'");	
 		}
 	}
 
@@ -90,6 +95,18 @@ public class Song {
 			sb.append(songElement.getContent());
 		}
 		return sb.toString();
+	}
+
+	public String getTitle() {
+		for (SongElement songElement : elements) {
+			if (songElement.getType()==SongElementType.CHORDPRO) {
+				ChordproElement elem = (ChordproElement)songElement;
+				if (elem.getSubtype()==ChordproSubtype.TITLE) {
+					return elem.getContent();
+				}
+			}
+		}
+		return null;
 	}
 
 	/**

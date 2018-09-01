@@ -12,7 +12,7 @@ public enum SongLanguage {
 	SongLanguage(final String language) {
 		this.language = language;
 	}
-
+	
 	public static boolean isLanguage(String language) {
 		SongLanguage[] languages = SongLanguage.values();
 		for (SongLanguage songLanguage : languages) {

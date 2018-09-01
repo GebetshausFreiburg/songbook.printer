@@ -19,7 +19,7 @@ package org.openskies.songbook.printer;
 public class SongElement {
 	
 	/** The type of a song. Could be WHITESPACE, LINEBREAK, CHORD or CHORDPRO */
-	private String type;
+	private SongElementType type;
 	
 	/** The line-position of the element in the song */
 	private int line;
@@ -38,7 +38,7 @@ public class SongElement {
 	 * @param column the column
 	 * @param content the content
 	 */
-	public SongElement(String type, int line, int column, String content) {
+	public SongElement(SongElementType type, int line, int column, String content) {
 		
 		//TODO Type must be enum, not string
 		
@@ -54,7 +54,7 @@ public class SongElement {
 	 *
 	 * @return the type
 	 */
-	public String getType() {
+	public SongElementType getType() {
 		return type;
 	}
 
@@ -63,7 +63,7 @@ public class SongElement {
 	 *
 	 * @param type the new type
 	 */
-	public void setType(String type) {
+	public void setType(SongElementType type) {
 		this.type = type;
 	}
 

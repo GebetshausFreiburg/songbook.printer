@@ -642,15 +642,15 @@ private boolean zzEOFDone;
             }
           case 8: break;
           case 2: 
-            { songElements.add(new SongElement("WORD", yyline, yycolumn, yytext()));
+            { songElements.add(new SongElement(SongElementType.WORD, yyline, yycolumn, yytext()));
             }
           case 9: break;
           case 3: 
-            { songElements.add(new SongElement("WHITESPACE", yyline, yycolumn, " "));
+            { songElements.add(new SongElement(SongElementType.WHITESPACE, yyline, yycolumn, " "));
             }
           case 10: break;
           case 4: 
-            { songElements.add(new SongElement("LINEBREAK", yyline, yycolumn, "\n"));
+            { songElements.add(new SongElement(SongElementType.LINEBREAK, yyline, yycolumn, "\n"));
             }
           case 11: break;
           case 5: 
@@ -658,11 +658,11 @@ private boolean zzEOFDone;
             }
           case 12: break;
           case 6: 
-            { songElements.add(new SongElement("CHORD", yyline, yycolumn, yytext().replace("[", "").replace("]", "")));
+            { songElements.add(new SongElement(SongElementType.CHORD, yyline, yycolumn, yytext().replace("[", "").replace("]", "")));
             }
           case 13: break;
           case 7: 
-            { songElements.add(new SongElement("CHORDPRO", yyline, yycolumn, yytext().replace("{", "").replace("}", "")));
+            { songElements.add(new ChordproElement(SongElementType.CHORDPRO, yyline, yycolumn, yytext().replace("{", "").replace("}", "")));
             }
           case 14: break;
           default:
