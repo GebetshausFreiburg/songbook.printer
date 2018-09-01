@@ -92,6 +92,7 @@ public class Song {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		for (SongElement songElement : elements) {
+			// System.out.println(songElement.getType()+": "+songElement.getContent());
 			sb.append(songElement.getContent());
 		}
 		return sb.toString();

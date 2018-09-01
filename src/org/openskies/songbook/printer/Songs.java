@@ -60,7 +60,6 @@ public class Songs {
 					songs.add(song);
 					System.out.println("Try loading " + song.getMeta());
 //					System.out.println(song);
-				//	System.out.println(song.getTitle());
 				} catch (SongParserException e) {
 					// TODO Auto-generated catch block
 					// e.printStackTrace();
