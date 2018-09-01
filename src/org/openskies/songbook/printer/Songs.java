@@ -58,10 +58,12 @@ public class Songs {
 
 					song = new Song(file);
 					songs.add(song);
-					System.out.println("try Loading " + song.getMeta());
+					System.out.println("Try loading " + song.getMeta());
+//					System.out.println(song);
+					System.out.println(song.getTitle());
 				} catch (SongParserException e) {
 					// TODO Auto-generated catch block
-//					e.printStackTrace();
+					// e.printStackTrace();
 					System.out.println(e.getMessage());
 				}
 
