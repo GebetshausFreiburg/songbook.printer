@@ -230,15 +230,60 @@ public class Song {
 		return sb.toString();
 	}
 
-	public String getTitle() {
-		ChordproElement element = getChordproElement(ChordproSubtype.TITLE);
-
-		if (element != null) {
-			return element.getContent();
+	public String getArtist() {
+		ChordproElement chordproElement = getChordproElement(ChordproSubtype.ARTIST);
+		if (chordproElement != null) {
+			return chordproElement.getContent();
 		}
+		
+		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.ARTIST);
+		if (onsongElement != null) {
+			return onsongElement.getContent();
+		}
+		
+		return null;
+	}
+	
+	public String getCapo() {
+		ChordproElement chordproElement = getChordproElement(ChordproSubtype.CAPO);
+		if (chordproElement != null) {
+			return chordproElement.getContent();
+		}
+		
+		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.CAPO);
+		if (onsongElement != null) {
+			return onsongElement.getContent();
+		}
+		
+		return null;
+	}
+	
+	public String getTitle() {
+		ChordproElement chordproElement = getChordproElement(ChordproSubtype.TITLE);
+		if (chordproElement != null) {
+			return chordproElement.getContent();
+		}
+		
+		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.TITLE);
+		if (onsongElement != null) {
+			return onsongElement.getContent();
+		}
+		
 		return null;
 	}
 
+	private OnsongElement getOnsongElement(OnsongSubtype subtype) {
+		for (SongElement songElement : elements) {
+			if (songElement.getType() == SongElementType.ONSONG) {
+				OnsongElement elem = (OnsongElement) songElement;
+				if (elem.getSubtype() == subtype) {
+					return elem;
+				}
+			}
+		}
+		return null;
+	}
+	
 	private ChordproElement getChordproElement(ChordproSubtype subtype) {
 		for (SongElement songElement : elements) {
 			if (songElement.getType() == SongElementType.CHORDPRO) {
@@ -259,18 +304,15 @@ public class Song {
 		return null;
 	}
 
-	public String getArtist() {
-		ChordproElement element = getChordproElement(ChordproSubtype.ARTIST);
-		if (element != null) {
-			return element.getContent();
-		}
-		return null;
-	}
-
 	public String getCopyright() {
-		ChordproElement element = getChordproElement(ChordproSubtype.COPYRIGHT);
-		if (element != null) {
-			return element.getContent();
+		ChordproElement chordproElement = getChordproElement(ChordproSubtype.COPYRIGHT);
+		if (chordproElement != null) {
+			return chordproElement.getContent();
+		}
+		
+		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.COPYRIGHT);
+		if (onsongElement != null) {
+			return onsongElement.getContent();
 		}
 		return null;
 	}

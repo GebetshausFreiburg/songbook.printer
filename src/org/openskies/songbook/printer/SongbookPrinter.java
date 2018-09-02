@@ -15,7 +15,7 @@ import java.util.Vector;
 
 /**
  * 
- * Printer for Song-Files in ChordPro and OnSong-Format.
+ * Printer for Song-Files in ChordPro and OnSong-Format
  * 
  * @author Matthias Wegner
  * @since 27. Juli 2018
