@@ -1,8 +1,8 @@
 package org.openskies.songbook.printer;
 
-public enum ChordproSubtype {
+public enum OnsongSubtype {
 
-	TITLE, COPYRIGHT, ARTIST, KEY, SOC, EOC, CCLI, SUBTITLE, COMMENT, CAPO;
+	KEY, BRIDGE, TAG, ARTIST, TITLE, AUTHOR, CAPO;
 	
 	/*
 	 * (non-Javadoc)

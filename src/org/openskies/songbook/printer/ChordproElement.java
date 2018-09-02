@@ -4,9 +4,18 @@ public class ChordproElement extends SongElement {
 
 	public ChordproSubtype subtype;
 
+	public ChordproElement(int line, int column, String content) {
+		super(SongElementType.CHORDPRO, line, column, content);
+		init();
+	}
+
 	public ChordproElement(SongElementType type, int line, int column, String content) {
 		super(type, line, column, content);
-		parseSubtype(content);
+		init();
+	}
+
+	private void init() {
+		parseSubtype(this.getContent());
 	}
 
 	public ChordproSubtype getSubtype() {
@@ -21,6 +30,14 @@ public class ChordproElement extends SongElement {
 			if (c.startsWith(type)) {
 				subtype = chordproSubtype;
 				this.setContent(this.getContent().substring(length, this.getContent().length()).trim());
+			}
+			
+			if (c.equalsIgnoreCase(ChordproSubtype.SOC.name())) {
+				subtype = ChordproSubtype.SOC;
+			}
+			
+			if (c.equalsIgnoreCase(ChordproSubtype.EOC.name())) {
+				subtype = ChordproSubtype.EOC;
 			}
 		}
 	}

@@ -59,6 +59,7 @@ CHORD=\[[^\]]*\]
 CHORDPRO=\{[^\}]*\}
 WHITE_SPACE_CHAR=[\ \t\r]
 NEWLINE_CHAR=[\n]
+ONSONG=(\R[^\{](\w+)\:).+
 
 %%
 
@@ -66,9 +67,10 @@ NEWLINE_CHAR=[\n]
  * LEXICAL RULES:
  */
 
-<YYINITIAL> {WORD} { songElements.add(new SongElement("WORD", yyline, yycolumn, yytext())); }
-{CHORD} { songElements.add(new SongElement("CHORD", yyline, yycolumn, yytext().replace("[", "").replace("]", ""))); }
-{CHORDPRO} { songElements.add(new SongElement("CHORDPRO", yyline, yycolumn, yytext().replace("{", "").replace("}", ""))); }
-{WHITE_SPACE_CHAR} { songElements.add(new SongElement("WHITESPACE", yyline, yycolumn, " ")); }
-{NEWLINE_CHAR} { songElements.add(new SongElement("LINEBREAK", yyline, yycolumn, "\n")); }
+<YYINITIAL> {WORD} { songElements.add(new WordElement(yyline, yycolumn, yytext())); }
+{CHORD} { songElements.add(new ChordElement(yyline, yycolumn, yytext().replace("[", "").replace("]", ""))); }
+{CHORDPRO} { songElements.add(new ChordproElement(yyline, yycolumn, yytext().replace("{", "").replace("}", ""))); }
+{WHITE_SPACE_CHAR} { songElements.add(new SongElement(SongElementType.WHITESPACE, yyline, yycolumn, " ")); }
+{NEWLINE_CHAR} { songElements.add(new SongElement(SongElementType.LINEBREAK, yyline, yycolumn, "\n")); }
+{ONSONG} { songElements.add(new SongElement(SongElementType.ONSONG, yyline, yycolumn, yytext().trim())); }
 .  { /*Do nothing*/ }

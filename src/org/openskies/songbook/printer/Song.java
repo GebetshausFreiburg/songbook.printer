@@ -9,7 +9,10 @@
 package org.openskies.songbook.printer;
 
 import java.io.File;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -63,20 +66,150 @@ public class Song {
 		// Check if id is correct
 		boolean isCorrectId = id.matches("[A-Z]{1}[0-9]{3}");
 		if (!isCorrectId) {
-			throw new SongParserException("ID is invalid in File '" + file.getName() + "'");
+			throw new SongParserException("Invalid id in filename '" + file.getName() + "'", new Throwable("Invalid id"));
 		}
 
 		// Check if language exists
 		if (SongLanguage.isLanguage(language)) {
 			elements = LexicalSongParser.parse(source);
+			for (SongElement se : elements) {
+				se.setSong(this);
+			}
 		} else {
-			throw new SongParserException("Songlanguage invalid in File '" + file.getName() + "'");
+			throw new SongParserException("No valid language in filename '" + file.getName() + "'", new Throwable("Invalid language"));
+		}
+
+		validateSongContent(file);
+	}
+
+	public String getEncoding() {
+		for (SongElement element : getElements()) {
+			if (element.getType() == SongElementType.WORD) {
+				String encoding = ((WordElement) element).getEncoding();
+				if (encoding.equals(StandardCharsets.UTF_8.name())) {
+					return StandardCharsets.UTF_8.name();
+				}
+			}
+		}
+		return StandardCharsets.ISO_8859_1.name();
+	}
+
+	private void validateSongContent(File file) throws SongParserException {
+		ChordproSubtype[] values = { ChordproSubtype.TITLE, ChordproSubtype.COPYRIGHT };// ChordproSubtype.values();
+		for (ChordproSubtype chordproSubtype : values) {
+			ChordproElement element = this.getChordproElement(chordproSubtype);
+
+			if (element == null) {
+				throw new SongParserException("No valid " + chordproSubtype.name().toLowerCase() + " in file '" + file.getName() + "'",
+						new Throwable("Non-existing " + chordproSubtype.name().toLowerCase()));
+			}
+		}
+	
+		for (SongElement element : getElements()) {
+			if (element.getType() == SongElementType.CHORDPRO) {
+				ChordproElement ose = (ChordproElement) element;
+				if (ose.getSubtype()==null) {
+					throw new SongParserException("Chordpro-Syntax '"+ose.getContent()+"' is unkown in file '" + file.getName() + "'",
+							new Throwable("Unknown Chordpro-Syntax"));
+				}
+			}
 		}
 		
-		String title = this.getTitle();
-		if (Utils.isNE(title)) {
-			throw new SongParserException("Song contains no valid title in File '" + file.getName() + "'");	
+		for (SongElement element : getElements()) {
+			if (element.getType() == SongElementType.ONSONG) {
+				OnsongElement ose = (OnsongElement) element;
+				if (ose.getSubtype() == OnsongSubtype.BRIDGE) {
+					if (ose.getContent() != null) {
+						if (!ose.getContent().equals("")) {
+							throw new SongParserException("Bridge at line '"+ose.getLine()+"' must be in single line in file '" + file.getName() + "'",
+									new Throwable("Bridge not in single line"));
+						}
+					}
+				}
+				if (ose.getSubtype()==null) {
+					throw new SongParserException("Onsong-Syntax '"+ose.getContent()+"' is unkown in file '" + file.getName() + "'",
+							new Throwable("Unknown Onsong-Syntax"));
+				}
+			}
 		}
+	}
+
+	public List<ChordElement> getInvalidChords() {
+		List<String> chords = new ArrayList<String>();
+		List<ChordElement> chordElements = new ArrayList<ChordElement>();
+		for (SongElement songElement : elements) {
+			if (songElement.getType() == SongElementType.CHORD) {
+				ChordElement ce = (ChordElement) songElement;
+				String chord = ce.getContent();
+				if (!ce.isValid()) {
+					if (!chords.contains(chord)) {
+						chords.add(chord);
+						chordElements.add(ce);
+					}
+				}
+			}
+		}
+		return chordElements;
+	}
+
+	public List<String> getBaseChords() {
+
+		List<String> chords = new ArrayList<String>();
+
+		for (SongElement songElement : elements) {
+			if (songElement.getType() == SongElementType.CHORD) {
+				String chord = songElement.getContent();
+				ChordElement ce = (ChordElement) songElement;
+				if (ce.isValid()) {
+
+					if (chord.contains("/")) {
+						int idx = chord.indexOf("/");
+						chord = chord.substring(0, idx);
+					}
+
+					if (chord.contains("sus")) {
+						int idx = chord.indexOf("sus");
+						chord = chord.substring(0, idx);
+					}
+
+					// if (chord.contains("m")) {
+					// int idx = chord.indexOf("m");
+					// chord = chord.substring(0, idx);
+					// }
+
+					if (chord.contains("add")) {
+						int idx = chord.indexOf("add");
+						chord = chord.substring(0, idx);
+					}
+
+					chord = chord.replace("2", "").replace("4", "").replace("6", "").replace("7", "");
+
+					chord = chord.replace("H", "B");
+
+					if (!chords.contains(chord)) {
+						chords.add(chord);
+					}
+				}
+			}
+		}
+		return chords;
+	}
+
+	public List<String> getChords() {
+
+		List<String> chords = new ArrayList<String>();
+
+		for (SongElement songElement : elements) {
+			if (songElement.getType() == SongElementType.CHORD) {
+				if (!chords.contains(songElement.getContent())) {
+					ChordElement ce = (ChordElement) songElement;
+					if (ce.isValid()) {
+						chords.add(songElement.getContent());
+					}
+				}
+			}
+		}
+		return chords;
 	}
 
 	public String getMeta() {
@@ -92,20 +225,52 @@ public class Song {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		for (SongElement songElement : elements) {
-			// System.out.println(songElement.getType()+": "+songElement.getContent());
 			sb.append(songElement.getContent());
 		}
 		return sb.toString();
 	}
 
 	public String getTitle() {
+		ChordproElement element = getChordproElement(ChordproSubtype.TITLE);
+
+		if (element != null) {
+			return element.getContent();
+		}
+		return null;
+	}
+
+	private ChordproElement getChordproElement(ChordproSubtype subtype) {
 		for (SongElement songElement : elements) {
-			if (songElement.getType()==SongElementType.CHORDPRO) {
-				ChordproElement elem = (ChordproElement)songElement;
-				if (elem.getSubtype()==ChordproSubtype.TITLE) {
-					return elem.getContent();
+			if (songElement.getType() == SongElementType.CHORDPRO) {
+				ChordproElement elem = (ChordproElement) songElement;
+				if (elem.getSubtype() == subtype) {
+					return elem;
 				}
 			}
+		}
+		return null;
+	}
+
+	public String getKey() {
+		ChordproElement element = getChordproElement(ChordproSubtype.KEY);
+		if (element != null) {
+			return element.getContent();
+		}
+		return null;
+	}
+
+	public String getArtist() {
+		ChordproElement element = getChordproElement(ChordproSubtype.ARTIST);
+		if (element != null) {
+			return element.getContent();
+		}
+		return null;
+	}
+
+	public String getCopyright() {
+		ChordproElement element = getChordproElement(ChordproSubtype.COPYRIGHT);
+		if (element != null) {
+			return element.getContent();
 		}
 		return null;
 	}
