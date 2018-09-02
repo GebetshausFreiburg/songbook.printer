@@ -12,7 +12,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * The Class Songs which holds all loaded songs
@@ -46,6 +49,29 @@ public class Songs {
 		return songs;
 	}
 
+	public List<Song> getSong(String id) {
+		List<Song> foundSongs = new ArrayList<Song>();
+		for (Song song : songs) {
+			if (song.getId().equals(id)) {
+				foundSongs.add(song);
+			}
+		}
+		return foundSongs;
+	}
+
+	public Map<String, Song> getInvalidChords() {
+		Map<String, Song> invalidChords = new HashMap<String, Song>();
+		for (Song song : songs) {
+			for (ChordElement ce : song.getInvalidChords()) {
+				if (!invalidChords.containsKey(ce.getContent())) {
+					invalidChords.put(ce.getContent(), song);
+				}
+			}
+		}
+	
+		return invalidChords;
+	}
+
 	/**
 	 * Load all songs from data-directory
 	 */
@@ -55,21 +81,21 @@ public class Songs {
 			Files.walk(Paths.get("data")).filter(Files::isRegularFile).forEach(file -> {
 				Song song = null;
 				try {
-
 					song = new Song(file);
 					songs.add(song);
-					System.out.println("Try loading " + song.getMeta());
-//					System.out.println(song);
 				} catch (SongParserException e) {
-					// TODO Auto-generated catch block
-					// e.printStackTrace();
-					System.out.println(e.getMessage());
+					if (e.getCause() != null) {
+						System.out.println("EXCEPTION: " + e.getCause().getMessage() + ": " + e.getMessage());
+					} else {
+						System.out.println("EXCEPTION: " + e.getMessage());
+					}
 				}
 
 			});
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	/**

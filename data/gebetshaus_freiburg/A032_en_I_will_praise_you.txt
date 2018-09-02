@@ -1,5 +1,6 @@
-I will praise you (A032)
-David Brymer / Deutsch: Rainer Harter
+{title: I will praise you (A032)}
+{artist: David Brymer}
+
 Key: [A]
 
 Vers 1:
@@ -48,3 +49,5 @@ And as I [A/C#]see the height to [F#m]which you brought me and the [Esus]depth f
 Bridge:
 Welche Höhe aus der du regierst, welche Tiefe in die du kamst
 Welche Höhe auf die du mich führtest, welche Tiefe aus der du mich nahmst
+
+{copyright: (c) David Brymer}

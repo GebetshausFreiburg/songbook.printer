@@ -8,6 +8,8 @@
  */
 package org.openskies.songbook.printer;
 
+import javax.rmi.CORBA.Util;
+
 /**
  * 
  * Songelement which is part of a song.
@@ -30,6 +32,16 @@ public class SongElement {
 	/** The content of the element */
 	private String content;
 
+	private Song song;
+	
+	public Song getSong() {
+		return song;
+	}
+	
+	public void setSong(Song song) {
+		this.song = song;
+	}
+
 	/**
 	 * Instantiates a new song element.
 	 *
@@ -39,9 +51,6 @@ public class SongElement {
 	 * @param content the content
 	 */
 	public SongElement(SongElementType type, int line, int column, String content) {
-		
-		//TODO Type must be enum, not string
-		
 		this.setType(type);
 		this.line = line;
 		this.column = column;
@@ -84,7 +93,7 @@ public class SongElement {
 	public int getColumn() {
 		return column;
 	}
-
+	
 	/**
 	 * Gets the content of the element
 	 *
@@ -111,7 +120,7 @@ public class SongElement {
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("SongElement [type=" + type + ", line=" + line + ", column=" + column);
+		sb.append(this.getClass().getSimpleName()+" [type=" + type + ", line=" + line + ", column=" + column);
 
 		if (content != null) {
 			if (!content.trim().equals("")) {

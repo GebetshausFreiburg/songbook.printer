@@ -15,9 +15,11 @@ And still You know me
  {eoc}
 
 
-Bridge: [F2]Nothing is [Bbmaj7]hidden from Your [F2]sight
+Bridge: 
+[F2]Nothing is [Bbmaj7]hidden from Your [F2]sight
 Wherever I [Bbmaj7]go, You find me
 [F2]You know every [Bbmaj7]detail of my [F2]life
 You are [Bbmaj7]God and You don't miss a [F2]thing
+
 {copyright: (c) 2011 Bethel Music}
 {ccli: 6149709}

@@ -18,7 +18,8 @@
  {eoc}
 
 
-Bridge: [C#m7]Und ich geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir.
+Bridge: 
+[C#m7]Und ich geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir.
 [C#m7]Ja ich geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir.
 [C#m7]Ja ich geh' immer weiter, weil ich [Bm7]deine Augen seh'
 [C#m7]und alles in mir will aufsteigen mit dir.
