@@ -8,6 +8,12 @@
  */
 package org.openskies.songbook.printer;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +37,7 @@ public class SongbookPrinter {
 
 		List<Song> songs = Songs.getInstance().getSongs();
 		for (Song song : songs) {
-			System.out.println(song.getTitle() + ": " + song.getBaseChords());
+			System.out.println("[" + song.getId() + "] " + song.getTitle() + ": " + song.getBaseChords());
 		}
 
 		if (true) {
@@ -43,10 +49,21 @@ public class SongbookPrinter {
 			}
 		}
 
-		/*
-		 * List<Song> songs = Songs.getInstance().getSong("A032"); for (Song song : songs) { System.out.println(song.getSource()); }
-		 */
-
+		for (Song ws : songs) {
+			Path p = Paths.get("web/" + ws.getFilename().replace(".txt", ".html"));
+			try {
+				Files.createDirectories(p.getParent());
+				if (Files.exists(p)) {
+					Files.delete(p);
+				}
+				Files.createFile(p);
+				BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
+				writer.write(ws.render());
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 
 }

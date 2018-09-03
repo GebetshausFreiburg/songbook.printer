@@ -1,0 +1,58 @@
+* {
+		  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+		  font-size: var(--textSize);
+		  line-height: 200%;
+		}
+
+		#title {
+		  font-size: large;
+		  font-weight: bold;
+		  padding-bottom: 0px;
+		}
+
+		.chorus-text {
+		  border-style: solid;
+		  border-width: thin;
+		  border-color: #FF0000;
+		   padding: 5px;
+		}
+
+		.chorus {
+		  padding-left: 20px;
+		  padding-top: 10px;
+		  padding-bottom: 20px;
+		}
+
+		#ccli::before {
+		  content: "CCLI: ";
+		}
+
+		#copyright::before {
+		  content: "\00a9 ";
+		}
+
+		#copyright {
+		  font-size: x-small;
+		  line-height:1.2 !important
+		}
+
+		#ccli {
+		  font-size: x-small;
+		  line-height:1.2 !important
+		}
+
+		#artist {
+		  font-size: small;
+		  padding-bottom: 10px;
+		}
+
+		.chord { position: absolute;
+		  font-size: 13px;
+		  font-weight: bold;
+		  color: red;
+		}
+
+		.chord .inner {
+		  position: relative;
+		  top: -1em;
+		}

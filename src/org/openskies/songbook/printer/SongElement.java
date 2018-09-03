@@ -18,7 +18,7 @@ import javax.rmi.CORBA.Util;
  * @since 27. Juli 2018
  *
  */
-public class SongElement {
+public class SongElement implements IRenderer {
 	
 	/** The type of a song. Could be WHITESPACE, LINEBREAK, CHORD or CHORDPRO */
 	private SongElementType type;
@@ -131,6 +131,22 @@ public class SongElement {
 		sb.append("]");
 
 		return sb.toString();
+	}
+
+	@Override
+	public String render() {
+		
+		if (this.type==SongElementType.CHORDPRO) {
+			ChordproElement e = (ChordproElement)this;
+			if (e.getSubtype()==ChordproSubtype.SOC) {
+				return "<div class=\"chorus\"><div class=\"chorus-text\">";
+			}
+			if (e.getSubtype()==ChordproSubtype.EOC) {
+				return "</div></div>";
+			}
+		}
+		
+		return this.getContent();
 	}
 
 }

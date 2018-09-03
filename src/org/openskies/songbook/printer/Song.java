@@ -23,7 +23,7 @@ import java.util.List;
  * @since 27. Juli 2018
  *
  */
-public class Song {
+public class Song implements IRenderer {
 
 	/** The source. */
 	private String source;
@@ -33,6 +33,8 @@ public class Song {
 
 	/** The language. */
 	private String language;
+	
+	private String filename;
 
 	/** The book. */
 	private String book;
@@ -52,8 +54,9 @@ public class Song {
 
 		File file = path.toFile();
 		source = file.toString();
-
-		String[] n = file.getName().split("_");
+		filename = file.getName();
+		
+		String[] n = filename.split("_");
 		book = file.getParentFile().getName();
 		id = n[0];
 		language = n[1];
@@ -104,30 +107,30 @@ public class Song {
 						new Throwable("Non-existing " + chordproSubtype.name().toLowerCase()));
 			}
 		}
-	
+
 		for (SongElement element : getElements()) {
 			if (element.getType() == SongElementType.CHORDPRO) {
 				ChordproElement ose = (ChordproElement) element;
-				if (ose.getSubtype()==null) {
-					throw new SongParserException("Chordpro-Syntax '"+ose.getContent()+"' is unkown in file '" + file.getName() + "'",
+				if (ose.getSubtype() == null) {
+					throw new SongParserException("Chordpro-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
 							new Throwable("Unknown Chordpro-Syntax"));
 				}
 			}
 		}
-		
+
 		for (SongElement element : getElements()) {
 			if (element.getType() == SongElementType.ONSONG) {
 				OnsongElement ose = (OnsongElement) element;
 				if (ose.getSubtype() == OnsongSubtype.BRIDGE) {
 					if (ose.getContent() != null) {
 						if (!ose.getContent().equals("")) {
-							throw new SongParserException("Bridge at line '"+ose.getLine()+"' must be in single line in file '" + file.getName() + "'",
+							throw new SongParserException("Bridge at line '" + ose.getLine() + "' must be in single line in file '" + file.getName() + "'",
 									new Throwable("Bridge not in single line"));
 						}
 					}
 				}
-				if (ose.getSubtype()==null) {
-					throw new SongParserException("Onsong-Syntax '"+ose.getContent()+"' is unkown in file '" + file.getName() + "'",
+				if (ose.getSubtype() == null) {
+					throw new SongParserException("Onsong-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
 							new Throwable("Unknown Onsong-Syntax"));
 				}
 			}
@@ -194,6 +197,10 @@ public class Song {
 		}
 		return chords;
 	}
+	
+	public String getFilename() {
+		return filename;
+	}
 
 	public List<String> getChords() {
 
@@ -235,40 +242,40 @@ public class Song {
 		if (chordproElement != null) {
 			return chordproElement.getContent();
 		}
-		
+
 		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.ARTIST);
 		if (onsongElement != null) {
 			return onsongElement.getContent();
 		}
-		
+
 		return null;
 	}
-	
+
 	public String getCapo() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.CAPO);
 		if (chordproElement != null) {
 			return chordproElement.getContent();
 		}
-		
+
 		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.CAPO);
 		if (onsongElement != null) {
 			return onsongElement.getContent();
 		}
-		
+
 		return null;
 	}
-	
+
 	public String getTitle() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.TITLE);
 		if (chordproElement != null) {
 			return chordproElement.getContent();
 		}
-		
+
 		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.TITLE);
 		if (onsongElement != null) {
 			return onsongElement.getContent();
 		}
-		
+
 		return null;
 	}
 
@@ -283,7 +290,49 @@ public class Song {
 		}
 		return null;
 	}
-	
+
+	private List<SongElement> getContentElements() {
+		List<SongElement> elems = new ArrayList<SongElement>();
+		for (SongElement songElement : elements) {
+			boolean ignore = false;
+			if (songElement.getType() == SongElementType.CHORDPRO) {
+				ChordproElement elem = (ChordproElement) songElement;
+				if (elem.getSubtype() == ChordproSubtype.TITLE) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == ChordproSubtype.ARTIST) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == ChordproSubtype.CCLI) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == ChordproSubtype.COPYRIGHT) {
+					ignore = true;
+				}
+			}
+			if (songElement.getType() == SongElementType.ONSONG) {
+				OnsongElement elem = (OnsongElement) songElement;
+				if (elem.getSubtype() == OnsongSubtype.TITLE) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == OnsongSubtype.ARTIST) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == OnsongSubtype.CCLI) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == OnsongSubtype.COPYRIGHT) {
+					ignore = true;
+				}
+			}
+			if (!ignore) {
+				elems.add(songElement);
+			}
+		}
+
+		return elems;
+	}
+
 	private ChordproElement getChordproElement(ChordproSubtype subtype) {
 		for (SongElement songElement : elements) {
 			if (songElement.getType() == SongElementType.CHORDPRO) {
@@ -304,12 +353,25 @@ public class Song {
 		return null;
 	}
 
+	public String getCCLI() {
+		ChordproElement chordproElement = getChordproElement(ChordproSubtype.CCLI);
+		if (chordproElement != null) {
+			return chordproElement.getContent();
+		}
+
+		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.CCLI);
+		if (onsongElement != null) {
+			return onsongElement.getContent();
+		}
+		return null;
+	}
+
 	public String getCopyright() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.COPYRIGHT);
 		if (chordproElement != null) {
 			return chordproElement.getContent();
 		}
-		
+
 		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.COPYRIGHT);
 		if (onsongElement != null) {
 			return onsongElement.getContent();
@@ -400,6 +462,37 @@ public class Song {
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
+	}
+
+	@Override
+	public String render() {
+
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("<!DOCTYPE html>");
+		sb.append("<html>");
+		sb.append("<head>");
+		sb.append("<link rel=\"stylesheet\" href=\"styles.css\">");
+		sb.append("<meta charset=\"utf-8\">");
+		sb.append("</head>");
+		sb.append("<body>");
+		
+		sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
+		sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
+
+		for (SongElement songElement : getContentElements()) {
+			sb.append(songElement.render());
+		}
+
+		if (this.getCCLI() != null) {
+			sb.append("<div id=\"ccli\">" + this.getCCLI() + "</div>\n");
+		}
+		sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
+
+		sb.append("</body>");
+		sb.append("</html>");
+		
+		return sb.toString();
 	}
 
 }

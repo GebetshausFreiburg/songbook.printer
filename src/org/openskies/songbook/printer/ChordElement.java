@@ -21,5 +21,10 @@ public class ChordElement extends SongElement {
 	public String toString() {
 		return this.getContent();
 	}
+	
+	@Override
+	public String render() {
+		return "<span class=\"chord\"><span class=\"inner\">"+this.getContent()+"</span></span>";
+	}
 
 }
