@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * The Class Songs which holds all loaded songs
+ * The Class Songs which holds all loaded songs.
  */
 public class Songs {
 
@@ -49,6 +49,12 @@ public class Songs {
 		return songs;
 	}
 
+	/**
+	 * Gets the song.
+	 *
+	 * @param id the id
+	 * @return the song
+	 */
 	public List<Song> getSong(String id) {
 		List<Song> foundSongs = new ArrayList<Song>();
 		for (Song song : songs) {
@@ -59,6 +65,11 @@ public class Songs {
 		return foundSongs;
 	}
 
+	/**
+	 * Gets the invalid chords.
+	 *
+	 * @return the invalid chords
+	 */
 	public Map<String, Song> getInvalidChords() {
 		Map<String, Song> invalidChords = new HashMap<String, Song>();
 		for (Song song : songs) {
@@ -73,7 +84,7 @@ public class Songs {
 	}
 
 	/**
-	 * Load all songs from data-directory
+	 * Load all songs from data-directory.
 	 */
 	public void load() {
 		songs = new ArrayList<Song>();
@@ -99,7 +110,7 @@ public class Songs {
 	}
 
 	/**
-	 * Count number of songs
+	 * Count number of songs.
 	 *
 	 * @return the int
 	 */

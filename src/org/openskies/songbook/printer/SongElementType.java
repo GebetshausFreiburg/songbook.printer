@@ -1,9 +1,23 @@
 package org.openskies.songbook.printer;
 
+/**
+ * The Enum SongElementType.
+ */
 public enum SongElementType {
 
-	CHORDPRO, WORD, WHITESPACE, LINEBREAK, CHORD, ONSONG;
-	
+	/** The chordpro. */
+	CHORDPRO,
+	/** The word. */
+	WORD,
+	/** The whitespace. */
+	WHITESPACE,
+	/** The linebreak. */
+	LINEBREAK,
+	/** The chord. */
+	CHORD,
+	/** The onsong. */
+	ONSONG;
+
 	/*
 	 * (non-Javadoc)
 	 * 

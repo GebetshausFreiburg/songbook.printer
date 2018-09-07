@@ -1,9 +1,29 @@
 package org.openskies.songbook.printer;
 
+/**
+ * The Enum OnsongSubtype.
+ */
 public enum OnsongSubtype {
 
-	KEY, BRIDGE, TAG, ARTIST, TITLE, AUTHOR, CAPO, COPYRIGHT, CCLI;
-	
+	/** The key. */
+	KEY,
+	/** The bridge. */
+	BRIDGE,
+	/** The tag. */
+	TAG,
+	/** The artist. */
+	ARTIST,
+	/** The title. */
+	TITLE,
+	/** The author. */
+	AUTHOR,
+	/** The capo. */
+	CAPO,
+	/** The copyright. */
+	COPYRIGHT,
+	/** The ccli. */
+	CCLI;
+
 	/*
 	 * (non-Javadoc)
 	 * 

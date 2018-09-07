@@ -23,21 +23,32 @@ public class SongElement implements IRenderer {
 	/** The type of a song. Could be WHITESPACE, LINEBREAK, CHORD or CHORDPRO */
 	private SongElementType type;
 	
-	/** The line-position of the element in the song */
+	/**  The line-position of the element in the song. */
 	private int line;
 	
-	/** The column-position of the element in the song */
+	/**  The column-position of the element in the song. */
 	private int column;
 	
-	/** The content of the element */
+	/**  The content of the element. */
 	private String content;
 
+	/** The song. */
 	private Song song;
 	
+	/**
+	 * Gets the song.
+	 *
+	 * @return the song
+	 */
 	public Song getSong() {
 		return song;
 	}
 	
+	/**
+	 * Sets the song.
+	 *
+	 * @param song the new song
+	 */
 	public void setSong(Song song) {
 		this.song = song;
 	}
@@ -59,7 +70,7 @@ public class SongElement implements IRenderer {
 	}
 
 	/**
-	 * Gets the type of the element
+	 * Gets the type of the element.
 	 *
 	 * @return the type
 	 */
@@ -68,7 +79,7 @@ public class SongElement implements IRenderer {
 	}
 
 	/**
-	 * Sets the type of a element
+	 * Sets the type of a element.
 	 *
 	 * @param type the new type
 	 */
@@ -77,7 +88,7 @@ public class SongElement implements IRenderer {
 	}
 
 	/**
-	 * Gets the line-position of an element
+	 * Gets the line-position of an element.
 	 *
 	 * @return the line
 	 */
@@ -86,7 +97,7 @@ public class SongElement implements IRenderer {
 	}
 
 	/**
-	 * Gets the column-position of an element
+	 * Gets the column-position of an element.
 	 *
 	 * @return the column
 	 */
@@ -95,7 +106,7 @@ public class SongElement implements IRenderer {
 	}
 	
 	/**
-	 * Gets the content of the element
+	 * Gets the content of the element.
 	 *
 	 * @return the content
 	 */
@@ -104,7 +115,7 @@ public class SongElement implements IRenderer {
 	}
 
 	/**
-	 * Sets the content of the element
+	 * Sets the content of the element.
 	 *
 	 * @param content the new content
 	 */
@@ -133,6 +144,9 @@ public class SongElement implements IRenderer {
 		return sb.toString();
 	}
 
+	/* (non-Javadoc)
+	 * @see org.openskies.songbook.printer.IRenderer#render()
+	 */
 	@Override
 	public String render() {
 		

@@ -20,15 +20,18 @@ import java.util.Map;
 import java.util.Vector;
 
 /**
- * 
- * Printer for Song-Files in ChordPro and OnSong-Format
- * 
+ * Printer for Song-Files in ChordPro and OnSong-Format.
+ *
  * @author Matthias Wegner
  * @since 27. Juli 2018
- *
  */
 public class SongbookPrinter {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 
 		Songs.getInstance().load();
@@ -37,7 +40,7 @@ public class SongbookPrinter {
 
 		List<Song> songs = Songs.getInstance().getSongs();
 		for (Song song : songs) {
-			System.out.println("[" + song.getId() + "] " + song.getTitle() + ": " + song.getBaseChords());
+			System.out.println("[" + song.getId() + "] " + song.getTitle() + ": " + song.getBaseChords() +" >>> "+song.getCalculatedKey());
 		}
 
 		if (true) {
@@ -48,6 +51,8 @@ public class SongbookPrinter {
 				System.out.println("   " + key + ": " + ichords.get(key).getTitle());
 			}
 		}
+		
+		// TODO Erklärung Writer
 
 		for (Song ws : songs) {
 			Path p = Paths.get("web/" + ws.getFilename().replace(".txt", ".html"));

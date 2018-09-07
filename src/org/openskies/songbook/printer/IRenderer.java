@@ -1,7 +1,15 @@
 package org.openskies.songbook.printer;
 
+/**
+ * The Interface IRenderer.
+ */
 public interface IRenderer {
 
+	/**
+	 * Render.
+	 *
+	 * @return the string
+	 */
 	public String render();
 	
 	// Test at https://jsfiddle.net/0adkhxe7/117/

@@ -33,7 +33,8 @@ public class Song implements IRenderer {
 
 	/** The language. */
 	private String language;
-	
+
+	/** The filename. */
 	private String filename;
 
 	/** The book. */
@@ -47,19 +48,20 @@ public class Song implements IRenderer {
 	 *
 	 * @param path
 	 *            the path
+	 * @throws SongParserException
+	 *             the song parser exception
 	 */
 	public Song(Path path) throws SongParserException {
-
-		// TODO Ausgabe testen mit CCS + HTML, Stichwort jsfiddle.com
-
 		File file = path.toFile();
 		source = file.toString();
 		filename = file.getName();
-		
+
 		String[] n = filename.split("_");
 		book = file.getParentFile().getName();
 		id = n[0];
 		language = n[1];
+
+		// TODO 01 Show Exceptions from Filename
 
 		// Check if book exists
 		if (book.trim().equalsIgnoreCase("data")) {
@@ -67,10 +69,12 @@ public class Song implements IRenderer {
 		}
 
 		// Check if id is correct
-		boolean isCorrectId = id.matches("[A-Z]{1}[0-9]{3}");
+		boolean isCorrectId = id.matches("([A-Z]{1})+((?!000)([0-9]{3}))");
 		if (!isCorrectId) {
 			throw new SongParserException("Invalid id in filename '" + file.getName() + "'", new Throwable("Invalid id"));
 		}
+
+		// TODO 02 Explain Enum SongLanguage
 
 		// Check if language exists
 		if (SongLanguage.isLanguage(language)) {
@@ -82,9 +86,49 @@ public class Song implements IRenderer {
 			throw new SongParserException("No valid language in filename '" + file.getName() + "'", new Throwable("Invalid language"));
 		}
 
+		// TODO 03 Explain Content-Validation
 		validateSongContent(file);
 	}
 
+	/**
+	 * Gets the element after.
+	 *
+	 * @param element
+	 *            the element
+	 * @return the element after
+	 */
+	public SongElement getElementAfter(SongElement element) {
+		int index = elements.indexOf(element);
+
+		if (index >= elements.size()) {
+			return null;
+		}
+
+		return elements.get(index + 1);
+	}
+
+	/**
+	 * Gets the element before.
+	 *
+	 * @param element
+	 *            the element
+	 * @return the element before
+	 */
+	public SongElement getElementBefore(SongElement element) {
+		int index = elements.indexOf(element);
+
+		if (index <= 0) {
+			return null;
+		}
+
+		return elements.get(index - 1);
+	}
+
+	/**
+	 * Gets the encoding.
+	 *
+	 * @return the encoding
+	 */
 	public String getEncoding() {
 		for (SongElement element : getElements()) {
 			if (element.getType() == SongElementType.WORD) {
@@ -97,8 +141,35 @@ public class Song implements IRenderer {
 		return StandardCharsets.ISO_8859_1.name();
 	}
 
+	/**
+	 * Gets the calculated key.
+	 *
+	 * @return the calculated key
+	 */
+	public String getCalculatedKey() {
+
+		SongKey[] keys = SongKey.values();
+		for (SongKey songKey : keys) {
+			if (songKey.containsChords(this.getBaseChords())) {
+				return songKey.name().replace("x", "#");
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Validate song content.
+	 *
+	 * @param file
+	 *            the file
+	 * @throws SongParserException
+	 *             the song parser exception
+	 */
 	private void validateSongContent(File file) throws SongParserException {
-		ChordproSubtype[] values = { ChordproSubtype.TITLE, ChordproSubtype.COPYRIGHT };// ChordproSubtype.values();
+		// TODO 04 Explain validation of mandatory title and copyright
+		
+		ChordproSubtype[] values = { ChordproSubtype.TITLE};// ChordproSubtype.values();
 		for (ChordproSubtype chordproSubtype : values) {
 			ChordproElement element = this.getChordproElement(chordproSubtype);
 
@@ -137,6 +208,11 @@ public class Song implements IRenderer {
 		}
 	}
 
+	/**
+	 * Gets the invalid chords.
+	 *
+	 * @return the invalid chords
+	 */
 	public List<ChordElement> getInvalidChords() {
 		List<String> chords = new ArrayList<String>();
 		List<ChordElement> chordElements = new ArrayList<ChordElement>();
@@ -155,6 +231,11 @@ public class Song implements IRenderer {
 		return chordElements;
 	}
 
+	/**
+	 * Gets the base chords.
+	 *
+	 * @return the base chords
+	 */
 	public List<String> getBaseChords() {
 
 		List<String> chords = new ArrayList<String>();
@@ -175,10 +256,10 @@ public class Song implements IRenderer {
 						chord = chord.substring(0, idx);
 					}
 
-					// if (chord.contains("m")) {
-					// int idx = chord.indexOf("m");
-					// chord = chord.substring(0, idx);
-					// }
+					if (chord.contains("maj")) {
+						int idx = chord.indexOf("maj");
+						chord = chord.substring(0, idx);
+					}
 
 					if (chord.contains("add")) {
 						int idx = chord.indexOf("add");
@@ -197,11 +278,21 @@ public class Song implements IRenderer {
 		}
 		return chords;
 	}
-	
+
+	/**
+	 * Gets the filename.
+	 *
+	 * @return the filename
+	 */
 	public String getFilename() {
 		return filename;
 	}
 
+	/**
+	 * Gets the chords.
+	 *
+	 * @return the chords
+	 */
 	public List<String> getChords() {
 
 		List<String> chords = new ArrayList<String>();
@@ -219,6 +310,11 @@ public class Song implements IRenderer {
 		return chords;
 	}
 
+	/**
+	 * Gets the meta.
+	 *
+	 * @return the meta
+	 */
 	public String getMeta() {
 		return "book=" + book + ", id=" + id + ", language=" + language + ", source=" + source;
 	}
@@ -237,6 +333,11 @@ public class Song implements IRenderer {
 		return sb.toString();
 	}
 
+	/**
+	 * Gets the artist.
+	 *
+	 * @return the artist
+	 */
 	public String getArtist() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.ARTIST);
 		if (chordproElement != null) {
@@ -251,6 +352,11 @@ public class Song implements IRenderer {
 		return null;
 	}
 
+	/**
+	 * Gets the capo.
+	 *
+	 * @return the capo
+	 */
 	public String getCapo() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.CAPO);
 		if (chordproElement != null) {
@@ -265,6 +371,11 @@ public class Song implements IRenderer {
 		return null;
 	}
 
+	/**
+	 * Gets the title.
+	 *
+	 * @return the title
+	 */
 	public String getTitle() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.TITLE);
 		if (chordproElement != null) {
@@ -279,6 +390,13 @@ public class Song implements IRenderer {
 		return null;
 	}
 
+	/**
+	 * Gets the onsong element.
+	 *
+	 * @param subtype
+	 *            the subtype
+	 * @return the onsong element
+	 */
 	private OnsongElement getOnsongElement(OnsongSubtype subtype) {
 		for (SongElement songElement : elements) {
 			if (songElement.getType() == SongElementType.ONSONG) {
@@ -291,6 +409,11 @@ public class Song implements IRenderer {
 		return null;
 	}
 
+	/**
+	 * Gets the content elements.
+	 *
+	 * @return the content elements
+	 */
 	private List<SongElement> getContentElements() {
 		List<SongElement> elems = new ArrayList<SongElement>();
 		for (SongElement songElement : elements) {
@@ -333,6 +456,13 @@ public class Song implements IRenderer {
 		return elems;
 	}
 
+	/**
+	 * Gets the chordpro element.
+	 *
+	 * @param subtype
+	 *            the subtype
+	 * @return the chordpro element
+	 */
 	private ChordproElement getChordproElement(ChordproSubtype subtype) {
 		for (SongElement songElement : elements) {
 			if (songElement.getType() == SongElementType.CHORDPRO) {
@@ -345,6 +475,11 @@ public class Song implements IRenderer {
 		return null;
 	}
 
+	/**
+	 * Gets the key.
+	 *
+	 * @return the key
+	 */
 	public String getKey() {
 		ChordproElement element = getChordproElement(ChordproSubtype.KEY);
 		if (element != null) {
@@ -353,6 +488,11 @@ public class Song implements IRenderer {
 		return null;
 	}
 
+	/**
+	 * Gets the ccli.
+	 *
+	 * @return the ccli
+	 */
 	public String getCCLI() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.CCLI);
 		if (chordproElement != null) {
@@ -366,6 +506,11 @@ public class Song implements IRenderer {
 		return null;
 	}
 
+	/**
+	 * Gets the copyright.
+	 *
+	 * @return the copyright
+	 */
 	public String getCopyright() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.COPYRIGHT);
 		if (chordproElement != null) {
@@ -380,7 +525,7 @@ public class Song implements IRenderer {
 	}
 
 	/**
-	 * Gets the source-path of the song
+	 * Gets the source-path of the song.
 	 *
 	 * @return the source
 	 */
@@ -389,7 +534,7 @@ public class Song implements IRenderer {
 	}
 
 	/**
-	 * Sets the source-path of the song
+	 * Sets the source-path of the song.
 	 *
 	 * @param source
 	 *            the new source
@@ -464,9 +609,16 @@ public class Song implements IRenderer {
 		this.language = language;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see org.openskies.songbook.printer.IRenderer#render()
+	 */
 	@Override
 	public String render() {
 
+		// TODO Erklärung Renderer: https://jsfiddle.net/0adkhxe7/117/
+		
 		StringBuilder sb = new StringBuilder();
 
 		sb.append("<!DOCTYPE html>");
@@ -476,7 +628,7 @@ public class Song implements IRenderer {
 		sb.append("<meta charset=\"utf-8\">");
 		sb.append("</head>");
 		sb.append("<body>");
-		
+
 		sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
 		sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
 
@@ -491,7 +643,7 @@ public class Song implements IRenderer {
 
 		sb.append("</body>");
 		sb.append("</html>");
-		
+
 		return sb.toString();
 	}
 

@@ -4,12 +4,27 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * The Class Utils.
+ */
 public class Utils {
 
+	/**
+	 * Checks if is ne.
+	 *
+	 * @param string the string
+	 * @return true, if is ne
+	 */
 	public static boolean isNE(String string) {
 		return !isNNE(string);
 	}
 
+	/**
+	 * Checks if is nne.
+	 *
+	 * @param string the string
+	 * @return true, if is nne
+	 */
 	public static boolean isNNE(String string) {
 		if (string != null) {
 			if (!string.trim().equals("")) {
@@ -20,11 +35,11 @@ public class Utils {
 	}
 
 	/**
-	 * Detect Charset in a string
-	 * 
+	 * Detect Charset in a string.
+	 *
+	 * @param value the value
+	 * @return the string
 	 * @see https://www.turro.org/publications/?item=114&page=0
-	 * @param value
-	 * @return
 	 */
 	public static String detectCharset(String value) {
 		if (isNE(value))
@@ -34,6 +49,14 @@ public class Utils {
 		return detectedCharset;
 	}
 
+	/**
+	 * Convert.
+	 *
+	 * @param value the value
+	 * @param fromEncoding the from encoding
+	 * @param toEncoding the to encoding
+	 * @return the string
+	 */
 	public static String convert(String value, String fromEncoding, String toEncoding) {
 		try {
 			return new String(value.getBytes(fromEncoding), toEncoding);
@@ -42,6 +65,13 @@ public class Utils {
 		return null;
 	}
 
+	/**
+	 * Charset.
+	 *
+	 * @param value the value
+	 * @param charsets the charsets
+	 * @return the string
+	 */
 	private static String charset(String value, String charsets[]) {
 		String probe = StandardCharsets.UTF_8.name();
 		
