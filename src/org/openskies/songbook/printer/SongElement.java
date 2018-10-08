@@ -8,8 +8,6 @@
  */
 package org.openskies.songbook.printer;
 
-import javax.rmi.CORBA.Util;
-
 /**
  * 
  * Songelement which is part of a song.

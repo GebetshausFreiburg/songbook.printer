@@ -1,5 +1,6 @@
 {title: O come O come Emmanuel (A369)}
 {artist: Words: Public Domain}
+key: Em
 
 1. O [Em]come, O come, Em[Am]ma [D]- nu[G]el, and [Em]ransom captive [Am]Is [D2]- ra[Em]el
 That [Am]mourns in lonely [Em]ex - [A]ile [D]here, un[Em]til the Son of [Am]God[D]ap[G]pear

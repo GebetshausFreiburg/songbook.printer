@@ -1,5 +1,6 @@
 {title: The Look (A379)}
 {artist: John Newton, Bob Kauflin}
+key: G
 
 1. I [Em]saw one hanging on a tree in [C]agony and bl[D]ood
 Who [Em]fixed His loving eyes on me as [Am7]near His cross I [Bm7]stood
@@ -23,7 +24,7 @@ This [Em]blood is [D]for your [C2]ransom paid, I [Bm7]died that you might [A]liv
 
 
 3. Thus [Em]while His death my sin displays for [C]all the world to [D]view
-Such [Em]is the mystery of grace: it [Am7]seals my pardon [Bm7]too
+Such [Em]is the mystery of grace]seals my pardon [Bm7]too
 With [A4]pleasing grief and [A]mournful joy my [C]spirit is now [Bm]filled
 That [Em]I should [D]such a [C2]life destroy yet [Bm7]live by Him I [A]killed[C] [D]
 {copyright: (c) Sovereign Grace Praise}

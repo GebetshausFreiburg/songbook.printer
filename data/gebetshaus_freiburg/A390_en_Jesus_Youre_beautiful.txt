@@ -1,5 +1,6 @@
 {title: Jesus You‘re beautiful (A390)}
 {artist: Jon Thurlow, James Kufeldt, David Brymer}
+key: C
 
 
 {soc}

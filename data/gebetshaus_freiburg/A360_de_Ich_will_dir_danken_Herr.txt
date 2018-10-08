@@ -1,21 +1,25 @@
-{title: Ich will dir danken Herr (A360)}
-{artist: Brent Chambers, Gitta Leuschner}
+{title:Ich will dir danken (A360)}
+{subtitle:Brent Chambers, dt. Gitta Leuschner}
+{key:A}
 
 1. Ich will [A]Dir [D/A]danken [A]Herr, unter [A]allen [D/A]Erden[A]völkern.
 Ich will [F#m]Dir Loblieder [E]singen [D]unter den [D/A]Mensch[A]en,[E]
 denn [A]Deine [D/A]Güte [A]reicht so [A]weit bis [D/A]zu den [A]Himmeln,
 Deine [F#m]Treue so [B]weit die Wolken [E]gehn.
 
+
 {soc}
- Sei er[A]hoben, [D]o [A]Gott, über den [B]Him[E]meln, 
- Deine [Bm7]Herrlichkeit [A]sei [E]über [D]aller [A]Welt.[E] 
- Sei er[A]hoben, [D]o  Gott, über den [B]Him[E]meln, 
- Deine [Bm7]Herrlichkeit [A]sei [E]über [D]aller [A]Welt. 
+ Sei er[A]hoben, [D]o  [A]Gott, über den [B]Him[E]meln,
+ Deine [Bm7]Herrlichkeit [A]sei [E]über [D]aller [A]Welt.[E]
+ Sei er[A]hoben, [D]o  Gott, über den [B]Him[E]meln,
+ Deine [Bm7]Herrlichkeit [A]sei [E]über [D]aller [A]Welt.
  {eoc}
 
 
-Sei [A]erhoben, [D]o [A]Gott, über den [B]Him[E]meln,
+{comment: Ending:}
+Sei er[A]hoben, [D]o [A]Gott, über den [B]Him[E]meln,
 Deine [Bm7]Herrlich[E]keit, Deine [C#m7]Herrlich[F#m]keit,
-Deine [Bm7]Herrlichkeit sei [E]über [D]a[E]ller [A]Welt.
-{copyright: (c) 1977 Universal Music - Brentwood Benson Publishing (Verwaltet von SCM-Verlag GmbH & Co. KG)}
+Deine [Bm7]Herrlichkeit sei [E]über [D]aller [A]Welt.
+
+{copyright: (c) 1977 Universal Music - Brentwood Benson Publishing}
 {ccli: 5376016}

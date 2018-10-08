@@ -1,27 +1,28 @@
 {title: Make a way (A391)}
 {artist: Jason Ingram, Jon Egan}
+key: D
 
-1. God from [B]God, light from light
-We believe in [G#m]one Jesus Christ
-Breaking through the [F#]darkest nights to save
-You alone can[E]save[G#m] [F#]
+1. God from [D]God, light from light
+We believe in [Bm]one Jesus Christ
+Breaking through the [A]darkest nights to save
+You alone can[G]save[Bm] [A]
 
 
-2. Hope of [B]hope, strength of strength
-All our sin is [G#m]dead in the grave
-Only One has [F#]power enough to save
-You alone can[E]save[G#m], [F#]You alone can[E]save[G#m] [F#]
+2. Hope of [D]hope, strength of strength
+All our sin is [Bm]dead in the grave
+Only One has [A]power enough to save
+You alone can[G]save[Bm], [A]You alone can[G]save[Bm] [A]
 
 {soc}
-  [E]Where there is no way You make a [B]way 
- Where [G#m]no one else can reach us,[F#]You find us 
-  [E]Where there is no way You make a [B]way 
- Where [G#m]no one else can reach us,[F#]You find us 
+  [G]Where there is no way You make a [D]way 
+ Where [Bm]no one else can reach us,[A]You find us 
+  [G]Where there is no way You make a [D]way 
+ Where [Bm]no one else can reach us,[A]You find us 
  {eoc}
 
 
-{comment: Bridge}
-[B]Jesus, it’s always been You; [G#m]Jesus, it always is You
-[E]Jesus, it always will be [B]You[F#]
+{comment: Bridge:}
+[D]Jesus, it’s always been You; [Bm]Jesus, it always is You
+[G]Jesus, it always will be [D]You[A]
 {copyright: (c) 2014 Open Hands Music, So Essential Tunes, Integrity Worship Music}
 {ccli: 7028394}

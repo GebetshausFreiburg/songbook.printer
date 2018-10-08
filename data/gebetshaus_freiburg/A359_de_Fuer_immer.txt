@@ -1,27 +1,27 @@
-{title: Für immer (A359)}
-{artist: Chris Tomlin, Goddy Bühler, Daniel Jakobi}
+{title:Für immer (A359)}
+{subtitle:Chris Tomlin, dt. Daniel Jakobi, Goddy Bühler}
+{key:G}
 
-1. Wir [G]danken dir, Herr, denn du bist gut. Unendlich ist deine Liebe
-Denn [C]du bist der, der große Wunder tut. Unendlich ist deine [G]Liebe
+1. Wir [G]danken dir, Herr, denn du bist gut. Unendlich ist deine Liebe.
+[C]Denn du bist der, der große Wunder tut. Unendlich ist deine [G]Liebe.
+
+2. [G]Mit starker Hand hast du uns befreit. Unendlich ist deine Liebe.
+[C]Und ewiges Leben hältst du für uns bereit. Unendlich ist deine [G]Liebe.
+
+3. [G] Du bist Gott und du veränderst dich nicht. Unendlich ist deine Liebe.
+Und [C]deine Gnade lässt uns nie im Stich. Unendlich ist deine [G]Liebe.
 
 
-2. Mit [G]starker Hand hast du uns befreit. Unendlich ist deine Liebe
-Und [C]ewiges Leben hältst du für uns bereit. Unendlich ist deine [G]Liebe
-
-
-Prechorus:
+{comment: Pre-Chorus:}
 Wir [D]preisen [C2/E]dich, wir [D]preisen [C2/E]dich
 
 
 {soc}
- Für [G]immer bist du treu, Herr 
- Für [Em7]immer bist du stark 
- Für [D]immer gehst du mit uns 
- Un[C]endlich und ewig, für [G]immer 
+ Für [G]immer bist du treu, Herr
+ Für [Em7]immer bist du stark
+ Für [D]immer gehst du mit uns
+ Un[C]endlich und ewig, für [G]immer
  {eoc}
 
-
-3. [G]Du bist Gott und du veränderst dich nicht. Unendlich ist deine Liebe
-Und [C]deine Gnade lässt uns nie im Stich. Unendlich ist deine [G]Liebe
-{copyright: (c) 2001 sixsteps Music (Verwaltet von SCM-Verlag GmbH & Co. KG)}
+{copyright: (c) 2001 sixsteps Music, worshiptogether.com songs}
 {ccli: 5228205}

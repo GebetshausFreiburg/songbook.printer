@@ -1,31 +1,24 @@
 {title: Cornerstone (A352)}
-{artist: Hillsong}
+{arist: Edward Mote, Eric Liljero, Jonas Myrin, Reuben Morgan, William Batchelder Bradbury}
+key: [C]
 
-1. [C]My hope is built on nothing less [F]than Jesus' blood and [G]righteousness
-[Am]I dare not trust the [Am/G]sweetest frame [F]but wholly [G]trust in Jesus' [C]name
+1.[C]  My hope is built on nothing less [F]  than Jesus' blood and [G]righteousness
+[Am]  I dare not trust the [Am/G]sweetest frame [F]  but wholly [G]trust in Jesus' [C]name
 
 
 {soc}
- Christ a[F]lone, [Am]Corner[G]stone 
- Weak made [F]strong in the [Am]Savior's [G]love 
-  [C]Through the [F]storm [Am]He is [G]Lord 
- Lord of [C]all 
+ Christ a[F]lone, [Am]Corner[G]stone
+ [C/E]Weak made [F]strong in the [Am]Savior's [G]love
+ [C]Through the [F]storm [Am]He is [G]Lord, Lord of [C]all
  {eoc}
 
 
-
-2. [C]When darkness seems to hide His face [F]I rest on His un[G]changing grace
-[Am]In every high and [Am/G]stormy gale
-[F]My anchor [G]holds within the [C]veil
-[F]My anchor [G]holds within the [C]veil
+2.[C]  When darkness seems to hide His face [F]  I rest on His un[G]changing grace
+[Am]  In every high and [Am/G]stormy gale [F]  my anchor [G]holds within the [C]veil
+[F]  My anchor [G]holds within the [C]veil
 
 
-
-Instrumental
-C /// //// Am /// //// F /// G ///
-
-
-3. [C]When he shall come with trumpet sound [F]oh may I then in [G]Him be found
-[Am]Dressed in His righteous [Am/G]ness alone
-[F]Faultless [G]stand before the th[C]rone
-{copyright: (c) Hillsong}
+3. [C]  When he shall come with trumpet sound -[F]  oh may I then in [G]Him be found
+[Am]  Dressed in His righteous[Am/G]ness alone [F]faultless [G]stand before the th[C]rone
+{copyright: (c) 2011 Hillsong Music Publishing}
+{ccli: 6158927}

@@ -1,30 +1,31 @@
 {title: Have it all (A386)}
 {artist: Bobby Strand, Brian Johnson, Joel Taylor, Lindsey Strand, Mia Fieldes}
+key: D
 
 
 {soc}
- You can have it [Am/G]all,  L[G]ord 
- Ev'ry part of [Am/E]my [Em]world 
- Take this life and [C]breathe [Em]on 
- This [Am7]heart that is now [G]Yours 
+ You can have it [Em/D]all,    L[D]ord 
+ Ev'ry part of [Em/B]my [Bm]world 
+ Take this life and [G]breathe [Bm]on 
+ This [Em7]heart that is now [D]Yours 
  {eoc}
 
 
-1. [Em]Oh the [C]joy I've [G]found sur[Em]rendering [C]my [G]crowns
-At the [Am7]feet [G]of a [D]King who sur[Am7]rendered [G]ev'ryt[D]hing
+1. [Bm]Oh the [G]joy I've [D]found sur[Bm]rendering [G]my [D]crowns
+At the [Em7]feet [D]of a [A]King who sur[Em7]rendered [D]ev'ryt[A]hing
 
 
-2. [Em]Oh the [C]peace that [G]comes when I'm [Em]broken [C]and un[G]done
-By Your [Am7]un[G]failing [D]grace I can [Am7]lift my [G]voice and [D]say
+2. [Bm]Oh the [G]peace that [D]comes when I'm [Bm]broken [G]and un[D]done
+By Your [Em7]un[D]failing [A]grace I can [Em7]lift my [D]voice and [A]say
 
 
-Bridge:
-[C]O-o-o-[Em]oh, [G]o-o-o-[D]oh
+{comment: Bridge:}
+[G]O-o-o-[Bm]oh,   [D]o-o-o-[A]oh
 
 
-[C]There is no greater call [Em]than giving You my [D/F#]all
-[G]I lay it all down, [D]I lay it all down
-[C]There is no greater love, [Em]no higher name a[D/F#]bove
-[G]I lay it all down, [D]I lay it all down
+[G]There is no greater call [Bm]than giving You my [A/C#]all
+[D]I lay it all down, [A]I lay it all down
+[G]There is no greater love, [Bm]no higher name a[A/C#]bove
+[D]I lay it all down, [A]I lay it all down
 {copyright: (c) 2015 Be Essential Songs, Upside Down Under, Bethel Music Publishing}
 {ccli: 7054173}

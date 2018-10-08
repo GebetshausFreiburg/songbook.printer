@@ -1,5 +1,6 @@
 {title: Eyes of redemption (A373)}
 {artist: David Brymer}
+key: D
 
 1.[G]I'm falling in love with you all [C]over again
 'cause there is [Em7]no one who red[D]eems like [Am]you

@@ -1,28 +1,29 @@
-{title: In deinem Namen (A362)}
-{artist: Die Musik meiner Kirche}
+{title:In deinem Namen (A362)}
+{subtitle:Die Musik meiner Kirche}
+{key:Em}
 
-[D] [E] [F#m] [F#m]
-1. In deinem Namen liegt [D]Frieden - Jes[E]us, Je[F#m7]sus [F#m7/9]
-In deinem Namen liegt [D]Frieden - Jes[E]us, Je[F#m7]sus [F#m7/9]
-In deinem Namen liegt [D]Frieden - Jes[E]us, Jes[A]us
+1. In deinem Namen liegt [C]Frieden - Jes[D]us, Je[Em7]sus  [Em7/9]
+In deinem Namen liegt [C]Frieden - Jes[D]us, Je[Em7]sus  [Em7/9]
+In deinem Namen liegt [C]Frieden - Jes[D]us, Jes[G]us
+
 
 {soc}
-  [D]Du hast alles [E]neu gemacht 
- Von [F#m7]meinem Leben [F#m7/9]fällt die Last 
-  [D]Jede Schuld ver[E]liert die Kraft 
- Der [Dm]Weg ist frei, es [E]ist vollbracht 
+ [C]Du hast alles [D]neu gemacht
+ Von [Em7]meinem Leben [Em7/9]fällt die Last
+ [C]Jede Schuld ver[D]liert die Kraft
+ Der [Cm]Weg ist frei, es [D]ist vollbracht
  {eoc}
 
 
-2. In deinem Namen liegt [D]Leben - Jes[E]us, Je[F#m7]sus [F#m7/9]
-In deinem Namen liegt [D]Leben - Jes[E]us, Je[F#m7]sus [F#m7/9]
-In deinem Namen liegt [D]Leben - Jes[E]us, Jes[A]us
+2. In deinem Namen liegt [C]Leben - Jes[D]us, Je[Em7]sus  [Em7/9]
+In deinem Namen liegt [C]Leben - Jes[D]us, Je[Em7]sus  [Em7/9]
+In deinem Namen liegt [C]Leben - Jes[D]us, Jes[G]us
 
 
 3. In deinem Namen liegt Heilung...
 
 
-1. (moduliert) In deinem Namen liegt [E]Frieden - Jes[F#]us, Je[G#m7]sus [G#m7/9]
-In deinem Namen liegt [E]Frieden - Jes[F#]us, Je[G#m7]sus [G#m7/9]
-In deinem Namen liegt [E]Frieden - Jes[F#]us, Jes[B]us
-{copyright: (c) Year Owner}
+1. (moduliert) In deinem Namen liegt [D]Frieden - Je[E]sus, Je[F#m7]sus  [F#m7/9]
+In deinem Namen liegt [D]Frieden - Je[E]sus, Je[F#m7]sus  [F#m7/9]
+In deinem Namen liegt [D]Frieden - Je[E]sus, Jes[A]us
+

@@ -1,19 +1,23 @@
-{title: Du bist hoch erhoben (A357)}
-{artist: Rainer Harter}
+{title:Du bist hoch erhoben (A357)}
+{subtitle:Rainer Harter}
+{key:Am}
 
-1.[Am]Mit Sehnsucht im Herzen [C]und erhobenen Händen
+
+1. [Am]  Mit Sehnsucht im Herzen [C]  und erhobenen Händen
 [D]mach ich mich auf zu dir, ich komm in [E]deine Gegenwart
-[Am]Auch wenn der Sturm weht, [C]und mir entgegen steht
+[Am]  Auch wenn der Sturm weht, [C]  und mir entgegen steht
 [D]nichts hält mich zurück, ich komm in [E]deine Gegenwart
 
+
 {soc}
- Du bist [Am]hoch erhoben über [Em]alles in der Welt 
- Und [Am]bei dir hier oben seh' [Em]ich was wirklich zählt 
- Du bist [Am]hoch erhoben über [Em]alles in der Welt 
- Ich will mich [D]beugen, Gott vor dir, denn du reg[E]ierst 
+ Du bist [Am]hoch erhoben über [Em]alles in der Welt
+ Und [Am]bei dir hier oben seh' [Em]ich was wirklich zählt
+ Du bist [Am]hoch erhoben über [Em]alles in der Welt
+ Ich will mich [D]beugen, Gott vor dir, denn du re[E]gierst
  {eoc}
 
-
-Bridge:
+{comment: Bridge:} 
 [Am]Heilig, heilig, heilig, [C]hei[D]lig
-{copyright: (c) Rainer Harter, Gebetshaus Freiburg}
+
+{copyright:(c) Rainer Harter, Gebetshaus Freiburg}
+

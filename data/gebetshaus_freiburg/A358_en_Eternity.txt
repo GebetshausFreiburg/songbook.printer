@@ -1,15 +1,15 @@
-{title: Eternity (A358)}
-{artist: Misty Edwards}
+{title:Eternity (A358)}
+{subtitle:Misty Edwards}
+{key:Am}
 
+[Am]Holy, [G]Holy
 
 {soc}
-  [Am]Holy, [G]Holy 
-  [Am]Eternity’s eternal [G]song is drawing me and calling me a[Am]way (x2) 
- It’s calling me aw[G]ay 
+ [Am]  Eternity’s eternal [G]song is drawing me and calling me a[Am]way (x2)
+ It’s calling me aw[G]ay
  {eoc}
 
-
-1.[Am]All flesh is [F]grass, fading a[C]way, only You [G]last, only You re[Am]main (x2)
+1.[Am]  All flesh is [F]grass, fading a[C]way, only You [G]last, only You re[Am]main (x2)
 The same, You [F]never change
 [C]Holy, holy holy, You are [G]fairer than the sons of [Am]man
 
@@ -21,7 +21,7 @@ a [C]fragrance, but a vapor, at [G]best it’s but a vapor
 but You, oh God, are better than a thousand blooms
 
 
-Bridge:
-[Am]Hallelu[F]jah, Amen! [C]Hallelu[G]jah, Amen!
-{copyright: (c) 2003 Forerunner Worship (Admin. by Small Stone Media Germany GmbH)}
+{comment: Bridge:}
+[Am]  Hallelu[F]jah, Amen! [C]  Hallelu[G]jah, Amen!
+{copyright: (c) 2003 Forerunner Worship}
 {ccli: 4332752}

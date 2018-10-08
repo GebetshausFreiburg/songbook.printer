@@ -1,5 +1,6 @@
 {title: Here's my heart (A380)}
 {artist: Chris Tomlin, Jason Ingram, Louie Giglio}
+key: G
 
 
 {soc}

@@ -1,25 +1,26 @@
 {title: Since your love (A393)}
 {artist: Will Reagan, Andrea Marie Reagan, Brock Human, Brandon Hampton, Michael Ketterer}
-
-1.[E]You are the light, [B]the song of my life
-[A2]You always [F#m7]lead me, [A2]You are the [F#m7]voice inside
-[E]You are my love, [B]no one before You
-[A2]All that I [F#m7]am [A2]points to [F#m7]You
-
+key: E
+ 
+1.[E]  You are the light, [B]  the song of my life 
+[A2]  You always [F#m7]lead me, [A2]You are the [F#m7]voice inside 
+[E]  You are my love, [B]  no one before You 
+[A2]  All that I [F#m7]am [A2]points to [F#m7]You 
+ 
 {soc}
  I was [E]made by You, I was [Bsus4]made for You 
- I am [A2]unfulfilled [C#m7]without full com[Bsus4]munion 
+ I am [A2]unfulfilled [C#m7]  without full com[Bsus4]munion 
  {eoc}
-
-
-{comment: Bridge:}
-[E]Since Your love got a hold of me
-[F#m7]Since Your love got a hold of me
-[A2]I'm a new cre[F#m7]ation, [A2]I'm forever [F#m7]changed
-
-
-{comment: Ending:}
-[E]In You is all I n[A]eed
-You're my [B]breath, You're my [A/C#]life, You're my [B/D#]ev'rything
-{copyright: (c) Capitol CMG Genesis, United Pursuit Music}
-{ccli: 7047290}
+ 
+ 
+{comment: Bridge:} 
+[E]Since Your love got a hold of me 
+[F#m7]Since Your love got a hold of me 
+[A2]  I'm a new cre[F#m7]ation, [A2]  I'm forever [F#m7]changed 
+ 
+ 
+{comment: Ending:} 
+[E]  In You is all I n[A]eed 
+You're my [B]breath, You're my [A/C#]life, You're my [B/D#]ev'rything 
+{copyright: (c) Capitol CMG Genesis, United Pursuit Music} 
+{ccli: 7047290} 

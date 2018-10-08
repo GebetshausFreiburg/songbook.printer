@@ -1,9 +1,10 @@
 {title: Whom have I but you (A364)}
 {artist: David Ruis}
+key: G
 
 
 {soc}
-  [Em]Whom have [D/F#]I   but [G]You (2x) 
+  [Em]  Whom have [D/F#]I   but [G]You (2x) 
  {eoc}
 
 
