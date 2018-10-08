@@ -1,5 +1,6 @@
 {title: Only Jesus (A376)}
 {artist: Brian Johnson, Hank Bentley, Jason Ingram, Joel Taylor}
+key: G
 
 1. You’re my [C]constant in the [D]cha[Em]os
 You’re my [C]compass when the [D]road is [Em]long
@@ -8,10 +9,10 @@ For [C]me only [D]Jes[G]us
 
 
 {soc}
-  [Em]Let my heart [C]want for nothing [G]but You [D]just You 
-  [Em]Let my heart [C]want for nothing [G]but You [D]just You 
-  [Em]The riches [C]of this world [G]could never [D]satisfy 
-  [Em]Let my heart [C]want for only [G]You 
+  [Em]  Let my heart [C]want for nothing [G]but You [D]just You 
+  [Em]  Let my heart [C]want for nothing [G]but You [D]just You 
+  [Em]  The riches [C]of this world [G]could never [D]satisfy 
+  [Em]  Let my heart [C]want for only [G]You 
  {eoc}
 
 

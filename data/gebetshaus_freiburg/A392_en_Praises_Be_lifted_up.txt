@@ -1,5 +1,6 @@
 {title: Praises (Be lifted up) (A392)}
 {artist: Josh Baldwin}
+key: G
 
 1. I sing [C]praises to Your [G]name, [C]praises to Your [G]name
 The [C]name that’s so much [Em]higher than all [D]names

@@ -1,32 +1,33 @@
 {title: Jesus, Erlöser der Welt (A377)}
 {artist: Albert Frey}
+key: C
 
-1. Was für ein [G]Mensch[D],  dem Wind und [A]Wellen ge[Bm]horchen.
-Was für ein [G]Mensch[D],  der auf dem [A]Wasser [Bm]geht.
-Was für ein [G]Mensch[D],  der Wasser [A]in Wein ver[Bm]wandelt, [A]Brot und Fisch [D/F#]verm[G]ehrt.
-Was für ein [G]Mensch,[D]der die Ge[A]fangenen [Bm]frei macht.
-Was für ein [G]Mensch[D], der selbst den [A]Tod bez[Bm]wingt.
-Was für ein [G]Mensch,[D]der allen [A]Armen und Sch[Bm]wachen [A]frohe Botsc[D/F#]haft [G]bringt.
+1. Was für ein [F]Mensch[C],  dem Wind und [G]Wellen ge[Am]horchen.
+Was für ein [F]Mensch[C],  der auf dem [G]Wasser [Am]geht.
+Was für ein [F]Mensch[C],  der Wasser [G]in Wein ver[Am]wandelt, [G]Brot und Fisch [C/E]verm[F]ehrt.
+Was für ein [F]Mensch,[C]der die Ge[G]fangenen [Am]frei macht.
+Was für ein [F]Mensch[C], der selbst den [G]Tod bez[Am]wingt.
+Was für ein [F]Mensch,[C]der allen [G]Armen und Sch[Am]wachen [G]frohe Botsc[C/E]haft [F]bringt.
 
 
 {soc}
-  [A]Je-[Bm]sus, Er[G]löser der [D]Welt. 
- Du bist [A]Chris[Bm]tus, der [G]Fels der uns [D]hält. 
- Gott ist [A]mit [Bm]uns, er [G]selbst kommt zur [D]Welt, 
- das [C]Licht, das die [G/B]Nacht er[A]hellt. 
+  [G]Je-[Am]sus, Er[F]löser der [C]Welt. 
+ Du bist [G]Chris[Am]tus, der [F]Fels der uns [C]hält. 
+ Gott ist [G]mit [Am]uns, er [F]selbst kommt zur [C]Welt, 
+ das [Bb]Licht, das die [F/A]Nacht er[G]hellt. 
  {eoc}
 
 
-2. Was für ein [G]Gott[D],  der zu uns [A]kommt, um zu [Bm]dienen.
-Was für ein [G]Gott[D],  der klein wird [A]wie ein [Bm]Kind.
-Was für ein [G]Gott[D],  der alle [A]Schuld dieser [Bm]Erde [A]für uns auf [D/F#]sich [G]nimmt.
-Was für ein [G]Gott[D],  der mit uns [A]sein neues [Bm]Reich baut.
-Was für ein [G]Gott[D],  der uns das [A]Erbe [Bm]gibt.
-Was für ein [G]Gott[D],  der uns als [A]Söhne und [Bm]Töchter [A]unbeschreib[D/F#]lich [G]liebt.
+2. Was für ein [F]Gott[C],  der zu uns [G]kommt, um zu [Am]dienen.
+Was für ein [F]Gott[C],  der klein wird [G]wie ein [Am]Kind.
+Was für ein [F]Gott[C],  der alle [G]Schuld dieser [Am]Erde [G]für uns auf [C/E]sich [F]nimmt.
+Was für ein [F]Gott[C],  der mit uns [G]sein neues [Am]Reich baut.
+Was für ein [F]Gott[C],  der uns das [G]Erbe [Am]gibt.
+Was für ein [F]Gott[C],  der uns als [G]Söhne und [Am]Töchter [G]unbeschreib[C/E]lich [F]liebt.
 
 
 Ending:
-Was für ein [G]Mensch[D], [A]Je-[Bm]sus.
-Was für ein [G]Gott[D], [A]Je-[Bm]sus.
+Was für ein [F]Mensch[C], [G]Je-[Am]sus.
+Was für ein [F]Gott[C], [G]Je-[Am]sus.
 {copyright: (c) 2004 FREYKLANG}
 {ccli: 4683243}

@@ -1,5 +1,6 @@
 {title: Jesus' Blood (A372)}
 {artist: Martin Smith}
+key: Em
 
 1.[Em]There's a [D/F#]secret I must [G]tell
 [Em]Of [D/F#]all the love I've [G]found

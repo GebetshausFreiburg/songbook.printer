@@ -1,5 +1,6 @@
 {title: Du großer Gott (A388)}
 {artist: Carl Boberg, Günter Balders, Manfred von Glehn}
+key: A
 
 1. Du grosser [A]Gott, wenn ich die Welt be[D]trachte
 Die Du ge[A]schaffen [E]durch Dein Allmachts[A]wort

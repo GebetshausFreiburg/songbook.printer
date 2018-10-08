@@ -1,9 +1,10 @@
 {title: Ich weiss, dass mein Erlöser lebt (A378)}
 {artist: Lothar Kosse}
+key: C#m
 
-1. [C#m]Komm, [A]komm[E]du [B]Sohn des [C#m]Höchst[A]en![E] [B]
+1. [C#m]Komm, [A]komm[E]  du [B]Sohn des [C#m]Höchst[A]en![E] [B]
 [C#m]Komm her[A]ab, zerr[E]eiß die [B]Finster[C#m]nis![B/D#] [A] [B]
-[C#m]Komm, [A]komm[E]du [B]Herr des [C#m]Himm[A]els![E] [B]
+[C#m]Komm, [A]komm[E]  du [B]Herr des [C#m]Himm[A]els![E] [B]
 [C#m]Komm, mein [A]treuer Fr[E]eund, verl[B]ass mich [C#m]nicht![B/D#] [E] [F#]
 
 {soc}

@@ -1,33 +1,35 @@
-{title: Deliver me (A361)}
-{artist: David Crowder}
+{title:Deliver me (A361)}
+{subtitle:David Crowder}
+{key:Am}
 
-1.[Am]Deliver me [G]out of the [F]sadness[C] [G]
-[Am]Deliver me [G]from all the [F]madness[C] [G]
-[Am]Deliver me [G]courage to [F]guide me[C] [G]
-[Am]Deliver me [G]Your strength in[F]side me[C] [G]
+1.[Am]  Deliver me [G] out of the [F]sadness[C]  [G]
+[Am]  Deliver me [G] from all the [F]madness[C]  [G]
+[Am]  Deliver me [G] courage to [F]guide me[C]  [G]
+[Am]  Deliver me [G] Your strength in[F]side me[C]  [G]
 
 {soc}
-  [Am]All of my [C]life  I've been in [G]hiding 
-  [Dm]Wishing there was someone just like[Am]you 
- Now that You're [C]here,  now that I've [G]found you 
- I [Dm]know that You're the one to pull me[Am]through 
- {eoc}
+ [Am]   All of my [C]life  I've been in [G]hiding
+ [Dm]Wishing there was someone just like[Am] you
+ Now that You're [C]here,  now that I've [G]found you
+ I [Dm]know that You're the one to pull me[Am] through
+ {end_of_chorus}
+
+2. [Am]  Deliver me [G] loving and [F]caring[C]  [G]
+[Am]  Deliver me [G] giving and [F]sharing[C]  [G]
+[Am]  Deliver me [G] this cross that I'm [F]bearing[C]  [G]
 
 
-2. [Am]Deliver me [G]loving and [F]caring[C] [G]
-[Am]Deliver me [G]giving and [F]sharing[C] [G]
-[Am]Deliver me [G]this cross that I'm [F]bearing[C] [G]
+{comment: Bridge:}
+[Am]   [G]  Oh, de[F]liver [C]me[G]
+Oh, de[Am]liver me. [G]  Oh, de[F]liver me[C]  [G]
+Oh, de[Am]liver me. [G] Oh, de[F]liver me[C]  [G]
 
 
-Bridge:
-[Am] [G]Oh, de[F]liver [C]me[G]
-Oh, de[Am]liver me. [G]Oh, de[F]liver me[C] [G]
-Oh, de[Am]liver me. [G]Oh, de[F]liver me[C] [G]
-
-
-Outro:
+{comment: Outro:}
 [Am]Jesus, Jesus [G]how I trust You [Dm]How I've proved You [C]o'er and [G]o'er
-[Am]Jesus, Jesus [G]precious Jesus[F] [C] [G]
-De[Am]liver me [G] [F] [C]
+[Am]Jesus, Jesus [G]precious Jesus[F]   [C]  [G]
+De[Am]liver me [G]    [F]    [C]
 Come and [G]pull me [Am]through, come pull me through
-{copyright: (c) Year Owner}
+
+
+

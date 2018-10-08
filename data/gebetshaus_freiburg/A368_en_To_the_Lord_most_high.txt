@@ -1,5 +1,6 @@
 {title: To the Lord most high (A368)}
 {artist: Bruce Ellis}
+key: E
 
 To the [E]Lord most high, who sits on the [C#m7]throne of grace
 We come to [Amaj7]worship you, seeking your [Bsus]face. [B]

@@ -1,7 +1,9 @@
 {title: All the poor and powerless (A354)}
 {artist: David Leonard, Leslie Jordan}
+Key: A
 
-[F#m] [D] [A]
+{comment: Intro: }
+[F#m]     [D]    [A]
 
 1. [F#m]All the [E]poor and [A]power[D]less
 And [Bm]all the [F#m]lost and [E]lone[D]ly
@@ -9,8 +11,9 @@ And [Bm]all the [F#m]lost and [E]lone[D]ly
 And [Bm]know that [F#m]you are [E]ho[D]ly
 Will [Bm]know that [F#m]you are [E]ho[A]ly
 
+
 {soc}
-  [F#m]All will [D]sing out, [A]Hallelujah; [F#m]we will [D]cry out, [A]Hallelujah 
+ [F#m]All will [D]sing out, [A]Hallelujah; [F#m]we will [D]cry out, [A]Hallelujah
  {eoc}
 
 
@@ -20,12 +23,13 @@ And [Bm]all who [F#m]feel unw[E]orth[D]y
 Will [Bm]know that [F#m]you are [E]hol[A]y
 
 
-Bridge:
+{comment: Bridge:}
 [A]Shout it, go on and scream it from the [E]mountains
 Go on and tell it to the [F#m]masses that He is [D]God
 
 
-Reprise:
+{comment: Reprise:}
 [A]We will sing out, Hallelujah; [E]we will cry out, Hallelujah
-{copyright: (c) 2011 Integrity's Alleluia! MusicIntegrity's Praise! Music}
+[F#m]We will sing out, Hallelujah [D]God
+{copyright: (c) 2011 Integrity's Alleluia! Music, Integrity's Praise! Music}
 {ccli: 5881130}

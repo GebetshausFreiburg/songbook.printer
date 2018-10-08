@@ -1,5 +1,6 @@
 {title: Have mercy (A371)}
 {artist: Russ Hughes}
+key: E
 
 1.[E]None is good, [B]no one righteous
 [C#m]Every[B]one of us has [A]sinned

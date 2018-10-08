@@ -2,16 +2,16 @@
 {artist: Rainer Harter}
 {capo: 3}
 
-1. [Bb]Lass die Worte die ich sage ein Wohlklang sein vor dir,
-die [Gm]Bewegung meines Herzens ein Wohlklang sein vor dir,
-lass [Eb]das Leben das ich lebe ein Wohlklang sein vor dir,
-nichts will [Bb]ich mehr, hier bin ich Herr.
+1. Lass die [Bb]Worte die ich sage ein Wohlklang sein vor dir,
+die Be[Gm]wegung meines Herzens ein Wohlklang sein vor dir,
+lass das [Eb]Leben das ich lebe ein Wohlklang sein vor dir,
+nichts will ich [Bb]mehr, hier bin ich Herr.
 
-2. [Bb]Ich richte meinen Blick auf dich und ich schau dich an,
-denn [Gm]der einz'ge Ort der Veränderung
-ist vor dem Löwen und
-dem Lamm.
-
+{soc}
+Ich [Bb]richte meinen Blick auf dich und ich schau dich an,
+denn [Gm]der einz'ge Ort der Veränderung ist vor dem Löwen und dem Lamm.
 Nichts will [Eb]ich mehr, nichts [Bb]will ich mehr.
+{eoc}
+
 {copyright: (c) Rainer Harter (Gebetshaus Freiburg) und Gebetshaus Augsburg}
 {ccli: 0}

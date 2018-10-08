@@ -1,5 +1,6 @@
 {title: Wir lieben deinen Namen (A374)}
 {artist: Sebastian und Veronika Lohmer}
+key: G
 
 1.[C]Wunder gesc[G/B]hehen wenn du sp[Am]richst, [G/B]
 [C]alles ist [G/B]möglich, wenn du [Am]hier bist. [G/B]

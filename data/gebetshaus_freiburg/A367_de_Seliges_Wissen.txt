@@ -1,7 +1,8 @@
 {title: Seliges Wissen (A367)}
 {artist: Fanny Crosby, dt. Marg. v. Brasch}
+key: G
 
-1. Seliges [G]Wissen: [C]Jesus ist [G]mein
+1. Seliges [G]Wissen]Jesus ist [G]mein
 Füllt mir das [G]Herz [D/A]mit [A7]himmlischem [D]Schein
 Wiederge[G]boren, [C]frei von der [G]Sünd
 unseres [Am]Gottes [D]herrliches [G]Kind

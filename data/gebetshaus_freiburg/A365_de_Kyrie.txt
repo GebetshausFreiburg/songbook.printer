@@ -1,0 +1,17 @@
+{title: Kyrie (A365)}
+{artist: Rainer Harter}
+key: G
+
+[Am] Herr Jesus [C]Christus [Em]
+Sohn [D]Gottes [Am]
+Erbarme [C]dich [G]mei[D]ner
+
+[G]Kyrie E[D]leison [Am] [C]
+[G]Christe E[D]leison [Am] [C]
+
+Er[Em]barme dich, erbarme dich
+Er[D]barme dich, erbarme dich
+[Am]über mich [C]
+
+
+{copyright:(c) Rainer Harter, Gebetshaus Freiburg}

@@ -1,5 +1,6 @@
 {title: Your love reaches me (A370)}
 {artist: Darren Clarke}
+key: D
 
 1. [A7]You are the [G2/B]fountain of my [G]life [D] [A7sus4]
 [A7]and in Your [G2/B]light I find my [G]reason [D] [A7sus4]

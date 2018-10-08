@@ -1,10 +1,11 @@
 {title: One thing remains (A363)}
 {artist: Brian Johnson, Christa Black Gifford, Jeremy Riddle}
+key: G
 
 1. [C]Higher than the [G]mountains that I [D]face
 [C]Stronger than the [G]power of the [D]grave
 [C]Constant in the [G]trial and the [D]change
-One [C]thing[G]rem[D]ains (repeat)
+One [C]thing[G]  rem[D]ains (repeat)
 
 {soc}
  Your [Em]love never fails, it [C]never gives up 
