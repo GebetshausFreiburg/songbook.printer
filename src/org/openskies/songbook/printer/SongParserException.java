@@ -5,6 +5,8 @@ package org.openskies.songbook.printer;
  */
 public class SongParserException extends Exception {
 	
+	private static final long serialVersionUID = -3765438413766742038L;
+
 	/**
 	 * Instantiates a new song parser exception.
 	 */

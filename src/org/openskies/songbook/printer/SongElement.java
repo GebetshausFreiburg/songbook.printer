@@ -148,6 +148,10 @@ public class SongElement implements IRenderer {
 	@Override
 	public String render() {
 		
+		/*if (this.type==SongElementType.WHITESPACE) {
+			return "&nbsp;";
+		}*/
+		
 		if (this.type==SongElementType.CHORDPRO) {
 			ChordproElement e = (ChordproElement)this;
 			if (e.getSubtype()==ChordproSubtype.SOC) {
