@@ -1,5 +1,7 @@
 package org.openskies.songbook.printer;
 
+import java.awt.Font;
+
 /**
  * The Class ChordElement.
  */
@@ -57,12 +59,48 @@ public class ChordElement extends SongElement {
 		SongElement afterElement = this.getSong().getElementAfter(this);
 		
 		boolean whitespaceflag = false;
+		boolean chordflag = false;
 		if (afterElement!=null) {
+			
 			if (afterElement.getType()==SongElementType.WHITESPACE) {
 				whitespaceflag = true;
 			}
-			/*if (afterElement.getType()==SongElementType.WORD) {
+			
+			if (afterElement.getType()==SongElementType.CHORD) {
+				chordflag = true;
+			}
+			
+			if (whitespaceflag||chordflag) {
+				afterElement.setEnabled(false);
+				return "<span class=\"chord-block\" chord=\""+this.getContent()+" \">&nbsp;&nbsp;</span>";
+			}
+			
+			if (afterElement.getType()==SongElementType.WORD) {
 				int lengthWord = afterElement.getContent().length();
+				int lengthChord = this.getContent().length();
+				
+				Font arial = new Font("Arial", Font.PLAIN, 12);
+				
+				int afterWordWidth = Utils.calculateWidth(afterElement.getContent(), arial);
+				int chordWidth = Utils.calculateWidth(this.getContent(), arial);
+				
+				if ((chordWidth)>=afterWordWidth) {
+					double diff = chordWidth - afterWordWidth;
+					double whitespaceWidth = Utils.calculateWidth(" ", arial);
+						
+					int val = (int)Math.ceil(diff / whitespaceWidth)+1;
+					String space = Utils.spaceBuilder(val, "&nbsp;");
+					
+					afterElement.setEnabled(false);
+					return "<span class=\"chord-space\" chord=\""+this.getContent()+"\">"+afterElement.getContent()+space+"</span>";
+				} else {
+					afterElement.setEnabled(false);
+					return "<span class=\"chord\" chord=\""+this.getContent()+"\">"+afterElement.getContent()+"</span>";			
+				}
+				
+			}
+				
+				/*int lengthWord = afterElement.getContent().length();
 				int lengthChord = this.getContent().length();
 				if (lengthChord>=lengthWord) {
 					int indexChord = this.getSong().getElements().indexOf(this);
@@ -81,12 +119,13 @@ public class ChordElement extends SongElement {
 			}*/
 		}
 		
-		if (whitespaceflag) {
-			return "<span class=\"chord\"><span class=\"innerwithspace\">"+this.getContent()+"</span></span>";
-		} else {
-			return "<span class=\"chord\"><span class=\"inner\">"+this.getContent()+"</span></span>";		
-		}
+//		if (whitespaceflag) {
+//			return "<span class=\"chord\"><span class=\"innerwithspace\">"+this.getContent()+"</span></span>";
+//		} else {
+//			return "<span class=\"chord\"><span class=\"inner\">"+this.getContent()+"</span></span>";		
+//		}
 		
+		return "";
 	}
 
 }

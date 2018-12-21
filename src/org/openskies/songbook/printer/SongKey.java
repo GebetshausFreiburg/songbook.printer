@@ -51,6 +51,14 @@ public enum SongKey {
 	/** The kadenz 7. */
 	private final String[] kadenz7;
 	
+	public String[] getKeyMinor() {
+		return keyMinor;
+	}
+
+	public String[] getKeyMajor() {
+		return keyMajor;
+	}
+
 	/**
 	 * Contains chords.
 	 *

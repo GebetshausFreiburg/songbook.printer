@@ -1,5 +1,8 @@
 package org.openskies.songbook.printer;
 
+import java.awt.Font;
+import java.awt.font.FontRenderContext;
+import java.awt.geom.AffineTransform;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -65,6 +68,26 @@ public class Utils {
 		return null;
 	}
 
+	public static String spaceBuilder(int count, String spacer) {
+		
+		if (count <= 0) {
+			return "";
+		}
+		
+		String s = "";
+		for (int i = 0; i < count; i++) {
+			s += spacer;
+		}
+		return s;
+	}
+	
+	public static int calculateWidth(String text, Font font) {
+		AffineTransform affinetransform = new AffineTransform();     
+		FontRenderContext frc = new FontRenderContext(affinetransform,true,true);     
+		int textwidth = (int)(font.getStringBounds(text, frc).getWidth());
+		return textwidth;
+	}
+	
 	/**
 	 * Charset.
 	 *

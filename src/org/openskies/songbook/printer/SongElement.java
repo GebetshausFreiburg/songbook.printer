@@ -17,22 +17,24 @@ package org.openskies.songbook.printer;
  *
  */
 public class SongElement implements IRenderer {
-	
+
 	/** The type of a song. Could be WHITESPACE, LINEBREAK, CHORD or CHORDPRO */
 	private SongElementType type;
-	
-	/**  The line-position of the element in the song. */
+
+	/** The line-position of the element in the song. */
 	private int line;
-	
-	/**  The column-position of the element in the song. */
+
+	/** The column-position of the element in the song. */
 	private int column;
-	
-	/**  The content of the element. */
+
+	/** The content of the element. */
 	private String content;
 
 	/** The song. */
 	private Song song;
-	
+
+	private boolean enabled = true;
+
 	/**
 	 * Gets the song.
 	 *
@@ -41,7 +43,7 @@ public class SongElement implements IRenderer {
 	public Song getSong() {
 		return song;
 	}
-	
+
 	/**
 	 * Sets the song.
 	 *
@@ -54,9 +56,9 @@ public class SongElement implements IRenderer {
 	/**
 	 * Instantiates a new song element.
 	 *
-	 * @param type the type
-	 * @param line the line
-	 * @param column the column
+	 * @param type    the type
+	 * @param line    the line
+	 * @param column  the column
 	 * @param content the content
 	 */
 	public SongElement(SongElementType type, int line, int column, String content) {
@@ -64,7 +66,7 @@ public class SongElement implements IRenderer {
 		this.line = line;
 		this.column = column;
 		this.setContent(content);
-		
+
 	}
 
 	/**
@@ -102,7 +104,7 @@ public class SongElement implements IRenderer {
 	public int getColumn() {
 		return column;
 	}
-	
+
 	/**
 	 * Gets the content of the element.
 	 *
@@ -110,6 +112,14 @@ public class SongElement implements IRenderer {
 	 */
 	public String getContent() {
 		return content;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
 	/**
@@ -121,7 +131,9 @@ public class SongElement implements IRenderer {
 		this.content = content;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -129,7 +141,7 @@ public class SongElement implements IRenderer {
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append(this.getClass().getSimpleName()+" [type=" + type + ", line=" + line + ", column=" + column);
+		sb.append(this.getClass().getSimpleName() + " [type=" + type + ", line=" + line + ", column=" + column);
 
 		if (content != null) {
 			if (!content.trim().equals("")) {
@@ -142,27 +154,37 @@ public class SongElement implements IRenderer {
 		return sb.toString();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.openskies.songbook.printer.IRenderer#render()
 	 */
 	@Override
 	public String render() {
-		
-		/*if (this.type==SongElementType.WHITESPACE) {
-			return "&nbsp;";
-		}*/
-		
-		if (this.type==SongElementType.CHORDPRO) {
-			ChordproElement e = (ChordproElement)this;
-			if (e.getSubtype()==ChordproSubtype.SOC) {
-				return "<div class=\"chorus\"><div class=\"chorus-text\">";
+
+		/*
+		 * if (this.type==SongElementType.WHITESPACE) { return "&nbsp;"; }
+		 */
+
+		if (this.isEnabled()) {
+
+			if (this.type == SongElementType.CHORDPRO) {
+				ChordproElement e = (ChordproElement) this;
+				if (e.getSubtype() == ChordproSubtype.SOC) {
+					return "<div class=\"chorus\"><div class=\"chorus-text\">";
+				}
+				if (e.getSubtype() == ChordproSubtype.EOC) {
+					return "</div></div>";
+				}
 			}
-			if (e.getSubtype()==ChordproSubtype.EOC) {
-				return "</div></div>";
-			}
+
+			return this.getContent();
+
+		} else {
+
+			return "";
+
 		}
-		
-		return this.getContent();
 	}
 
 }
