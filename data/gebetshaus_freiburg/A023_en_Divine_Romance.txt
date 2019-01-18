@@ -1,5 +1,6 @@
 {title: Divine Romance (A023)}
 {artist: Phil Wickham}
+key: G
 
 1. The f[C]ullness [Em]of Your gr[C]ace is h[G]ere with m[D]e
 The r[C]ichness [Em]of Your be[C]auty's [G]all I [D]see

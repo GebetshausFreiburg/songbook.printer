@@ -1,26 +1,26 @@
 {title: Zu deinem Thron (A010)}
 {artist: Outbreakband}
 
-1.[A]Weder ein Hoch noch Tief
-[F#m]Leben noch Tod hält mich von [E]Dir
+1.[A]  Weder ein Hoch noch Tief
+[F#m]  Leben noch Tod hält mich von [E]Dir
 und dem, was ich nur h[D]ier in Deiner Nähe [A]finde, Herr
 
 
-2. [A]Weder die Liebe der Welt
-[F#m]noch Raum oder Zeit, die mich hält
+2. [A]  Weder die Liebe der Welt
+[F#m]  noch Raum oder Zeit, die mich hält
 Ja, n[E]ichts auf der Welt könnte m[D]ich jemals von Dir tr[A]ennen, Herr
 
 
-[F#m]Für alle Zeit l[E]iebst Du, die Sünden ver[D]gibst Du
+[F#m]  Für alle Zeit l[E]iebst Du, die Sünden ver[D]gibst Du
 Wir geben [A]uns in D[E]eine [F#m]Hand
-[F#m]Du bist voller Gn[E]ade und schenkst uns die Fr[D]eiheit
+Du bist voller Gn[E]ade und schenkst uns die Fr[D]eiheit
 Wir leben [F#m]nur durch [E]Dich
 
 {soc}
-  [A]Wir laufen zu Dir zu Deinem Thron 
-  [E]und singen ver[D]eint: Nur Du bist der Herr 
-  [A]Alles legen wir ab für die Freude an Dir 
-  [E]komm fülle uns [D]neu mit Deinem Feuer, o H[A]err [D] 
+  [A]  Wir laufen zu Dir zu Deinem Thron 
+  [E]  und singen ver[D]eint: Nur Du bist der Herr 
+  [A]  Alles legen wir ab für die Freude an Dir 
+  [E]  komm fülle uns [D]neu mit Deinem Feuer, o H[A]err [D] 
  {eoc}
 
 {copyright: 2008 Hillsong Music Publishing}

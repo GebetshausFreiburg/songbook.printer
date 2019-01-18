@@ -2,21 +2,21 @@
 {artist: Stuart Dauermann, Gitta Leuschner}
 {capo: 5}
 
-1. [Dm]Groß und w[G]underbar [Dm]sind all' D[G]eine Werke,
-[Dm]o Herr   G[C7]ott, allm[F]ächt'ger Sc[A7]höpfer.
-[Dm]Gerecht und [G]wahr sind [Dm]alle [G]Deine Wege,
+1.[Dm]  Groß und w[G]underbar [Dm]  sind all' D[G]eine Werke,
+[Dm]O Herr [C7]Gott, allm[F]ächt'ger Sc[A7]höpfer.
+[Dm]  Gerecht und [G]wahr sind [Dm] alle [G]Deine Wege,
 [Bb/D]König der [Am7]Völker bist [Dm]Du. [D7]
 
 {soc}
-  [Gm]Wer sollte [Dm]Dich nicht fürchten 
+  [Gm]Wer sollte [Dm]  Dich nicht fürchten 
  und [Gm]Deinen Namen [Dm]preisen? 
-  [Gm]Du allein [Dm]Herr, bist heilig, [Gm]Du nur al[A]lein.[Dm] [A] 
+  [Gm]Du allein [Dm] Herr, bist heilig, [Gm]Du nur al[A]lein.[Dm] [A] 
  {eoc}
 
 
-2. [Dm]Alle V[G]ölker werden [Dm]Dich anb[G]eten, Herr,
+2. [Dm]  Alle V[G]ölker werden [Dm]  Dich anb[G]eten, Herr,
 [Dm]denn Deine H[C7]errlichkeit wird [F]offenb[A7]art sein.
-[Dm]Halle[G]luja! [Dm]Halle[G]luja! [Bb/D]Halle-[Am7]luja!     Am[Dm]en.
+[Dm]  Halle[G]luja! [Dm]  Halle[G]luja! [Bb/D]Halle-[Am7]luja! Am[Dm]en.
 
 
 La la la [A]la la la la la [Dm]la la la la la la [C7]la la la la la

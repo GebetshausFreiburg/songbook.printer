@@ -1,27 +1,27 @@
 {title: Wir erheben uns im Glauben (A024)}
 {artist: Martin Pepper}
-{capo: 5}
+key: Bm
 
-1. Wir er[Dm]heben [C/D]uns im Gl[Dm]auben, wachen aus dem Schl[C/D]afe [Dm]auf,
-denn wir hören s[C/D]eine St[Dm]imme, und die [Gm7]Sonne g[Am7]eht schon [Dm]auf.
-Es ist [Dm]Zeit, den H[C/D]errn zu s[Dm]uchen, unsre Herzen w[C/D]erden w[Dm]arm,
-denn der Tag ist sch[C/D]on ganz n[Dm]ahe, und so [Gm7]viele   s[Am7]ind noch [Dm]arm,
-und so [Gm7]viele   s[Am7]ind noch [Dm]arm. [A7]
+1. Wir er[Bm]heben [A/B]uns im Glau[Bm]ben, wachen aus dem Sch[A/B]lafe [Bm]auf,
+denn wir hören [A/B]seine Stim[Bm]me, und die [Em7]Sonne geht [F#m7]schon [Bm]auf.
+Es ist [Bm]Zeit, den [A/B]Herrn zu su[Bm]chen, unsre Herzen w[A/B]erden [Bm]warm,
+denn der Tag ist [A/B]schon ganz na[Bm]he, und so [Em7]viele sind[F#m7]noch [Bm]arm
+Und so [Em7]viele [F#m7]sind noch [Bm]arm [F#]
 
 
 
-2. Jeden [Dm]Ort, auf d[C/D]en wir tr[Dm]eten, gibst Du uns in [C/D]unsre H[Dm]and,
-und die Welt, in d[C/D]er wir l[Dm]eben, wird für [Gm7]uns verh[Am7]eißnes L[Dm]and.
-Die Ge[Dm]fangnen [C/D]auf dem W[Dm]ege schließen sich dem Z[C/D]uge [Dm]an.
-Ihre Ketten w[C/D]erden br[Dm]echen, denn sie [Gm7]beten [Am7]mit uns [Dm]an,
-ja sie [Gm7]beten [Am7]mit uns [Dm]an.
+2. Jeden [Bm]Ort, auf [A/B]den wir tre[Bm]ten, gibst Du uns in uns[A/B]re Hand[Bm],
+und die Welt, in [A/B]der wir le[Bm]ben, wird für [Em7]uns ver[F#m7]heißnes [Bm]Land.
+Die Ge[Bm]fangnen [A/B]auf dem [Bm]Wege schließen sich dem [A/B]Zuge [Bm]an.
+Ihre Ketten [A/B]werden b[Bm]rechen, denn sie [Em7]beten [F#m7]mit uns [Bm]an,
+denn sie [Em7]beten [F#m7]mit uns [Bm]an [F#]
 
 
 {soc}
-  [Dm]Heiliger Herr, Herr der [Bb/D]Heerscharen, 
-  [C4]wir      pr[C]eisen D[Dm]eine Macht [Gm7] [Am7]. 
-  [Dm]Du gehst voran wie die [Bb/D]strahlende Sonne 
- und [C]führst uns [Dm]aus der Nacht[Gm7] [Am7]. 
+  [Bm]Heiliger Herr, Herr der [G/B]Heerscharen, [A4]wir [A]preisen D[Bm]eine Macht [Em7] [F#m7]. 
+  [Bm]Du gehst voran wie die [G/B]strahlende Sonne und [A]führst uns [Bm]aus der Nacht.[Em7] [F#m7]
+  [Bm]Heiliger Herr, Herr der [G/B]Heerscharen, [A4]wir [A]preisen D[Bm]eine Macht [Em7] [F#m7]. 
+  [Bm]Du gehst voran wie die [G/B]strahlende Sonne und [A]führst uns [F#m7]aus der [Bm]Nacht
  {eoc}
 
 {copyright: (c) Poly-Note Musikverlag, München}

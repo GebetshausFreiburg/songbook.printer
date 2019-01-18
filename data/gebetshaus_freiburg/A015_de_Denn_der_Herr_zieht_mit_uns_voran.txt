@@ -1,21 +1,22 @@
 {title: Denn der Herr zieht mit uns voran (A015)}
 {subtitle: For the Lord is marching on}
 {artist: Bonnie Low}
+key: D
 
-Denn der H[D]err zieht mit [Hm]uns voran,
-seine H[D]eerschar'n niemand sch[Hm]lagen kann.
-Seine [G]Ehre wird im [A]Lande sichtbar [Hm]sein.
-Hebt das B[D]anner, singt das [Hm]Siegeslied!
-Preist den H[D]errn, der im [Hm]Kampfe siegt!
-Keine W[G]affe, noch so s[A]tark, uns treffen [Hm]kann.
+Denn der H[D]err zieht mit [Bm]uns voran,
+seine H[D]eerschar'n niemand sch[Bm]lagen kann.
+Seine [G]Ehre wird im [A]Lande sichtbar [Bm]sein.
+Hebt das B[D]anner, singt das [Bm]Siegeslied!
+Preist den H[D]errn, der im [Bm]Kampfe siegt!
+Keine W[G]affe, noch so s[A]tark, uns treffen [Bm]kann.
 
 {soc}
  Der [G]siegreiche Held ist J[D]esus, 
  wir [G]folgen Ihm, wo er uns h[D]inführt. 
- Kein F[G]eind kann uns im K[A]ampfe wider[Hm]steh-[A]en. 
- Wir marsch[D]ieren in der S[Hm]iegesschar! 
- Jesu H[D]errschaft wird nun [Hm]offenbar. 
- Lasst und [G]einzieh'n in das [A]uns verheiß'ne [Hm]Land! 
+ Kein F[G]eind kann uns im K[A]ampfe wider[Bm]steh-[A]en. 
+ Wir marsch[D]ieren in der S[Bm]iegesschar! 
+ Jesu H[D]errschaft wird nun [Bm]offenbar. 
+ Lasst und [G]einzieh'n in das [A]uns verheiß'ne [Bm]Land! 
  {eoc}
 
 {copyright: (c) 1976 Scripture in Song / Integrity's Hosanna! Music}

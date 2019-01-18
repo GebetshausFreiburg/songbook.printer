@@ -88,7 +88,7 @@ public class ChordElement extends SongElement {
 					double diff = chordWidth - afterWordWidth;
 					double whitespaceWidth = Utils.calculateWidth(" ", arial);
 						
-					int val = (int)Math.ceil(diff / whitespaceWidth)+1;
+					int val = (int)Math.ceil(diff / whitespaceWidth);
 					String space = Utils.spaceBuilder(val, "&nbsp;");
 					
 					afterElement.setEnabled(false);
@@ -99,31 +99,7 @@ public class ChordElement extends SongElement {
 				}
 				
 			}
-				
-				/*int lengthWord = afterElement.getContent().length();
-				int lengthChord = this.getContent().length();
-				if (lengthChord>=lengthWord) {
-					int indexChord = this.getSong().getElements().indexOf(this);
-					
-					int diff = (lengthChord-lengthWord)+1;
-					
-					//System.out.println(this.getSong().getTitle() + ": "+diff + "("+this.getContent()+")");
-					
-					for (int i = 0; i < diff; i++) {
-						SongElement spacer = new SongElement(SongElementType.WHITESPACE,this.getLine(),this.getColumn()," ");
-						spacer.setSong(this.getSong());
-						this.getSong().getElements().add(indexChord+1, spacer);	
-					}
-					
-				}
-			}*/
 		}
-		
-//		if (whitespaceflag) {
-//			return "<span class=\"chord\"><span class=\"innerwithspace\">"+this.getContent()+"</span></span>";
-//		} else {
-//			return "<span class=\"chord\"><span class=\"inner\">"+this.getContent()+"</span></span>";		
-//		}
 		
 		return "";
 	}

@@ -1,5 +1,5 @@
 * {
-	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
 	line-height: 3em;
 }
 
@@ -10,9 +10,7 @@
 }
 
 .chorus-text {
-	border-style: solid;
-	border-width: thin;
-	border-color: #FF0000;
+	border-left: 5px solid grey;
 	padding: 5px;
 }
 
@@ -46,8 +44,8 @@
 }
 
 .lyrics{
-line-height:3em;
-font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;}
+  line-height:3em;
+}
 
 .chord {
   position:relative;
@@ -58,7 +56,7 @@ font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;}
   font-weight: bold;
   bottom: .2em;
   text-align:left;
-  color:red;
+  color:grey;
 }
 
 .chord-block {
@@ -69,15 +67,15 @@ font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;}
   content:attr(chord);
   position:relative;
   font-weight: bold;
-  bottom: 1.0em;
+  bottom: 1.1em;
   text-align:left;
   display: inline-block;
-  color:red;
+  color:grey;
 }
 
 .chord-space {
   position:relative;
-  padding-right: 1.0em;
+  padding-right: 0.0em;
 }
 
 .chord-space::before{
@@ -85,7 +83,7 @@ font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;}
   position:absolute;
   font-weight: bold;
   bottom: .2em;
-  padding-right: 1.0em;
+  padding-right: 0.0em;
   text-align:left;
-  color:red;
+  color:grey;
 }

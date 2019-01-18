@@ -3,24 +3,24 @@
 {artist: Luke Wood}
 
 {comment: Verse}
-[G]Now to You
-[D/F#] [G]Now to You who is [G/B]able to k[C]eep me [G/B] [C]
-[G]Now to You
-[D/F#] [G]Who loves me more than [G/B]I know[C] [G/B] [C]
+[G]  Now to You
+[D/F#] [G]  Now to You who is [G/B]able to k[C]eep me [G/B] [C]
+[G]  Now to You
+[D/F#] [G]  Who loves me more than [G/B]I know[C] [G/B] [C]
 Have Your [Dsus4]glory, have my [Am7]love
 Here's Your [Dsus4]glory, here's my [Am7]love
 
-{comment: Pre Chorus}
-[G/B]Both n[C]ow and fo[G/B]re-v[C]er  be [G/B]clothed [C]in g[D]lo-[Em]ry L[C]ord
-[G/B]Both n[C]ow and fo[G/B]re-v[C]er  I [G/B]give Y[C]ou [D]all [Em]my l[C]ove
+{comment: Pre-Chorus:}
+[G/B]Both n[C]ow and fo[G/B]re - v[C]er  be [G/B]clothed [C]in g[D]lo-[Em]ry L[C]ord
+[G/B]Both n[C]ow and fo[G/B]re - v[C]er  I [G/B]give Y[C]ou [D]all [Em]my l[C]ove
 
 {soc}
  Y[G]ou who hold the seven stars in Your h[D]and 
  Hold my [Am7]heart, hold my h[C]eart 
  {eoc}
 
-T[G]ake my heart Lord c[D]ome and seal it
-[Am7]It's all I have to g[C]ive
+T[G]ake my heart, Lord, c[D]ome and seal it
+[Am7]  It's all I have to g[C]ive
 
 {copyright: (c) 2007 Luke Wood/Forerunner Music}
 {ccli: 4800978}

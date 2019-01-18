@@ -1,5 +1,6 @@
 {title: Unsere Augen werden den König sehn (A012)}
 {artist: Lilo Keller}
+key: D
 
 Unsere [D]Augen werden den K[G]önig sehn
 in Sc[Em]hönheit und K[A4]raft,
@@ -14,7 +15,7 @@ mit [Em]Jubel und T[D]anz.
 Ge[D/A]lobt sei, der kommt im [G/A]Namen des [A4]Herrn! (3x)
 
 {soc}
- J[D]esus! Fr[G]iedefürst, Jesc[E7/G#]huah Hamas[D/A]chi-[A]ach! 
+ J[D]esus! Fr[G]iedefürst, Jesc[E7/G#]huah Hamas[D/A]chi - [A]ach! 
   [Bm]Gottes Lamm, B[A/C#]räutig[D]am, wir b[A4]eten Dich [D]an. 
   [Bm]Gottes Lamm, B[A/C#]räutig[D]am, wir b[A4]eten Dich [D]an. 
  {eoc}

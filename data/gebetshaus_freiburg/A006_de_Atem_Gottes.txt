@@ -1,5 +1,4 @@
 {title: Atem Gottes (A006)}
-{subtitle: Atem Gottes}
 {artist: Albert Frey}
 {capo: 2}
 
@@ -8,7 +7,7 @@ mit [D]Freiheit [E]und mit [Gmaj7]Macht,
 mit [Em]Liebe [F#m]und mit [Bm]Kraft.
 
 {soc}
- Atem [Bm]Gottes,[D] [F#m]Atem [Bm]Gottes, [D] [E] 
+ Atem [Bm]Gottes,[D]  [F#m]     Atem [Bm]Gottes, [D] [E] 
  Atem [Gmaj7]Gottes, [Em]wirke [F#m]unter [Bm]uns. 
  {eoc}
 

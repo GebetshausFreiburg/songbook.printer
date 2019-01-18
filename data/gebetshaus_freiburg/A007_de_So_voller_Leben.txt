@@ -1,26 +1,27 @@
 {title: So voller Leben (A007)}
 {artist: Simon Schlittenhardt, Vinyard Enztal}
-
-[D]Denn du bist so gut zu mir und
-[A/C#]alles was ich bin, liegt in
-[Bm]dir verborgen und alles was ich hab' bist du
-[G]Denn nur du sprichst mir die Würde zu
-[D]die mich aufhebt und aufnimmt, wie ich bin
-[A/C#]und Gott, du bist die Freude damit ich
-[Bm]sing von dir mein Gott, für alle Zeit
-[G2]Denn in dir finde ich Freiheit.[D]
-
+ 
+[D]  Denn du bist so gut zu mir und 
+[A/C#]  alles was ich bin, liegt in [Bm]dir verborgen 
+und alles was ich hab' bist [G]du 
+Denn nur du sprichst mir die Würde [D]zu 
+die mich aufhebt und aufnimmt, wie ich b[A/C#]in 
+und Gott, du bist die Freude damit ich s[Bm]ing
+von dir mein Gott, für alle Z[G]eit 
+Denn in dir finde ich Freiheit[D] 
+ 
 {soc}
-  [D]So voller Leben und 
-  [A/C#]so voller Schönheit und 
-  [Bm]so voller wunderbarer G[G2]nade bist 
- Du mein Gott[D] 
+  [D]  So voller Leben und 
+  [A/C#]  so voller Schönheit und 
+  [Bm]  so voller wunderbarer G[G2]nade bist 
+ Du mein G[D]ott
  {eoc}
-
-
+ 
+ 
 Bridge: 
-[C#m7]Und ich geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir.
-[C#m7]Ja ich geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir.
-[C#m7]Ja ich geh' immer weiter, weil ich [Bm7]deine Augen seh'
-[C#m7]und alles in mir will aufsteigen mit dir.
-{copyright: (c) 2006 Simon Schlittenhardt, Vineyard Enztal}
+Und ich [Em/C#]geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir. 
+Ja ich [Em/C#]geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir. 
+Ja ich [Em/C#]geh' immer weiter, weil ich [Bm7]deine Augen seh' 
+und [Em/C#]alles in mir will [G]aufsteigen mit [A7sus4]dir. 
+{copyright: (c) 2006 Simon Schlittenhardt, Vineyard Enztal} 
+

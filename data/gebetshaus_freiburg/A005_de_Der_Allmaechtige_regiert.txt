@@ -1,18 +1,19 @@
 {title: Der Allmächtige regiert (A005)}
 {artist: Marcus Ehrich, Stephanie Heinen, Terry Butler}
+key: E
 
-Er hat s[H]eine Macht erwiesen,
+Er hat s[B]eine Macht erwiesen,
 er hat m[A]ächtig triumph[E]iert.
-Er ist S[H]ieger über Finsternis und T[E]od.
-Er hat die K[H]etten zerbrochen,
+Er ist S[B]ieger über Finsternis und T[E]od.
+Er hat die K[B]etten zerbrochen,
 die Ge[A]fangenen befr[E]eit,
-durch s[D]eine Gnade s[A]ind wir er[H4]löst[H].
+durch s[D]eine Gnade s[A]ind wir er[B4]löst[B].
 
 {soc}
-  [A/B]Halle[E]luja, Halle[H]luj[E]a,  Hallelu-[F#m]- [E/G#]- [A]ja, 
- der Herr reg[H]iert. 
-  [A/B]Halle[E]luja, Halle[H]luj[E]a,  Hallelu-[F#m]- [E/G#]- [A]ja, 
- der Allm[H]ächtige reg[E]iert! 
+  [A/B]Halle[E]luja, Halle[B]luj[E]a,  Hallelu[F#m]  - [E/G#]- [A]ja, 
+ der Herr reg[B]iert. 
+  [A/B]Halle[E]luja, Halle[B]luj[E]a,  Hallelu[F#m]  - [E/G#]- [A]ja, 
+ der Allm[B]ächtige reg[E]iert! 
  {eoc}
 
 {copyright: (c) 1995 Mercy / Vineyard Publishing, USA}

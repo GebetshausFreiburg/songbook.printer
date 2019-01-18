@@ -1,5 +1,6 @@
 {title: Where I belong (A019)}
 {artist: Cory Asbury, Anna Asbury, Seth Yates}
+key: C
 
 Your p[F/C]resence is [C]all I am [Am]longing f[G]or [Dm]here in the s[C]ecret p[G/B]lace.
 Your n[F/C]earness is [C]all I am [Am]waiting f[G]or [Dm]here in the q[C]uiet p[G/B]lace,
@@ -7,7 +8,7 @@ H[Dm]ere in the s[C]ecret p[G/B]lace
 
 
 My soul w[F]aits [C/E]for [G/B]You [C]al[F]one, like the w[F]atchm[C/E]en [G/B]wait f[C]or d[G]awn
-Here I’ve f[F]inal[C/E]ly f[G/B]ound t[C]he pl[F]ace where we’ll m[F]eet, [C/E]Lord, [G/B]face t[C]o f[G]ace
+Here I’ve f[F]inal[C/E]ly [G/B]found [C]the pl[F]ace where we’ll m[F]eet, [C/E]Lord, [G/B]face [C]to f[G]ace
 
 {soc}
  I’ve [F]finally found where I bel[C/E]ong, 

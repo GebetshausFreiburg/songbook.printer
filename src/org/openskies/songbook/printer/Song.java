@@ -624,6 +624,7 @@ public class Song implements IRenderer {
 		sb.append("<html>");
 		sb.append("<head>");
 		sb.append("<link rel=\"stylesheet\" href=\"styles.css\">");
+		sb.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"//fonts.googleapis.com/css?family=Open+Sans\" />");
 		sb.append("<meta charset=\"utf-8\">");
 		sb.append("</head>");
 		sb.append("<body>");
