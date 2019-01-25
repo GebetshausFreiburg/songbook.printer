@@ -64,5 +64,16 @@ public class OnsongElement extends SongElement {
 			}
 		}
 	}
+	
+	@Override
+	public String render() {
+		
+		if (this.getSubtype()==OnsongSubtype.KEY) {
+			return "";
+			//return "<div id=\"key\">"+this.getContent()+"</div>";
+		}
+		
+		return this.getContent();
+	}
 
 }

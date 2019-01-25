@@ -1,8 +1,10 @@
 {title: Herrlichkeit und Ehre (A004)}
 {artist: John Barnett, Albert Frey}
+key: C
 
 1. [C]  Seht wie gut er z[G]u uns ist, [Am7]  Jesus, Gottes S[F]ohn
 [C]  Segen fließt zu [G]uns herab, [Am7]  kommt von seinem Th[F]ron
+
 
 {soc}
   [C]  Herrlichkeit und [F]Ehre [G] [C]  sei Gott in der H[F]öhe [G]

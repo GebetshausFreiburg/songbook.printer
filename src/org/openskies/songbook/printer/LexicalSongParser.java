@@ -821,7 +821,7 @@ private boolean zzEOFDone;
             }
           case 11: break;
           case 4: 
-            { songElements.add(new SongElement(SongElementType.LINEBREAK, yyline, yycolumn, "\n"));
+            { songElements.add(new LinebreakElement(yyline, yycolumn, "\n"));
             }
           case 12: break;
           case 5: 

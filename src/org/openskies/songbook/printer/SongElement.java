@@ -161,7 +161,52 @@ public class SongElement implements IRenderer {
 	 */
 	@Override
 	public String render() {
-
+//
+////		if (this.getSong().getTitle().contains("Herrlichkeit und Ehre ")) {
+//		
+//		if (this.type==SongElementType.LINEBREAK) {
+//			
+//			SongElement beforeElement = this.getSong().getElementBefore(this);
+//			
+////			System.out.println("   b1: "+beforeElement.getContent()+beforeElement.getType());
+//			
+//			if (beforeElement.type==SongElementType.WHITESPACE) {
+//				SongElement beforeElement2 = this.getSong().getElementBefore(beforeElement);
+////				System.out.println("   b2: "+beforeElement2.getContent()+beforeElement2.getType());
+//				if (beforeElement2.type==SongElementType.CHORDPRO) {
+//					
+//					return "";
+//				}
+//			}
+//			
+////			if (beforeElement.type==SongElementType.WHITESPACE) {
+////				SongElement beforeElement2 = this.getSong().getElementBefore(beforeElement);
+//////				System.out.println("   b2: "+beforeElement2.getContent()+beforeElement2.getType());
+////				if (beforeElement2.type==SongElementType.LINEBREAK) {
+////					
+////					return "";
+////				}
+////			}
+//			
+////			if (beforeElement.type==SongElementType.WHITESPACE) {
+////				SongElement beforeElement2 = this.getSong().getElementBefore(beforeElement);
+////				if (beforeElement2.type==SongElementType.CHORDPRO) {
+////					SongElement beforeElement3 = this.getSong().getElementBefore(beforeElement2);	
+////					if (beforeElement3.type==SongElementType.LINEBREAK) {
+////						return "";
+////					}
+////				}
+////			}
+//			
+//			if (beforeElement.type==SongElementType.CHORDPRO) {
+//				return "";
+//			}
+//			
+//			return "<br/>";
+//		}
+////		return "";
+////		}
+		
 		/*
 		 * if (this.type==SongElementType.WHITESPACE) { return "&nbsp;"; }
 		 */

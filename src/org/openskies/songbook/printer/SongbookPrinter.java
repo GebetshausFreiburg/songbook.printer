@@ -41,7 +41,7 @@ public class SongbookPrinter {
 			System.out.println("[" + song.getId() + "] " + song.getTitle() + ": " + song.getBaseChords() +" >>> "+song.getCalculatedKey());
 		}
 
-		if (true) {
+		if (false) {
 			System.out.println("Found invalid chords:");
 			Map<String, Song> ichords = Songs.getInstance().getInvalidChords();
 			Vector<String> keys = new Vector<String>(ichords.keySet());

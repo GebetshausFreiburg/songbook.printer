@@ -71,6 +71,6 @@ ONSONG=(\R[^\{](\w+)\:).+
 {CHORD} { songElements.add(new ChordElement(yyline, yycolumn, yytext().replace("[", "").replace("]", ""))); }
 {CHORDPRO} { songElements.add(new ChordproElement(yyline, yycolumn, yytext().replace("{", "").replace("}", ""))); }
 {WHITE_SPACE_CHAR} { songElements.add(new SongElement(SongElementType.WHITESPACE, yyline, yycolumn, " ")); }
-{NEWLINE_CHAR} { songElements.add(new SongElement(SongElementType.LINEBREAK, yyline, yycolumn, "\n")); }
+{NEWLINE_CHAR} { songElements.add(new LinebreakElement(yyline, yycolumn, "\n")); }
 {ONSONG} { songElements.add(new SongElement(SongElementType.ONSONG, yyline, yycolumn, yytext().trim())); }
 .  { /*Do nothing*/ }
