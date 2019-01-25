@@ -16,7 +16,8 @@ import java.util.List;
 
 /**
  * 
- * Song represents a loaded file and holds the language, id and content of a song.
+ * Song represents a loaded file and holds the language, id and content of a
+ * song.
  * 
  * @author Matthias Wegner
  * @since 27. Juli 2018
@@ -45,10 +46,8 @@ public class Song implements IRenderer {
 	/**
 	 * Instantiates a new song.
 	 *
-	 * @param path
-	 *            the path
-	 * @throws SongParserException
-	 *             the song parser exception
+	 * @param path the path
+	 * @throws SongParserException the song parser exception
 	 */
 	public Song(Path path) throws SongParserException {
 		File file = path.toFile();
@@ -70,7 +69,8 @@ public class Song implements IRenderer {
 		// Check if id is correct
 		boolean isCorrectId = id.matches("([A-Z]{1})+((?!000)([0-9]{3}))");
 		if (!isCorrectId) {
-			throw new SongParserException("Invalid id in filename '" + file.getName() + "'", new Throwable("Invalid id"));
+			throw new SongParserException("Invalid id in filename '" + file.getName() + "'",
+					new Throwable("Invalid id"));
 		}
 
 		// TODO 02 Explain Enum SongLanguage
@@ -82,7 +82,8 @@ public class Song implements IRenderer {
 				se.setSong(this);
 			}
 		} else {
-			throw new SongParserException("No valid language in filename '" + file.getName() + "'", new Throwable("Invalid language"));
+			throw new SongParserException("No valid language in filename '" + file.getName() + "'",
+					new Throwable("Invalid language"));
 		}
 
 		// TODO 03 Explain Content-Validation
@@ -92,8 +93,7 @@ public class Song implements IRenderer {
 	/**
 	 * Gets the element after.
 	 *
-	 * @param element
-	 *            the element
+	 * @param element the element
 	 * @return the element after
 	 */
 	public SongElement getElementAfter(SongElement element) {
@@ -109,8 +109,7 @@ public class Song implements IRenderer {
 	/**
 	 * Gets the element before.
 	 *
-	 * @param element
-	 *            the element
+	 * @param element the element
 	 * @return the element before
 	 */
 	public SongElement getElementBefore(SongElement element) {
@@ -160,20 +159,19 @@ public class Song implements IRenderer {
 	/**
 	 * Validate song content.
 	 *
-	 * @param file
-	 *            the file
-	 * @throws SongParserException
-	 *             the song parser exception
+	 * @param file the file
+	 * @throws SongParserException the song parser exception
 	 */
 	private void validateSongContent(File file) throws SongParserException {
 		// TODO 04 Explain validation of mandatory title and copyright
-		
-		ChordproSubtype[] values = { ChordproSubtype.TITLE};// ChordproSubtype.values();
+
+		ChordproSubtype[] values = { ChordproSubtype.TITLE };// ChordproSubtype.values();
 		for (ChordproSubtype chordproSubtype : values) {
 			ChordproElement element = this.getChordproElement(chordproSubtype);
 
 			if (element == null) {
-				throw new SongParserException("No valid " + chordproSubtype.name().toLowerCase() + " in file '" + file.getName() + "'",
+				throw new SongParserException(
+						"No valid " + chordproSubtype.name().toLowerCase() + " in file '" + file.getName() + "'",
 						new Throwable("Non-existing " + chordproSubtype.name().toLowerCase()));
 			}
 		}
@@ -182,7 +180,8 @@ public class Song implements IRenderer {
 			if (element.getType() == SongElementType.CHORDPRO) {
 				ChordproElement ose = (ChordproElement) element;
 				if (ose.getSubtype() == null) {
-					throw new SongParserException("Chordpro-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
+					throw new SongParserException(
+							"Chordpro-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
 							new Throwable("Unknown Chordpro-Syntax"));
 				}
 			}
@@ -194,13 +193,15 @@ public class Song implements IRenderer {
 				if (ose.getSubtype() == OnsongSubtype.BRIDGE) {
 					if (ose.getContent() != null) {
 						if (!ose.getContent().equals("")) {
-							throw new SongParserException("Bridge at line '" + ose.getLine() + "' must be in single line in file '" + file.getName() + "'",
+							throw new SongParserException("Bridge at line '" + ose.getLine()
+									+ "' must be in single line in file '" + file.getName() + "'",
 									new Throwable("Bridge not in single line"));
 						}
 					}
 				}
 				if (ose.getSubtype() == null) {
-					throw new SongParserException("Onsong-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
+					throw new SongParserException(
+							"Onsong-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
 							new Throwable("Unknown Onsong-Syntax"));
 				}
 			}
@@ -392,8 +393,7 @@ public class Song implements IRenderer {
 	/**
 	 * Gets the onsong element.
 	 *
-	 * @param subtype
-	 *            the subtype
+	 * @param subtype the subtype
 	 * @return the onsong element
 	 */
 	private OnsongElement getOnsongElement(OnsongSubtype subtype) {
@@ -458,8 +458,7 @@ public class Song implements IRenderer {
 	/**
 	 * Gets the chordpro element.
 	 *
-	 * @param subtype
-	 *            the subtype
+	 * @param subtype the subtype
 	 * @return the chordpro element
 	 */
 	private ChordproElement getChordproElement(ChordproSubtype subtype) {
@@ -480,9 +479,13 @@ public class Song implements IRenderer {
 	 * @return the key
 	 */
 	public String getKey() {
-		ChordproElement element = getChordproElement(ChordproSubtype.KEY);
-		if (element != null) {
-			return element.getContent();
+		ChordproElement celement = getChordproElement(ChordproSubtype.KEY);
+		if (celement != null) {
+			return celement.getContent();
+		}
+		OnsongElement oelement = getOnsongElement(OnsongSubtype.KEY);
+		if (oelement != null) {
+			return oelement.getContent();
 		}
 		return null;
 	}
@@ -535,8 +538,7 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the source-path of the song.
 	 *
-	 * @param source
-	 *            the new source
+	 * @param source the new source
 	 */
 	public void setSource(String source) {
 		this.source = source;
@@ -554,8 +556,7 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id
-	 *            the new id
+	 * @param id the new id
 	 */
 	public void setId(String id) {
 		this.id = id;
@@ -573,8 +574,7 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the book.
 	 *
-	 * @param book
-	 *            the new book
+	 * @param book the new book
 	 */
 	public void setBook(String book) {
 		this.book = book;
@@ -601,8 +601,7 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the language.
 	 *
-	 * @param language
-	 *            the new language
+	 * @param language the new language
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
@@ -617,7 +616,7 @@ public class Song implements IRenderer {
 	public String render() {
 
 		// TODO Erklärung Renderer: https://jsfiddle.net/0adkhxe7/117/
-		
+
 		StringBuilder sb = new StringBuilder();
 
 		sb.append("<!DOCTYPE html>");
@@ -629,11 +628,31 @@ public class Song implements IRenderer {
 		sb.append("</head>");
 		sb.append("<body>");
 
+		sb.append("<div id=\"key\">"+this.getKey()+ "</div>\n");
 		sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
 		sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
-
+		
+		boolean acceptWhitespaces = false;
 		for (SongElement songElement : getContentElements()) {
-			sb.append(songElement.render());
+			
+			if (acceptWhitespaces || !(songElement.getType() == SongElementType.WHITESPACE
+					|| songElement.getType() == SongElementType.LINEBREAK)) {
+				sb.append(songElement.render());
+//					System.out.println(songElement.getType());
+				acceptWhitespaces = true;
+				
+//				if (this.getTitle().contains("Herrlichkeit und Ehre ")) {
+//					
+//					if (songElement instanceof OnsongElement) {
+//						OnsongElement e = (OnsongElement)songElement;
+//						System.out.println(e.getSubtype());
+//					}
+//					
+//					System.out.println(songElement.getType()+" : "+songElement.getContent());
+//					
+////					
+//				}
+			}
 		}
 
 		if (this.getCCLI() != null) {

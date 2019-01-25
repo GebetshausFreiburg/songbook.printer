@@ -6,7 +6,17 @@
 #title {
 	font-size: large;
 	font-weight: bold;
+	line-height: 2em;
 	padding-bottom: 0px;
+}
+
+#key::before {
+	content: "Tonart: "
+}
+
+#key {
+	line-height: 2em;
+	float: right;
 }
 
 .chorus-text {
@@ -40,6 +50,7 @@
 
 #artist {
 	font-size: small;
+	line-height: 1em;
 	padding-bottom: 10px;
 }
 
