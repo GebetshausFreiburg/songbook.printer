@@ -51,11 +51,11 @@ public class LinebreakElement extends SongElement {
 	 */
 	private SongElement getLinebreakBefore(SongElement element) {
 		SongElement beforeElement = element.getSong().getElementBefore(element);
-		if (beforeElement.getType() == SongElementType.WHITESPACE) {
-			SongElement beforeElement2 = element.getSong().getElementBefore(beforeElement);
-			if (beforeElement2.getType() == SongElementType.LINEBREAK) {
-				return beforeElement2;
-			}
+		while (beforeElement.getType() == SongElementType.WHITESPACE) {
+			beforeElement = element.getSong().getElementBefore(beforeElement);
+		}
+		if (beforeElement.getType() == SongElementType.LINEBREAK) {
+			return beforeElement;
 		}
 		return null;
 	}
@@ -67,12 +67,15 @@ public class LinebreakElement extends SongElement {
 	 * @return true, if successful
 	 */
 	private boolean hasLinebreakBefore(SongElement element) {
+		if (element==null) {
+			return false;
+		}
 		SongElement beforeElement = element.getSong().getElementBefore(element);
-		if (beforeElement.getType() == SongElementType.WHITESPACE) {
-			SongElement beforeElement2 = element.getSong().getElementBefore(beforeElement);
-			if (beforeElement2.getType() == SongElementType.LINEBREAK) {
-				return true;
-			}
+		while(beforeElement.getType() == SongElementType.WHITESPACE) {
+			beforeElement = element.getSong().getElementBefore(beforeElement);
+		}
+		if (beforeElement.getType() == SongElementType.LINEBREAK) {
+			return true;
 		}
 		return false;
 	}

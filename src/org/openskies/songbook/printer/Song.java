@@ -636,6 +636,13 @@ public class Song implements IRenderer {
 	 */
 	@Override
 	public String render() {
+
+		if (this.getId().contains("007")) {
+			for (SongElement songElement : elements) {
+				System.out.println(songElement);
+			}
+		}
+
 		StringBuilder sb = new StringBuilder();
 
 		// create html-header
@@ -678,7 +685,7 @@ public class Song implements IRenderer {
 		if (this.getCCLI() != null) {
 			sb.append("<div id=\"ccli\">" + this.getCCLI() + "</div>\n");
 		}
-		
+
 		// add copyright
 		sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
 
