@@ -15,6 +15,9 @@ I'll s[G]ing and not be s[F]ilent
  {eoc}
 
 
+Bridge:
+Text text text[F] lorem ipsum bla
+
 {comment: Bridge}
 
 I will li[G]ve only for[F]you

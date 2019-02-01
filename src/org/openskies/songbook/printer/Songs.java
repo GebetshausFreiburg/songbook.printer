@@ -78,7 +78,7 @@ public class Songs {
 				}
 			}
 		}
-	
+
 		return invalidChords;
 	}
 
@@ -105,7 +105,7 @@ public class Songs {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	/**

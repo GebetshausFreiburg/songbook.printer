@@ -11,21 +11,21 @@ public class OnsongElement extends SongElement {
 	/**
 	 * Instantiates a new onsong element.
 	 *
-	 * @param line the line
-	 * @param column the column
+	 * @param line    the line
+	 * @param column  the column
 	 * @param content the content
 	 */
 	public OnsongElement(int line, int column, String content) {
 		super(SongElementType.ONSONG, line, column, content);
 		parseSubtype(content);
 	}
-	
+
 	/**
 	 * Instantiates a new onsong element.
 	 *
-	 * @param type the type
-	 * @param line the line
-	 * @param column the column
+	 * @param type    the type
+	 * @param line    the line
+	 * @param column  the column
 	 * @param content the content
 	 */
 	public OnsongElement(SongElementType type, int line, int column, String content) {
@@ -55,25 +55,26 @@ public class OnsongElement extends SongElement {
 			if (c.toLowerCase().startsWith(type)) {
 				subtype = osSubtype;
 				this.setContent(this.getContent().substring(length, this.getContent().length()).trim());
-			
-				if (subtype==OnsongSubtype.KEY) {
-					if (this.getContent().contains("[")||this.getContent().contains("]")) {
+
+				if (subtype == OnsongSubtype.KEY) {
+					if (this.getContent().contains("[") || this.getContent().contains("]")) {
 						this.setContent(this.getContent().replace("[", "").replace("]", ""));
 					}
 				}
 			}
 		}
+
 	}
-	
+
 	@Override
 	public String render() {
-		
-		if (this.getSubtype()==OnsongSubtype.KEY) {
+
+		if (this.getSubtype() == OnsongSubtype.KEY) {
 			return "";
-			//return "<div id=\"key\">"+this.getContent()+"</div>";
+		} else {
+			return "<b>" + this.getSubtype() +": "+this.getContent()+ "</b><br/>";
 		}
-		
-		return this.getContent();
+
 	}
 
 }

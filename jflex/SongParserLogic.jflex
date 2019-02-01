@@ -57,9 +57,9 @@ import java.util.*;
 WORD=[a-zA-Z\x21-\x40\xA1-\xFF]+
 CHORD=\[[^\]]*\]
 CHORDPRO=\{[^\}]*\}
+ONSONG=(\R[^\{](\w+)\:)(.)*
 WHITE_SPACE_CHAR=[\ \t\r]
 NEWLINE_CHAR=[\n]
-ONSONG=(\R[^\{](\w+)\:).+
 
 %%
 
@@ -72,5 +72,5 @@ ONSONG=(\R[^\{](\w+)\:).+
 {CHORDPRO} { songElements.add(new ChordproElement(yyline, yycolumn, yytext().replace("{", "").replace("}", ""))); }
 {WHITE_SPACE_CHAR} { songElements.add(new SongElement(SongElementType.WHITESPACE, yyline, yycolumn, " ")); }
 {NEWLINE_CHAR} { songElements.add(new LinebreakElement(yyline, yycolumn, "\n")); }
-{ONSONG} { songElements.add(new SongElement(SongElementType.ONSONG, yyline, yycolumn, yytext().trim())); }
+{ONSONG} { songElements.add(new OnsongElement(yyline, yycolumn, yytext().trim())); }
 .  { /*Do nothing*/ }

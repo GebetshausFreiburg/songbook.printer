@@ -9,7 +9,7 @@ key: C
 {soc}
   [C]  Herrlichkeit und [F]Ehre [G] [C]  sei Gott in der H[F]öhe [G]
   [C]  Hosanna dem, d[F]er mit M[G]acht reg[C]iert[F] [G] 
- {eoc}
+{eoc}
 
 
 2. [C]  Jesus, wir ver[G]ehren dich, [Am7]  du bist Gottes S[F]ohn

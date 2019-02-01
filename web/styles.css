@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 * {
-	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+	font-family: 'Open Sans',sans-serif; 
 	line-height: 3em;
 }
 

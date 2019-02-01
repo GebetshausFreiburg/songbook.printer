@@ -73,5 +73,25 @@ public class ChordproElement extends SongElement {
 			}
 		}
 	}
+	
+	@Override
+	public String render() {
+
+		if (getSubtype() == ChordproSubtype.SOC) {
+			return "<div class=\"chorus\"><div class=\"chorus-text\">";
+		}
+		if (getSubtype() == ChordproSubtype.EOC) {
+			return "</div></div>";
+		}
+		
+		return this.getContent();
+		
+		//		
+////		if (this.getSubtype().equals(ChordproSubtype.COMMENT)) {
+////			return "<b>"+this.getContent()+"</b>";
+////		}
+//		
+//		return this.getContent();
+	}
 
 }

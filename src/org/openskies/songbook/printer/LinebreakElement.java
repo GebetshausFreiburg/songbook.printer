@@ -55,14 +55,6 @@ public class LinebreakElement extends SongElement {
 		if (countLinebreaksBefore(this)>1) {
 			return "";
 		}
-		
-//		if (this.getSong().getTitle().contains("Herrlichkeit und Ehre ")) {
-//			System.out.println(countLinebreaksBefore(this));
-//		}
-
-//			if (ignoreLine()) {
-//				return "";
-//			}
 
 		if (beforeElement.getType() == SongElementType.CHORDPRO||beforeElement.getType() == SongElementType.ONSONG) {
 			return "";

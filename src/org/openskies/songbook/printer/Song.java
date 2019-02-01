@@ -59,8 +59,6 @@ public class Song implements IRenderer {
 		id = n[0];
 		language = n[1];
 
-		// TODO 01 Show Exceptions from Filename
-
 		// Check if book exists
 		if (book.trim().equalsIgnoreCase("data")) {
 			throw new SongParserException("No directory/songbook set which contains song '" + file.getName() + "'");
@@ -73,8 +71,6 @@ public class Song implements IRenderer {
 					new Throwable("Invalid id"));
 		}
 
-		// TODO 02 Explain Enum SongLanguage
-
 		// Check if language exists
 		if (SongLanguage.isLanguage(language)) {
 			elements = LexicalSongParser.parse(source);
@@ -86,7 +82,6 @@ public class Song implements IRenderer {
 					new Throwable("Invalid language"));
 		}
 
-		// TODO 03 Explain Content-Validation
 		validateSongContent(file);
 	}
 
@@ -623,7 +618,6 @@ public class Song implements IRenderer {
 		sb.append("<html>");
 		sb.append("<head>");
 		sb.append("<link rel=\"stylesheet\" href=\"styles.css\">");
-		sb.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"//fonts.googleapis.com/css?family=Open+Sans\" />");
 		sb.append("<meta charset=\"utf-8\">");
 		sb.append("</head>");
 		sb.append("<body>");
