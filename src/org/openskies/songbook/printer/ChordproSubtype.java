@@ -15,8 +15,10 @@ public enum ChordproSubtype {
 	KEY,
 	/** The soc. */
 	SOC,
+	START_OF_CHORUS,
 	/** The eoc. */
 	EOC,
+	END_OF_CHORUS,
 	/** The ccli. */
 	CCLI,
 	/** The subtitle. */

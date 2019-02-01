@@ -50,13 +50,25 @@ public class Song implements IRenderer {
 	 * @throws SongParserException the song parser exception
 	 */
 	public Song(Path path) throws SongParserException {
+		// get file from path
 		File file = path.toFile();
+
+		// get file-source as string
 		source = file.toString();
+
+		// get filename from file
 		filename = file.getName();
 
+		// split filename by underscore
 		String[] n = filename.split("_");
+
+		// subdirectory in data-directory should represent a songbook
 		book = file.getParentFile().getName();
+
+		// song-id of song should be first prefix in file
 		id = n[0];
+
+		// song-language should be second element in song-title
 		language = n[1];
 
 		// Check if book exists
@@ -64,14 +76,15 @@ public class Song implements IRenderer {
 			throw new SongParserException("No directory/songbook set which contains song '" + file.getName() + "'");
 		}
 
-		// Check if id is correct
+		// Check if id is correct. Only upper-case letter with three-digits are allowed
 		boolean isCorrectId = id.matches("([A-Z]{1})+((?!000)([0-9]{3}))");
 		if (!isCorrectId) {
 			throw new SongParserException("Invalid id in filename '" + file.getName() + "'",
 					new Throwable("Invalid id"));
 		}
 
-		// Check if language exists
+		// Check if enabled language exists (at the moment german, english). i8n
+		// possible
 		if (SongLanguage.isLanguage(language)) {
 			elements = LexicalSongParser.parse(source);
 			for (SongElement se : elements) {
@@ -82,22 +95,28 @@ public class Song implements IRenderer {
 					new Throwable("Invalid language"));
 		}
 
+		// Validate song-content. Throws exception if something is wrong
 		validateSongContent(file);
+
 	}
 
 	/**
-	 * Gets the element after.
+	 * Gets the element after the actual element
 	 *
-	 * @param element the element
+	 * @param element the element after the actual
 	 * @return the element after
 	 */
 	public SongElement getElementAfter(SongElement element) {
+		// find index of actual element
 		int index = elements.indexOf(element);
 
+		// if index of element is last element return null, because no element after
+		// this exists
 		if (index >= elements.size()) {
 			return null;
 		}
 
+		// return element with incremented index
 		return elements.get(index + 1);
 	}
 
@@ -108,17 +127,21 @@ public class Song implements IRenderer {
 	 * @return the element before
 	 */
 	public SongElement getElementBefore(SongElement element) {
+		// find index of actual element
 		int index = elements.indexOf(element);
 
+		// if index of actual element is first element return null, because no element
+		// before exists
 		if (index <= 0) {
 			return null;
 		}
 
+		// return element with decremented index
 		return elements.get(index - 1);
 	}
 
 	/**
-	 * Gets the encoding.
+	 * Gets the encoding of the first word-element. Expected UTF-8.
 	 *
 	 * @return the encoding
 	 */
@@ -135,7 +158,7 @@ public class Song implements IRenderer {
 	}
 
 	/**
-	 * Gets the calculated key.
+	 * Gets the calculated key of the song
 	 *
 	 * @return the calculated key
 	 */
@@ -154,13 +177,13 @@ public class Song implements IRenderer {
 	/**
 	 * Validate song content.
 	 *
-	 * @param file the file
+	 * @param file the file of the song
 	 * @throws SongParserException the song parser exception
 	 */
 	private void validateSongContent(File file) throws SongParserException {
-		// TODO 04 Explain validation of mandatory title and copyright
 
-		ChordproSubtype[] values = { ChordproSubtype.TITLE };// ChordproSubtype.values();
+		// check title in chordpro-format exists (mandatory)
+		ChordproSubtype[] values = { ChordproSubtype.TITLE };
 		for (ChordproSubtype chordproSubtype : values) {
 			ChordproElement element = this.getChordproElement(chordproSubtype);
 
@@ -171,6 +194,8 @@ public class Song implements IRenderer {
 			}
 		}
 
+		// check if all elements which indicate to be chord-pro are known from
+		// application
 		for (SongElement element : getElements()) {
 			if (element.getType() == SongElementType.CHORDPRO) {
 				ChordproElement ose = (ChordproElement) element;
@@ -182,6 +207,7 @@ public class Song implements IRenderer {
 			}
 		}
 
+		// check if bridge in onsong-format is single line
 		for (SongElement element : getElements()) {
 			if (element.getType() == SongElementType.ONSONG) {
 				OnsongElement ose = (OnsongElement) element;
@@ -189,11 +215,12 @@ public class Song implements IRenderer {
 					if (ose.getContent() != null) {
 						if (!ose.getContent().equals("")) {
 							throw new SongParserException("Bridge at line '" + ose.getLine()
-									+ "' must be in single line in file '" + file.getName() + "'",
+									+ "' must be a single line in file '" + file.getName() + "'",
 									new Throwable("Bridge not in single line"));
 						}
 					}
 				}
+				// check if all elements which indicate to be onsong are known from application
 				if (ose.getSubtype() == null) {
 					throw new SongParserException(
 							"Onsong-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
@@ -609,11 +636,9 @@ public class Song implements IRenderer {
 	 */
 	@Override
 	public String render() {
-
-		// TODO Erklärung Renderer: https://jsfiddle.net/0adkhxe7/117/
-
 		StringBuilder sb = new StringBuilder();
 
+		// create html-header
 		sb.append("<!DOCTYPE html>");
 		sb.append("<html>");
 		sb.append("<head>");
@@ -622,38 +647,42 @@ public class Song implements IRenderer {
 		sb.append("</head>");
 		sb.append("<body>");
 
-		sb.append("<div id=\"key\">"+this.getKey()+ "</div>\n");
-		sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
-		sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
-		
-		boolean acceptWhitespaces = false;
-		for (SongElement songElement : getContentElements()) {
-			
-			if (acceptWhitespaces || !(songElement.getType() == SongElementType.WHITESPACE
-					|| songElement.getType() == SongElementType.LINEBREAK)) {
-				sb.append(songElement.render());
-//					System.out.println(songElement.getType());
-				acceptWhitespaces = true;
-				
-//				if (this.getTitle().contains("Herrlichkeit und Ehre ")) {
-//					
-//					if (songElement instanceof OnsongElement) {
-//						OnsongElement e = (OnsongElement)songElement;
-//						System.out.println(e.getSubtype());
-//					}
-//					
-//					System.out.println(songElement.getType()+" : "+songElement.getContent());
-//					
-////					
-//				}
+		// create key of song
+		if (this.getKey() != null) {
+			if (!this.getKey().equals("")) {
+				sb.append("<div id=\"key\">" + this.getKey() + "</div>\n");
 			}
 		}
 
+		// create title of song
+		sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
+
+		// create artist of song
+		if (this.getArtist() != null) {
+			if (!this.getArtist().equals("")) {
+				sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
+			}
+		}
+
+		// shrink whitespaces and linebreak after title to one single line (not more)
+		boolean acceptWhitespaces = false;
+		for (SongElement songElement : getContentElements()) {
+			if (acceptWhitespaces || !(songElement.getType() == SongElementType.WHITESPACE
+					|| songElement.getType() == SongElementType.LINEBREAK)) {
+				sb.append(songElement.render());
+				acceptWhitespaces = true;
+			}
+		}
+
+		// add ccli-number if available
 		if (this.getCCLI() != null) {
 			sb.append("<div id=\"ccli\">" + this.getCCLI() + "</div>\n");
 		}
+		
+		// add copyright
 		sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
 
+		// create html-footer
 		sb.append("</body>");
 		sb.append("</html>");
 

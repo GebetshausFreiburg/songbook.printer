@@ -32,26 +32,18 @@ public class SongbookPrinter {
 	 */
 	public static void main(String[] args) {
 
+		// Load songs from data-directory
 		Songs.getInstance().load();
 
+		// Display how much songs are loaded
 		System.out.println(Songs.getInstance().count() + " songs loaded.");
 
+//		List<Song> songs = Songs.getInstance().getSongs();
+//		for (Song song : songs) {
+//			System.out.println("[" + song.getId() + "] " + song.getTitle() + ": " + song.getBaseChords() +" >>> "+song.getCalculatedKey());
+//		}
+
 		List<Song> songs = Songs.getInstance().getSongs();
-		for (Song song : songs) {
-			System.out.println("[" + song.getId() + "] " + song.getTitle() + ": " + song.getBaseChords() +" >>> "+song.getCalculatedKey());
-		}
-
-		if (false) {
-			System.out.println("Found invalid chords:");
-			Map<String, Song> ichords = Songs.getInstance().getInvalidChords();
-			Vector<String> keys = new Vector<String>(ichords.keySet());
-			for (String key : keys) {
-				System.out.println("   " + key + ": " + ichords.get(key).getTitle());
-			}
-		}
-		
-		// TODO Erklärung Writer
-
 		for (Song ws : songs) {
 			Path p = Paths.get("web/" + ws.getFilename().replace(".txt", ".html"));
 			try {

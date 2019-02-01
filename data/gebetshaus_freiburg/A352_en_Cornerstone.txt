@@ -1,5 +1,5 @@
 {title: Cornerstone (A352)}
-{arist: Edward Mote, Eric Liljero, Jonas Myrin, Reuben Morgan, William Batchelder Bradbury}
+{artist: Edward Mote, Eric Liljero, Jonas Myrin, Reuben Morgan, William Batchelder Bradbury}
 key: [C]
 
 1.[C]  My hope is built on nothing less [F]  than Jesus' blood and [G]righteousness

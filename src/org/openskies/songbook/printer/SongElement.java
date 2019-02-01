@@ -33,6 +33,7 @@ public class SongElement implements IRenderer {
 	/** The song. */
 	private Song song;
 
+	/** The enabled. */
 	private boolean enabled = true;
 
 	/**
@@ -114,10 +115,20 @@ public class SongElement implements IRenderer {
 		return content;
 	}
 
+	/**
+	 * Checks if is enabled.
+	 *
+	 * @return true, if is enabled
+	 */
 	public boolean isEnabled() {
 		return enabled;
 	}
 
+	/**
+	 * Sets the enabled.
+	 *
+	 * @param enabled the new enabled
+	 */
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}

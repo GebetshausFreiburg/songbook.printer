@@ -86,17 +86,25 @@ public class Songs {
 	 * Load all songs from data-directory.
 	 */
 	public void load() {
+		// Initialize emtpy list of songs
 		songs = new ArrayList<Song>();
 		try {
+			// iterate through all files in data-directory (including subdirectories)
 			Files.walk(Paths.get("data")).filter(Files::isRegularFile).forEach(file -> {
 				Song song = null;
 				try {
+					// Instantiate new song
 					song = new Song(file);
+					
+					// Add song to list of songs
 					songs.add(song);
 				} catch (SongParserException e) {
+					// skip adding song to list if exception occurs
 					if (e.getCause() != null) {
+						// show cause if cause is not null
 						System.out.println("EXCEPTION: " + e.getCause().getMessage() + ": " + e.getMessage());
 					} else {
+						// show exception message
 						System.out.println("EXCEPTION: " + e.getMessage());
 					}
 				}

@@ -7,7 +7,6 @@ import java.util.List;
  * The Enum SongKey.
  */
 public enum SongKey {
-
 	// TODO Klären mit Barbara, ob dies korrekt ist
 	
 	/**                          keyMajor                   keyMinor                     kadenz1                    kadenz2                      kadenz3                      kadenz4                    kadenz5                    kadenz6                      kadenz7. */

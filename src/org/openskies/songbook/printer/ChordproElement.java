@@ -11,8 +11,8 @@ public class ChordproElement extends SongElement {
 	/**
 	 * Instantiates a new chordpro element.
 	 *
-	 * @param line the line
-	 * @param column the column
+	 * @param line    the line
+	 * @param column  the column
 	 * @param content the content
 	 */
 	public ChordproElement(int line, int column, String content) {
@@ -23,9 +23,9 @@ public class ChordproElement extends SongElement {
 	/**
 	 * Instantiates a new chordpro element.
 	 *
-	 * @param type the type
-	 * @param line the line
-	 * @param column the column
+	 * @param type    the type
+	 * @param line    the line
+	 * @param column  the column
 	 * @param content the content
 	 */
 	public ChordproElement(SongElementType type, int line, int column, String content) {
@@ -63,17 +63,20 @@ public class ChordproElement extends SongElement {
 				subtype = chordproSubtype;
 				this.setContent(this.getContent().substring(length, this.getContent().length()).trim());
 			}
-			
-			if (c.equalsIgnoreCase(ChordproSubtype.SOC.name())) {
+
+			if (c.equalsIgnoreCase(ChordproSubtype.SOC.name())
+					|| c.equalsIgnoreCase(ChordproSubtype.START_OF_CHORUS.name())) {
 				subtype = ChordproSubtype.SOC;
 			}
-			
-			if (c.equalsIgnoreCase(ChordproSubtype.EOC.name())) {
+
+			if (c.equalsIgnoreCase(ChordproSubtype.EOC.name())
+					|| c.equalsIgnoreCase(ChordproSubtype.END_OF_CHORUS.name())) {
 				subtype = ChordproSubtype.EOC;
 			}
+
 		}
 	}
-	
+
 	@Override
 	public String render() {
 
@@ -83,15 +86,12 @@ public class ChordproElement extends SongElement {
 		if (getSubtype() == ChordproSubtype.EOC) {
 			return "</div></div>";
 		}
-		
+
+		if (getSubtype() == ChordproSubtype.CAPO) {
+			return "<i>Kapo: " + this.getContent() + "</i>";
+		}
+
 		return this.getContent();
-		
-		//		
-////		if (this.getSubtype().equals(ChordproSubtype.COMMENT)) {
-////			return "<b>"+this.getContent()+"</b>";
-////		}
-//		
-//		return this.getContent();
 	}
 
 }

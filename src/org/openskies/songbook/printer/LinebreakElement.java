@@ -1,15 +1,39 @@
 package org.openskies.songbook.printer;
 
+/**
+ * The Class LinebreakElement.
+ */
 public class LinebreakElement extends SongElement {
 
+	/**
+	 * Instantiates a new linebreak element.
+	 *
+	 * @param line the line
+	 * @param column the column
+	 * @param content the content
+	 */
 	public LinebreakElement(int line, int column, String content) {
 		super(SongElementType.LINEBREAK, line, column, content);
 	}
 
+	/**
+	 * Instantiates a new linebreak element.
+	 *
+	 * @param type the type
+	 * @param line the line
+	 * @param column the column
+	 * @param content the content
+	 */
 	public LinebreakElement(SongElementType type, int line, int column, String content) {
 		super(type, line, column, content);
 	}
 
+	/**
+	 * Count linebreaks before.
+	 *
+	 * @param element the element
+	 * @return the int
+	 */
 	private int countLinebreaksBefore(SongElement element) {
 		int counter = 0;
 		while (hasLinebreakBefore(element)) {
@@ -19,6 +43,12 @@ public class LinebreakElement extends SongElement {
 		return counter;
 	}
 
+	/**
+	 * Gets the linebreak before.
+	 *
+	 * @param element the element
+	 * @return the linebreak before
+	 */
 	private SongElement getLinebreakBefore(SongElement element) {
 		SongElement beforeElement = element.getSong().getElementBefore(element);
 		if (beforeElement.getType() == SongElementType.WHITESPACE) {
@@ -30,6 +60,12 @@ public class LinebreakElement extends SongElement {
 		return null;
 	}
 
+	/**
+	 * Checks for linebreak before.
+	 *
+	 * @param element the element
+	 * @return true, if successful
+	 */
 	private boolean hasLinebreakBefore(SongElement element) {
 		SongElement beforeElement = element.getSong().getElementBefore(element);
 		if (beforeElement.getType() == SongElementType.WHITESPACE) {
@@ -41,10 +77,14 @@ public class LinebreakElement extends SongElement {
 		return false;
 	}
 
+	/* (non-Javadoc)
+	 * @see org.openskies.songbook.printer.SongElement#render()
+	 */
 	@Override
 	public String render() {
 		SongElement beforeElement = this.getSong().getElementBefore(this);
 
+		// if element before whitespace is chordpro or onsong, then not break line
 		if (beforeElement.getType() == SongElementType.WHITESPACE) {
 			SongElement beforeElement2 = this.getSong().getElementBefore(beforeElement);
 			if (beforeElement2.getType() == SongElementType.CHORDPRO||beforeElement2.getType() == SongElementType.ONSONG) {
@@ -52,14 +92,17 @@ public class LinebreakElement extends SongElement {
 			}
 		}
 
+		// if linesbreaks before this line, then skip linebreak
 		if (countLinebreaksBefore(this)>1) {
 			return "";
 		}
 
+		// if element before this linebreak is chordpro or onsong, then not break line
 		if (beforeElement.getType() == SongElementType.CHORDPRO||beforeElement.getType() == SongElementType.ONSONG) {
 			return "";
 		}
 
+		// return html-linebreak
 		return "<br/>";
 	}
 

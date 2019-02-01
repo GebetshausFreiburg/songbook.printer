@@ -16,6 +16,24 @@ public enum OnsongSubtype {
 	/** The title. */
 	TITLE,
 	/** The author. */
+	INTERLUDE,
+
+	/** The prechorus. */
+	PRECHORUS,
+
+	/** The ending. */
+	ENDING,
+
+	/** The intro. */
+	INTRO,
+
+	/** The outro. */
+	OUTRO,
+
+	/** The chorus. */
+	CHORUS,
+
+	/** The author. */
 	AUTHOR,
 	/** The capo. */
 	CAPO,

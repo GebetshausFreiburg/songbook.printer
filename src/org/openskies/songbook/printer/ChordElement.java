@@ -31,7 +31,7 @@ public class ChordElement extends SongElement {
 	}
 
 	/**
-	 * Checks if is valid.
+	 * Checks if chord is valid. Check against regular expression
 	 *
 	 * @return true, if is valid
 	 */
@@ -55,46 +55,66 @@ public class ChordElement extends SongElement {
 	 */
 	@Override
 	public String render() {
-		
+		// look for element after actual chord
 		SongElement afterElement = this.getSong().getElementAfter(this);
 		
 		boolean whitespaceflag = false;
 		boolean chordflag = false;
+		
+		// if element after actual chord exists, then ...
 		if (afterElement!=null) {
 			
+			// ... check if it is whitespace ...
 			if (afterElement.getType()==SongElementType.WHITESPACE) {
 				whitespaceflag = true;
 			}
 			
+			// ... check if it is chord ...
 			if (afterElement.getType()==SongElementType.CHORD) {
 				chordflag = true;
 			}
 			
+			// ... and disable element after chord if whitespace or chord. Use chord-block-css instead.
 			if (whitespaceflag||chordflag) {
 				afterElement.setEnabled(false);
 				return "<span class=\"chord-block\" chord=\""+this.getContent()+" \">&nbsp;&nbsp;</span>";
 			}
 			
+			// estimate word length (with sans-serif-font)
 			if (afterElement.getType()==SongElementType.WORD) {
-				int lengthWord = afterElement.getContent().length();
-				int lengthChord = this.getContent().length();
-				
 				Font arial = new Font("Arial", Font.PLAIN, 12);
 				
+				// estimate length of element after chord
 				int afterWordWidth = Utils.calculateWidth(afterElement.getContent(), arial);
+				
+				// estimate length of actual chord
 				int chordWidth = Utils.calculateWidth(this.getContent(), arial);
 				
+				// if chord is longer than element after, then ...
 				if ((chordWidth)>=afterWordWidth) {
+					// ... calculate needed spaces
 					double diff = chordWidth - afterWordWidth;
+					
+					// calculate length of a whitespace
 					double whitespaceWidth = Utils.calculateWidth(" ", arial);
-						
+					
+					// estimate amount of needed spaces 
 					int val = (int)Math.ceil(diff / whitespaceWidth);
+					
+					// create string-representation of html-nbsp-element
 					String space = Utils.spaceBuilder(val, "&nbsp;");
 					
+					// disable element after chord
 					afterElement.setEnabled(false);
+					
+					// return spaced chord
 					return "<span class=\"chord-space\" chord=\""+this.getContent()+"\">"+afterElement.getContent()+space+"</span>";
-				} else {
+				} else { // else add simple chord
+					
+					// disable element after chord
 					afterElement.setEnabled(false);
+					
+					// return normal chord
 					return "<span class=\"chord\" chord=\""+this.getContent()+"\">"+afterElement.getContent()+"</span>";			
 				}
 				

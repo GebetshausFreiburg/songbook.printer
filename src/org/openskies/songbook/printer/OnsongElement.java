@@ -66,13 +66,19 @@ public class OnsongElement extends SongElement {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see org.openskies.songbook.printer.SongElement#render()
+	 */
 	@Override
 	public String render() {
 
+		// if subtype is key, then do nothing, because key is displayed directly in song
 		if (this.getSubtype() == OnsongSubtype.KEY) {
 			return "";
 		} else {
-			return "<b>" + this.getSubtype() +": "+this.getContent()+ "</b><br/>";
+			// in any other cases display subtype
+			return "<b>" + Utils.beautify(this.getSubtype().name()) + "</b><br/>";
+			//return "<b>" + Utils.beautify(this.getSubtype().name()) +": "+this.getContent()+ "</b><br/>";
 		}
 
 	}
