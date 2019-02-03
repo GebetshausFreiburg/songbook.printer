@@ -1,4 +1,4 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.util;
 
 import java.util.ArrayList;
 import java.util.List;

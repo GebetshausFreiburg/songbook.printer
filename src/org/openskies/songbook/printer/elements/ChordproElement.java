@@ -1,4 +1,6 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
+
+import org.openskies.songbook.printer.parser.RenderMode;
 
 /**
  * The Class ChordproElement.
@@ -78,8 +80,12 @@ public class ChordproElement extends SongElement {
 	}
 
 	@Override
-	public String render() {
+	public String render(RenderMode mode) {
 
+		if (mode==RenderMode.PLAIN) {
+			return "";
+		}
+		
 		if (getSubtype() == ChordproSubtype.SOC) {
 			return "<div class=\"chorus\"><div class=\"chorus-text\">";
 		}

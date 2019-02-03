@@ -6,7 +6,10 @@
  * @since 27.07.2018
  * 
  */
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
+
+import org.openskies.songbook.printer.parser.RenderMode;
+import org.openskies.songbook.printer.parser.Song;
 
 /**
  * 
@@ -171,7 +174,7 @@ public class SongElement implements IRenderer {
 	 * @see org.openskies.songbook.printer.IRenderer#render()
 	 */
 	@Override
-	public String render() {
+	public String render(RenderMode mode) {
 
 		if (this.isEnabled()) {
 			return this.getContent();

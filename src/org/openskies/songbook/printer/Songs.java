@@ -8,18 +8,44 @@
  */
 package org.openskies.songbook.printer;
 
+import java.io.BufferedWriter;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openskies.songbook.printer.elements.ChordElement;
+import org.openskies.songbook.printer.parser.RenderMode;
+import org.openskies.songbook.printer.parser.Song;
+import org.openskies.songbook.printer.parser.SongParserException;
+import org.openskies.songbook.printer.util.Comparators;
+
+import com.itextpdf.text.Document;
+import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorkerHelper;
 
 /**
  * The Class Songs which holds all loaded songs.
  */
 public class Songs {
+
+	/** The Constant LOGGER. */
+	final static Logger LOGGER = LogManager.getLogger(Songs.class);
 
 	/** The list of all songs. */
 	private List<Song> songs = null;
@@ -45,6 +71,17 @@ public class Songs {
 	 * @return the songs
 	 */
 	public List<Song> getSongs() {
+		return getSongs(Comparators.TITLE);
+	}
+
+	/**
+	 * Gets the songs.
+	 *
+	 * @param comparator the comparator
+	 * @return the songs
+	 */
+	public List<Song> getSongs(Comparator<Song> comparator) {
+		java.util.Collections.sort(songs, comparator);
 		return songs;
 	}
 
@@ -83,6 +120,138 @@ public class Songs {
 	}
 
 	/**
+	 * Write html.
+	 *
+	 * @param filename the filename
+	 * @param cómparator the cómparator
+	 */
+	public void writeHtml(String filename, Comparator<Song> cómparator) {
+
+		StringBuilder sb  = new StringBuilder();
+		sb.append("<!DOCTYPE html>");
+		sb.append("<html>");
+		sb.append("<head>");
+		sb.append("<link rel=\"stylesheet\" href=\"web/styles.css\"/>");
+		sb.append("<meta charset=\"utf-8\"/>");
+		sb.append("</head>");
+		sb.append("<body>");
+		
+		for (Song ws : getSongs(cómparator)) {
+			
+			sb.append( ws.render(RenderMode.WEB_NO_HEADER) );
+			sb.append( "<p style=\"page-break-after: always;\">&nbsp;</p>\n"
+					+ "<p style=\"page-break-before: always;\">&nbsp;</p>");
+
+		}
+		
+		sb.append("</body>");
+		sb.append("</html>");
+
+		Path p = Paths.get("." + File.separatorChar + filename);
+		
+		try {
+			Files.createDirectories(p.getParent());
+			if (Files.exists(p)) {
+				Files.delete(p);
+			}
+			Files.createFile(p);
+			BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
+			writer.write(sb.toString());
+			writer.close();
+		} catch (IOException e) {
+			LOGGER.error(e);
+		}
+		
+	}
+
+	/**
+	 * Write pdf.
+	 *
+	 * @param filename the filename
+	 * @param cómparator the cómparator
+	 */
+	public void writePdf(String filename, Comparator<Song> cómparator) {
+
+		try {
+			OutputStream file = new FileOutputStream(new File(filename));
+			Document document = new Document();
+			PdfWriter writer = PdfWriter.getInstance(document, file);
+			document.open();
+
+			RenderMode mode = RenderMode.PLAIN;
+
+			for (Song ws : getSongs(cómparator)) {
+				// create plain html from song
+				String s = new String();
+				if (RenderMode.PLAIN == mode) {
+					s = "<html><head></head><body>";
+					s += "<h1>" + ws.getTitle() + "</h1>";
+					s += ws.getContent();
+					s += "</body></html>";
+				}
+				if (RenderMode.WEB_WITH_HEADER == mode) {
+					s += ws.render();
+				}
+
+				LOGGER.debug(s);
+
+				// parse html to pdf
+				XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
+
+				FileInputStream csis = null;
+				if (RenderMode.WEB_WITH_HEADER == mode) {
+					csis = new FileInputStream(new File("web" + File.separatorChar + "styles.css"));
+				}
+
+				InputStream is = new ByteArrayInputStream(s.getBytes(StandardCharsets.UTF_8));
+
+				if (RenderMode.WEB_WITH_HEADER == mode) {
+					if (csis != null) {
+						worker.parseXHtml(writer, document, is, csis, Charset.forName("UTF-8"));
+					} else {
+						worker.parseXHtml(writer, document, is, Charset.forName("UTF-8"));
+					}
+				}
+				if (RenderMode.PLAIN == mode) {
+					worker.parseXHtml(writer, document, is, Charset.forName("UTF-8"));
+				}
+
+				// pagebreak in pdf
+				document.newPage();
+			}
+
+			document.close();
+			file.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	/**
+	 * Write songs.
+	 */
+	public void writeSongs() {
+		List<Song> songs = getSongs();
+		for (Song ws : songs) {
+			Path p = ws.getFilenameHtml();
+			try {
+				Files.createDirectories(p.getParent());
+				if (Files.exists(p)) {
+					Files.delete(p);
+				}
+				Files.createFile(p);
+				BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
+				writer.write(ws.render());
+				writer.close();
+			} catch (IOException e) {
+				LOGGER.error(e);
+			}
+		}
+	}
+
+	/**
 	 * Load all songs from data-directory.
 	 */
 	public void load() {
@@ -95,17 +264,17 @@ public class Songs {
 				try {
 					// Instantiate new song
 					song = new Song(file);
-					
+
 					// Add song to list of songs
 					songs.add(song);
 				} catch (SongParserException e) {
 					// skip adding song to list if exception occurs
 					if (e.getCause() != null) {
 						// show cause if cause is not null
-						System.out.println("EXCEPTION: " + e.getCause().getMessage() + ": " + e.getMessage());
+						LOGGER.error(e.getCause().getMessage() + ": " + e.getMessage());
 					} else {
 						// show exception message
-						System.out.println("EXCEPTION: " + e.getMessage());
+						LOGGER.error(e.getMessage());
 					}
 				}
 
@@ -114,6 +283,53 @@ public class Songs {
 			e.printStackTrace();
 		}
 
+	}
+
+	/**
+	 * Write index.
+	 */
+	public void writeIndex() {
+		StringBuilder sb = new StringBuilder();
+
+		Path idx = Paths.get("web" + File.separatorChar + "index.html");
+
+		// create html-header
+		sb.append("<!DOCTYPE html>");
+		sb.append("<html>");
+		sb.append("<head>");
+		sb.append("<link rel=\"stylesheet\" href=\"styles.css\">");
+		sb.append("<meta charset=\"utf-8\">");
+		sb.append("</head>");
+		sb.append("<body>\n");
+
+		sb.append("<ul>\n");
+		List<Song> songs = Songs.getInstance().getSongs();
+		for (Song ws : songs) {
+			// Path p = ws.getFilenameHtml();
+
+			String s = ws.getFilename();
+			File f = new File(s);
+
+			sb.append("<li><a href=\"" + f.getName().replace(".txt", ".html") + "\">" + ws.getTitle() + "</a></li>\n");
+		}
+		sb.append("</ul>\n");
+
+		// create html-footer
+		sb.append("</body>");
+		sb.append("</html>");
+
+		try {
+			Files.createDirectories(idx.getParent());
+			if (Files.exists(idx)) {
+				Files.delete(idx);
+			}
+			Files.createFile(idx);
+			BufferedWriter writer = Files.newBufferedWriter(idx, StandardCharsets.UTF_8);
+			writer.write(sb.toString());
+			writer.close();
+		} catch (IOException e) {
+			LOGGER.error(e);
+		}
 	}
 
 	/**

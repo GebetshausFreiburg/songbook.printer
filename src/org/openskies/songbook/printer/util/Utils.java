@@ -1,4 +1,4 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.util;
 
 import java.awt.Font;
 import java.awt.font.FontRenderContext;
@@ -12,6 +12,21 @@ import java.nio.charset.StandardCharsets;
  */
 public class Utils {
 
+	public static String addSpace(String string, Integer space, char fill) {
+
+		int spacer = 0;
+		StringBuffer sb = new StringBuffer();
+
+		if (space > string.length())
+			spacer = space - string.length();
+
+		for (int i = 0; i < spacer; i++) {
+			sb.append(fill);
+		}
+
+		return sb.append(string).toString();
+	}
+	
 	/**
 	 * Checks if is ne.
 	 *

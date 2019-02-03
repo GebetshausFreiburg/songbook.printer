@@ -1,4 +1,4 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
 
 /**
  * The Enum OnsongSubtype.

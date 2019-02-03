@@ -1,6 +1,9 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
 
 import java.awt.Font;
+
+import org.openskies.songbook.printer.parser.RenderMode;
+import org.openskies.songbook.printer.util.Utils;
 
 /**
  * The Class ChordElement.
@@ -54,7 +57,12 @@ public class ChordElement extends SongElement {
 	 * @see org.openskies.songbook.printer.SongElement#render()
 	 */
 	@Override
-	public String render() {
+	public String render(RenderMode mode) {
+		
+		if (mode==RenderMode.PLAIN) {
+			return "";
+		}
+		
 		// look for element after actual chord
 		SongElement afterElement = this.getSong().getElementAfter(this);
 		

@@ -1,4 +1,6 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
+
+import org.openskies.songbook.printer.parser.RenderMode;
 
 /**
  * The Class LinebreakElement.
@@ -44,7 +46,7 @@ public class LinebreakElement extends SongElement {
 	}
 
 	/**
-	 * Gets the linebreak before.
+	 * Gets the linebreak before actual element
 	 *
 	 * @param element the element
 	 * @return the linebreak before
@@ -84,7 +86,7 @@ public class LinebreakElement extends SongElement {
 	 * @see org.openskies.songbook.printer.SongElement#render()
 	 */
 	@Override
-	public String render() {
+	public String render(RenderMode mode) {
 		SongElement beforeElement = this.getSong().getElementBefore(this);
 
 		// if element before whitespace is chordpro or onsong, then not break line

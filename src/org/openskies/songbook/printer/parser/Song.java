@@ -6,13 +6,26 @@
  * @since 27.07.2018
  * 
  */
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.parser;
 
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.openskies.songbook.printer.elements.ChordElement;
+import org.openskies.songbook.printer.elements.ChordproElement;
+import org.openskies.songbook.printer.elements.ChordproSubtype;
+import org.openskies.songbook.printer.elements.IRenderer;
+import org.openskies.songbook.printer.elements.OnsongElement;
+import org.openskies.songbook.printer.elements.OnsongSubtype;
+import org.openskies.songbook.printer.elements.SongElement;
+import org.openskies.songbook.printer.elements.SongElementType;
+import org.openskies.songbook.printer.elements.WordElement;
+import org.openskies.songbook.printer.util.SongKey;
+import org.openskies.songbook.printer.util.Utils;
 
 /**
  * 
@@ -101,7 +114,7 @@ public class Song implements IRenderer {
 	}
 
 	/**
-	 * Gets the element after the actual element
+	 * Gets the element after the actual element.
 	 *
 	 * @param element the element after the actual
 	 * @return the element after
@@ -158,7 +171,7 @@ public class Song implements IRenderer {
 	}
 
 	/**
-	 * Gets the calculated key of the song
+	 * Gets the calculated key of the song.
 	 *
 	 * @return the calculated key
 	 */
@@ -308,6 +321,46 @@ public class Song implements IRenderer {
 	 */
 	public String getFilename() {
 		return filename;
+	}
+
+	/**
+	 * Gets the content.
+	 *
+	 * @return the content
+	 */
+	public String getContent() {
+		StringBuilder sb = new StringBuilder();
+
+//		for (SongElement songElement : elements) {
+//			if ((songElement.getType() == SongElementType.WORD)
+//					|| (songElement.getType() == SongElementType.WHITESPACE)) {
+//				sb.append(songElement.getContent());
+//			}
+//			if ((songElement.getType() == SongElementType.LINEBREAK)) {
+//				sb.append("<br/>");
+//			}
+//
+//		}
+//		
+//		this.render(RenderMode.PLAIN);
+
+		sb.append(this.render(RenderMode.PLAIN));
+
+//		for (int i = 0; i < 10; i++) {
+//			String x = Utils.addSpace("", i, ' ');
+//			
+//			String ending = "<br/>"+x+"<br/>";
+//			while (sb.toString().contains(ending)) {
+//				s = s.replace(ending, "<br/>");
+//			}
+//		}
+
+//		s = s.replace("   ", " ");
+//		s = s.replace("  ", " ");
+//		s = s.replace("<br/><br/><br/>", "<br/>");
+//		s = s.replace("<br/><br/>", "<br/>");
+
+		return sb.toString();
 	}
 
 	/**
@@ -496,6 +549,15 @@ public class Song implements IRenderer {
 	}
 
 	/**
+	 * Gets the filename html.
+	 *
+	 * @return the filename html
+	 */
+	public Path getFilenameHtml() {
+		return Paths.get("web/" + this.getFilename().replace(".txt", ".html"));
+	}
+
+	/**
 	 * Gets the key.
 	 *
 	 * @return the key
@@ -629,46 +691,60 @@ public class Song implements IRenderer {
 		this.language = language;
 	}
 
+	/**
+	 * Render.
+	 *
+	 * @return the string
+	 */
+	public String render() {
+		return render(RenderMode.WEB_WITH_HEADER);
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see org.openskies.songbook.printer.IRenderer#render()
 	 */
 	@Override
-	public String render() {
+	public String render(RenderMode mode) {
 
-		if (this.getId().contains("007")) {
-			for (SongElement songElement : elements) {
-				System.out.println(songElement);
-			}
-		}
+//		if (this.getId().contains("007")) {
+//			for (SongElement songElement : elements) {
+//				System.out.println(songElement);
+//			}
+//		}
 
 		StringBuilder sb = new StringBuilder();
 
-		// create html-header
-		sb.append("<!DOCTYPE html>");
-		sb.append("<html>");
-		sb.append("<head>");
-		sb.append("<link rel=\"stylesheet\" href=\"styles.css\">");
-		sb.append("<meta charset=\"utf-8\">");
-		sb.append("</head>");
-		sb.append("<body>");
-
-		// create key of song
-		if (this.getKey() != null) {
-			if (!this.getKey().equals("")) {
-				sb.append("<div id=\"key\">" + this.getKey() + "</div>\n");
+		if (mode != RenderMode.PLAIN) {
+			if (mode != RenderMode.WEB_NO_HEADER) {
+				// create html-header
+				sb.append("<!DOCTYPE html>");
+				sb.append("<html>");
+				sb.append("<head>");
+				sb.append("<link rel=\"stylesheet\" href=\"styles.css\"/>");
+				sb.append("<meta charset=\"utf-8\"/>");
+				sb.append("</head>");
+				sb.append("<body>");
 			}
-		}
 
-		// create title of song
-		sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
-
-		// create artist of song
-		if (this.getArtist() != null) {
-			if (!this.getArtist().equals("")) {
-				sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
+			// create key of song
+			if (this.getKey() != null) {
+				if (!this.getKey().equals("")) {
+					sb.append("<div id=\"key\">" + this.getKey() + "</div>\n");
+				}
 			}
+
+			// create title of song
+			sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
+
+			// create artist of song
+			if (this.getArtist() != null) {
+				if (!this.getArtist().equals("")) {
+					sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
+				}
+			}
+
 		}
 
 		// shrink whitespaces and linebreak after title to one single line (not more)
@@ -676,24 +752,38 @@ public class Song implements IRenderer {
 		for (SongElement songElement : getContentElements()) {
 			if (acceptWhitespaces || !(songElement.getType() == SongElementType.WHITESPACE
 					|| songElement.getType() == SongElementType.LINEBREAK)) {
-				sb.append(songElement.render());
+				sb.append(songElement.render(mode));
 				acceptWhitespaces = true;
 			}
 		}
 
-		// add ccli-number if available
-		if (this.getCCLI() != null) {
-			sb.append("<div id=\"ccli\">" + this.getCCLI() + "</div>\n");
+		if (mode != RenderMode.PLAIN) {
+			// add ccli-number if available
+			if (this.getCCLI() != null) {
+				sb.append("<div id=\"ccli\">" + this.getCCLI() + "</div>\n");
+			}
+
+			// add copyright
+			sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
+
+			if (mode != RenderMode.WEB_NO_HEADER) {
+				// create html-footer
+				sb.append("</body>");
+				sb.append("</html>");
+			}
 		}
 
-		// add copyright
-		sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
+		// cut whitespaces or linebreak from beginning of song (used for plain
+		// rendering)
+		String s = sb.toString();
+		while (s.startsWith(" ") || s.startsWith("<br/>")) {
+			s = s.trim();
+			if (s.startsWith("<br/>")) {
+				s = s.substring(5);
+			}
+		}
 
-		// create html-footer
-		sb.append("</body>");
-		sb.append("</html>");
-
-		return sb.toString();
+		return s;
 	}
 
 }

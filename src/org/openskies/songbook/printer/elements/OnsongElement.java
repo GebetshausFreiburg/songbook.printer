@@ -1,4 +1,7 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
+
+import org.openskies.songbook.printer.parser.RenderMode;
+import org.openskies.songbook.printer.util.Utils;
 
 /**
  * The Class OnsongElement.
@@ -70,8 +73,12 @@ public class OnsongElement extends SongElement {
 	 * @see org.openskies.songbook.printer.SongElement#render()
 	 */
 	@Override
-	public String render() {
+	public String render(RenderMode mode) {
 
+		if (mode==RenderMode.PLAIN) {
+			return "";
+		}
+		
 		// if subtype is key, then do nothing, because key is displayed directly in song
 		if (this.getSubtype() == OnsongSubtype.KEY) {
 			return "";

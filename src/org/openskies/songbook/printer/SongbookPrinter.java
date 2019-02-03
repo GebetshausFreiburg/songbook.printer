@@ -8,15 +8,10 @@
  */
 package org.openskies.songbook.printer;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
-import java.util.Vector;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openskies.songbook.printer.util.Comparators;
+import org.openskies.songbook.printer.webserver.Webserver;
 
 /**
  * Printer for Song-Files in ChordPro and OnSong-Format.
@@ -25,6 +20,10 @@ import java.util.Vector;
  * @since 27. Juli 2018
  */
 public class SongbookPrinter {
+
+	/** The Constant LOGGER. */
+	final static Logger LOGGER = LogManager.getLogger(SongbookPrinter.class);
+
 	/**
 	 * The main method.
 	 *
@@ -36,29 +35,29 @@ public class SongbookPrinter {
 		Songs.getInstance().load();
 
 		// Display how much songs are loaded
-		System.out.println(Songs.getInstance().count() + " songs loaded.");
+		LOGGER.info(Songs.getInstance().count() + " songs loaded.");
 
-//		List<Song> songs = Songs.getInstance().getSongs();
-//		for (Song song : songs) {
-//			System.out.println("[" + song.getId() + "] " + song.getTitle() + ": " + song.getBaseChords() +" >>> "+song.getCalculatedKey());
-//		}
+		Songs.getInstance().writePdf("Songs_byTitle.pdf", Comparators.TITLE);
+		Songs.getInstance().writePdf("Songs_byId.pdf", Comparators.ID);
 
-		List<Song> songs = Songs.getInstance().getSongs();
-		for (Song ws : songs) {
-			Path p = Paths.get("web/" + ws.getFilename().replace(".txt", ".html"));
-			try {
-				Files.createDirectories(p.getParent());
-				if (Files.exists(p)) {
-					Files.delete(p);
-				}
-				Files.createFile(p);
-				BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
-				writer.write(ws.render());
-				writer.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+		// Write songs
+		LOGGER.info("Write Songs (Single Files)");
+		Songs.getInstance().writeSongs();
+
+		// Write songs
+		LOGGER.info("Write Songs (Merged File)");
+		Songs.getInstance().writeHtml("Songs.html", Comparators.TITLE);
+
+		// Write index
+		LOGGER.info("Write Index");
+		Songs.getInstance().writeIndex();
+
+		// Start server
+		LOGGER.info("Start Webserver through Launcher");
+//		Webserver server = new Webserver();
+//		server.openInBrowser();
+//		server.run();
+
 	}
 
 }

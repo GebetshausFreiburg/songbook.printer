@@ -1,4 +1,6 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
+
+import org.openskies.songbook.printer.parser.RenderMode;
 
 /**
  * The Interface IRenderer.
@@ -10,7 +12,7 @@ public interface IRenderer {
 	 *
 	 * @return the string
 	 */
-	public String render();
+	public String render(RenderMode mode);
 	
 	// Test at https://jsfiddle.net/0adkhxe7/117/
 	

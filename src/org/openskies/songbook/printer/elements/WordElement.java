@@ -1,4 +1,6 @@
-package org.openskies.songbook.printer;
+package org.openskies.songbook.printer.elements;
+
+import org.openskies.songbook.printer.util.Utils;
 
 /**
  * The Class WordElement.
