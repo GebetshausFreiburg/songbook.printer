@@ -53,13 +53,24 @@ public class OnsongElement extends SongElement {
 	private void parseSubtype(String c) {
 		OnsongSubtype[] values = OnsongSubtype.values();
 		for (OnsongSubtype osSubtype : values) {
-			String type = osSubtype.name().toLowerCase() + ":";
-			int length = type.length();
-			if (c.toLowerCase().startsWith(type)) {
+//			String type = osSubtype.name().toLowerCase() + ":";
+//			int length = type.length();
+			
+//			if (c.contains("-")) {
+//				System.out.println(osSubtype.isEqual(c) + " : "+osSubtype);
+//			}
+			
+			if (osSubtype.isEqual(c)) {
+			
+			//if (c.toLowerCase().startsWith(type)) {
+			
 				subtype = osSubtype;
-				this.setContent(this.getContent().substring(length, this.getContent().length()).trim());
-
+			
+//				System.out.println(" "+ subtype.name());
+				
 				if (subtype == OnsongSubtype.KEY) {
+					this.setContent(this.getContent().substring("key:".length(), this.getContent().length()).trim());
+					
 					if (this.getContent().contains("[") || this.getContent().contains("]")) {
 						this.setContent(this.getContent().replace("[", "").replace("]", ""));
 					}
@@ -84,6 +95,11 @@ public class OnsongElement extends SongElement {
 			return "";
 		} else {
 			// in any other cases display subtype
+			
+//			if (this.getSong().getId().contains("189")) {
+//				System.out.println(this.getSubtype());
+//			}
+			
 			return "<b>" + Utils.beautify(this.getSubtype().name()) + "</b><br/>";
 			//return "<b>" + Utils.beautify(this.getSubtype().name()) +": "+this.getContent()+ "</b><br/>";
 		}

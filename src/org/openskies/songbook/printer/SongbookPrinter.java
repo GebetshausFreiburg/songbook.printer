@@ -37,8 +37,8 @@ public class SongbookPrinter {
 		// Display how much songs are loaded
 		LOGGER.info(Songs.getInstance().count() + " songs loaded.");
 
-		Songs.getInstance().writePdf("Songs_byTitle.pdf", Comparators.TITLE);
-		Songs.getInstance().writePdf("Songs_byId.pdf", Comparators.ID);
+//		Songs.getInstance().writePdf("Songs_byTitle.pdf", Comparators.TITLE);
+//		Songs.getInstance().writePdf("Songs_byId.pdf", Comparators.ID);
 
 		// Write songs
 		LOGGER.info("Write Songs (Single Files)");
@@ -53,7 +53,7 @@ public class SongbookPrinter {
 		Songs.getInstance().writeIndex();
 
 		// Start server
-		LOGGER.info("Start Webserver through Launcher");
+//		LOGGER.info("Start Webserver through Launcher");
 //		Webserver server = new Webserver();
 //		server.openInBrowser();
 //		server.run();

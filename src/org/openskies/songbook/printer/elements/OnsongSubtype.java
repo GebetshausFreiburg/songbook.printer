@@ -19,8 +19,8 @@ public enum OnsongSubtype {
 	INTERLUDE,
 
 	/** The prechorus. */
-	PRECHORUS,
-
+	PRECHORUS("Prechorus", "Pre-Chorus"),
+	
 	/** The ending. */
 	ENDING,
 
@@ -42,6 +42,33 @@ public enum OnsongSubtype {
 	/** The ccli. */
 	CCLI;
 
+	private final String[] aliases;
+	
+	public boolean isEqual(String checkAlias) {
+		if (aliases!=null) {
+			if (aliases.length>0) {
+				for (String alias : aliases) {
+					
+					//System.out.println(checkAlias +" =?= "+alias);
+					if (checkAlias.toLowerCase().startsWith((alias+":").toLowerCase())) {
+				//		System.out.println(checkAlias +" =TRUE= "+alias);
+						return true;
+					}
+				}
+			}
+		}
+		
+		if (checkAlias.toLowerCase().startsWith((this.name()+":").toLowerCase())) {
+			//System.out.println(checkAlias +" =TRUE= "+this.name());
+			return true;
+		}
+		return false;
+	}
+	
+	private OnsongSubtype(String... aliases) {
+		this.aliases = aliases;
+	}
+	
 	/*
 	 * (non-Javadoc)
 	 * 

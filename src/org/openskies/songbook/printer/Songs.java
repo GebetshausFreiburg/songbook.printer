@@ -12,6 +12,7 @@ import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,10 +35,25 @@ import org.openskies.songbook.printer.parser.RenderMode;
 import org.openskies.songbook.printer.parser.Song;
 import org.openskies.songbook.printer.parser.SongParserException;
 import org.openskies.songbook.printer.util.Comparators;
+import org.xhtmlrenderer.pdf.ITextRenderer;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.itextpdf.tool.xml.XMLWorker;
+import com.itextpdf.tool.xml.XMLWorkerFontProvider;
 import com.itextpdf.tool.xml.XMLWorkerHelper;
+import com.itextpdf.tool.xml.css.CssFile;
+import com.itextpdf.tool.xml.css.StyleAttrCSSResolver;
+import com.itextpdf.tool.xml.html.CssAppliers;
+import com.itextpdf.tool.xml.html.CssAppliersImpl;
+import com.itextpdf.tool.xml.html.Tags;
+import com.itextpdf.tool.xml.parser.XMLParser;
+import com.itextpdf.tool.xml.pipeline.css.CSSResolver;
+import com.itextpdf.tool.xml.pipeline.css.CssResolverPipeline;
+import com.itextpdf.tool.xml.pipeline.end.PdfWriterPipeline;
+import com.itextpdf.tool.xml.pipeline.html.HtmlPipeline;
+import com.itextpdf.tool.xml.pipeline.html.HtmlPipelineContext;
+import com.lowagie.text.DocumentException;
 
 /**
  * The Class Songs which holds all loaded songs.
@@ -122,12 +138,12 @@ public class Songs {
 	/**
 	 * Write html.
 	 *
-	 * @param filename the filename
+	 * @param filename   the filename
 	 * @param cómparator the cómparator
 	 */
 	public void writeHtml(String filename, Comparator<Song> cómparator) {
 
-		StringBuilder sb  = new StringBuilder();
+		StringBuilder sb = new StringBuilder();
 		sb.append("<!DOCTYPE html>");
 		sb.append("<html>");
 		sb.append("<head>");
@@ -135,20 +151,20 @@ public class Songs {
 		sb.append("<meta charset=\"utf-8\"/>");
 		sb.append("</head>");
 		sb.append("<body>");
-		
+
 		for (Song ws : getSongs(cómparator)) {
-			
-			sb.append( ws.render(RenderMode.WEB_NO_HEADER) );
-			sb.append( "<p style=\"page-break-after: always;\">&nbsp;</p>\n"
+
+			sb.append(ws.render(RenderMode.WEB_NO_HEADER));
+			sb.append("<p style=\"page-break-after: always;\">&nbsp;</p>\n"
 					+ "<p style=\"page-break-before: always;\">&nbsp;</p>");
 
 		}
-		
+
 		sb.append("</body>");
 		sb.append("</html>");
 
 		Path p = Paths.get("." + File.separatorChar + filename);
-		
+
 		try {
 			Files.createDirectories(p.getParent());
 			if (Files.exists(p)) {
@@ -161,13 +177,49 @@ public class Songs {
 		} catch (IOException e) {
 			LOGGER.error(e);
 		}
-		
+
 	}
+
+	/*public void writePdf2(String filename, Comparator<Song> cómparator) {
+		ITextRenderer renderer = new ITextRenderer();
+		try {
+			String s = new String();
+			for (Song ws : getSongs(cómparator)) {
+
+				try {
+					// LOGGER.debug(ws.getTitle());
+					renderer.setDocumentFromString(ws.render());
+				s += ws.render();
+				} catch (Exception e) {
+					LOGGER.error("Error in generated html-file '" + ws.getId() + ") " + ws.getTitle()
+							+ "'.  Change source-song.", e);
+				}
+			}
+
+			renderer = new ITextRenderer();
+			renderer.setDocumentFromString(s);
+			renderer.layout();
+			OutputStream outputStream = new FileOutputStream(filename);
+			renderer.createPDF(outputStream);
+			outputStream.close();
+
+		} catch (FileNotFoundException e) {
+			LOGGER.error(e);
+//			LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle() + "'. Change source-song.");
+		} catch (DocumentException e) {
+			LOGGER.error(e);
+//			LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle() + "'.  Change source-song.");
+		} catch (IOException e) {
+			LOGGER.error(e);
+//			LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle() + "'.  Change source-song.");
+		}
+
+	}*/
 
 	/**
 	 * Write pdf.
 	 *
-	 * @param filename the filename
+	 * @param filename   the filename
 	 * @param cómparator the cómparator
 	 */
 	public void writePdf(String filename, Comparator<Song> cómparator) {
@@ -193,24 +245,39 @@ public class Songs {
 					s += ws.render();
 				}
 
-				LOGGER.debug(s);
+//				LOGGER.debug(s);
 
 				// parse html to pdf
 				XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 
-				FileInputStream csis = null;
-				if (RenderMode.WEB_WITH_HEADER == mode) {
-					csis = new FileInputStream(new File("web" + File.separatorChar + "styles.css"));
-				}
-
 				InputStream is = new ByteArrayInputStream(s.getBytes(StandardCharsets.UTF_8));
 
 				if (RenderMode.WEB_WITH_HEADER == mode) {
-					if (csis != null) {
-						worker.parseXHtml(writer, document, is, csis, Charset.forName("UTF-8"));
-					} else {
-						worker.parseXHtml(writer, document, is, Charset.forName("UTF-8"));
-					}
+
+//						CSSResolver cssResolver = new StyleAttrCSSResolver();
+//						CssFile cssFile = XMLWorkerHelper.getCSS(new ByteArrayInputStream(("web" + File.separatorChar + "styles.css").getBytes()));
+//						cssResolver.addCss(cssFile);
+//
+//						XMLWorkerFontProvider fontProvider = new XMLWorkerFontProvider(
+//								XMLWorkerFontProvider.DONTLOOKFORFONTS);
+//						fontProvider.register("ressources/fonts/open-sans/OpenSans-Regular.ttf");
+//
+//						CssAppliers cssAppliers = new CssAppliersImpl(fontProvider);
+//						HtmlPipelineContext htmlContext = new HtmlPipelineContext(cssAppliers);
+//						htmlContext.setTagFactory(Tags.getHtmlTagProcessorFactory());
+//
+//						PdfWriterPipeline pdf = new PdfWriterPipeline(document, writer);
+//						HtmlPipeline html = new HtmlPipeline(htmlContext, pdf);
+//						CssResolverPipeline css = new CssResolverPipeline(cssResolver, html);
+//
+//						XMLWorker w = new XMLWorker(css, true);
+//						    XMLParser p = new XMLParser(w);
+//						    ByteArrayInputStream stream = new ByteArrayInputStream(s.getBytes("UTF-8"));
+//						       
+//						    p.parse(stream, Charset.forName("UTF-8"));
+
+					FileInputStream css = new FileInputStream(new File("web" + File.separatorChar + "styles.css"));
+					worker.parseXHtml(writer, document, is, css, Charset.forName("UTF-8"));
 				}
 				if (RenderMode.PLAIN == mode) {
 					worker.parseXHtml(writer, document, is, Charset.forName("UTF-8"));
@@ -224,7 +291,7 @@ public class Songs {
 			file.close();
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.error(e);
 		}
 
 	}

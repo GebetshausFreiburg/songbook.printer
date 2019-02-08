@@ -6,8 +6,19 @@
  * Created with <TT>java -jar jflex-1.6.1.jar SongParserLogic.jflex</TT>
  *
  */
-package org.openskies.songbook.printer;
 
+package org.openskies.songbook.printer.parser;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openskies.songbook.printer.elements.ChordElement;
+import org.openskies.songbook.printer.elements.ChordproElement;
+import org.openskies.songbook.printer.elements.LinebreakElement;
+import org.openskies.songbook.printer.elements.OnsongElement;
+import org.openskies.songbook.printer.elements.SongElement;
+import org.openskies.songbook.printer.elements.SongElementType;
+import org.openskies.songbook.printer.elements.WordElement;
 import java.util.*;
 %%
 
@@ -57,7 +68,7 @@ import java.util.*;
 WORD=[a-zA-Z\x21-\x40\xA1-\xFF]+
 CHORD=\[[^\]]*\]
 CHORDPRO=\{[^\}]*\}
-ONSONG=(\R[^\{](\w+)\:)(.)*
+ONSONG=(\R[^\{](\w+)(-*)(\w*)\:)(.)*
 WHITE_SPACE_CHAR=[\ \t\r]
 NEWLINE_CHAR=[\n]
 

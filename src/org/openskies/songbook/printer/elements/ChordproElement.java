@@ -54,7 +54,7 @@ public class ChordproElement extends SongElement {
 	/**
 	 * Parses the subtype.
 	 *
-	 * @param c the c
+	 * @param subtype the subtype
 	 */
 	private void parseSubtype(String c) {
 		ChordproSubtype[] values = ChordproSubtype.values();
@@ -93,9 +93,9 @@ public class ChordproElement extends SongElement {
 			return "</div></div>";
 		}
 
-		if (getSubtype() == ChordproSubtype.CAPO) {
+		/*if (getSubtype() == ChordproSubtype.CAPO) {
 			return "<i>Kapo: " + this.getContent() + "</i>";
-		}
+		}*/
 
 		return this.getContent();
 	}

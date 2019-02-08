@@ -25,7 +25,6 @@ import org.openskies.songbook.printer.elements.SongElement;
 import org.openskies.songbook.printer.elements.SongElementType;
 import org.openskies.songbook.printer.elements.WordElement;
 import org.openskies.songbook.printer.util.SongKey;
-import org.openskies.songbook.printer.util.Utils;
 
 /**
  * 
@@ -224,15 +223,15 @@ public class Song implements IRenderer {
 		for (SongElement element : getElements()) {
 			if (element.getType() == SongElementType.ONSONG) {
 				OnsongElement ose = (OnsongElement) element;
-				if (ose.getSubtype() == OnsongSubtype.BRIDGE) {
-					if (ose.getContent() != null) {
-						if (!ose.getContent().equals("")) {
-							throw new SongParserException("Bridge at line '" + ose.getLine()
-									+ "' must be a single line in file '" + file.getName() + "'",
-									new Throwable("Bridge not in single line"));
-						}
-					}
-				}
+//				if (ose.getSubtype() == OnsongSubtype.BRIDGE) {
+//					if (ose.getContent() != null) {
+//						if (!ose.getContent().equals("")) {
+//							throw new SongParserException("Bridge at line '" + ose.getLine()
+//									+ "' must be a single line in file '" + file.getName() + "'",
+//									new Throwable("Bridge not in single line"));
+//						}
+//					}
+//				}
 				// check if all elements which indicate to be onsong are known from application
 				if (ose.getSubtype() == null) {
 					throw new SongParserException(
