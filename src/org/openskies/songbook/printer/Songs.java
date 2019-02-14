@@ -141,7 +141,7 @@ public class Songs {
 	 * @param filename   the filename
 	 * @param cómparator the cómparator
 	 */
-	public void writeHtml(String filename, Comparator<Song> cómparator) {
+	public void writeHtml(String filename, Comparator<Song> comparator) {
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("<!DOCTYPE html>");
@@ -152,7 +152,7 @@ public class Songs {
 		sb.append("</head>");
 		sb.append("<body>");
 
-		for (Song ws : getSongs(cómparator)) {
+		for (Song ws : getSongs(comparator)) {
 
 			sb.append(ws.render(RenderMode.WEB_NO_HEADER));
 			sb.append("<p style=\"page-break-after: always;\">&nbsp;</p>\n"
@@ -222,7 +222,7 @@ public class Songs {
 	 * @param filename   the filename
 	 * @param cómparator the cómparator
 	 */
-	public void writePdf(String filename, Comparator<Song> cómparator) {
+	public void writePdf(String filename, Comparator<Song> comparator) {
 
 		try {
 			OutputStream file = new FileOutputStream(new File(filename));
@@ -232,7 +232,7 @@ public class Songs {
 
 			RenderMode mode = RenderMode.PLAIN;
 
-			for (Song ws : getSongs(cómparator)) {
+			for (Song ws : getSongs(comparator)) {
 				// create plain html from song
 				String s = new String();
 				if (RenderMode.PLAIN == mode) {

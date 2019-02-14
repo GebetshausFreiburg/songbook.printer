@@ -100,8 +100,9 @@ public class OnsongElement extends SongElement {
 //				System.out.println(this.getSubtype());
 //			}
 			
-			return "<b>" + Utils.beautify(this.getSubtype().name()) + "</b><br/>";
+//			return "<b>" + Utils.beautify(this.getSubtype().name()) + "</b><br/>";
 			//return "<b>" + Utils.beautify(this.getSubtype().name()) +": "+this.getContent()+ "</b><br/>";
+			return "<div id=\"songpart\">" + Utils.beautify(this.getSubtype().name()) + "</div>";
 		}
 
 	}
