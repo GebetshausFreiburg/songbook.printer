@@ -1,39 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 * {
-	font-family: 'Open Sans',sans-serif; 
-	line-height: 3em;
+	font-family: "Open Sans", Century Gothic, Apple Gothic, sans-serif;
+	line-height: 2.3em;
 }
 
 #title {
 	font-size: large;
 	font-weight: bold;
 	line-height: 2em;
-	padding-bottom: 0px;
-}
-
-#key::before {
-	content: "Tonart: "
-}
-
-#key {
-	line-height: 2em;
-	float: right;
 }
 
 .chorus-text {
-	border-left: 5px solid grey;
-	padding: 5px;
+	padding: 10px;
+	border-radius: 7px;
+	border: 3px solid #DCDCDC;
+	display: inline-block;
 }
 
 .chorus {
 	padding-left: 20px;
-	padding-top: 10px;
-	padding-bottom: 20px;
 }
 
-#ccli::before {
-	content: "CCLI: ";
+#songpart {
+	line-height: 1.2em;
+	font-weight: 600;
+	font-style: italic;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 85%;
+}
+
+#songpart::after {
+	content: ":";
 }
 
 #copyright::before {
@@ -45,58 +44,78 @@
 	line-height: 1.2 !important
 }
 
+#ccli::before {
+	content: "CCLI: ";
+}
+
 #ccli {
 	font-size: x-small;
 	line-height: 1.2 !important
 }
 
+#key::before {
+	content: "Tonart: "
+}
+
+#key {
+	line-height: 2em;
+	float: right;
+}
+
 #artist {
 	font-size: small;
 	line-height: 1em;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
-.lyrics{
-  line-height:3em;
+.lyrics {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 .chord {
-  position:relative;
+	position: relative;
 }
-.chord::before{
-  content:attr(chord);
-  position:absolute;
-  font-weight: bold;
-  bottom: .2em;
-  text-align:left;
-  color:grey;
+
+.chord::before {
+	content: attr(chord);
+	position: absolute;
+	font-weight: bold;
+	bottom: 10px;
+	text-align: left;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
 }
 
 .chord-block {
-  position:relative;
+	position: relative;
 }
 
-.chord-block::before{
-  content:attr(chord);
-  position:relative;
-  font-weight: bold;
-  bottom: 1.1em;
-  text-align:left;
-  display: inline-block;
-  color:grey;
+.chord-block::before {
+	content: attr(chord);
+	position: relative;
+	font-weight: bold;
+	bottom: 18.3px;
+	text-align: left;
+	display: inline-block;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
 }
 
 .chord-space {
-  position:relative;
-  padding-right: 0.0em;
+	position: relative;
+	padding-right: 5px;
 }
 
-.chord-space::before{
-  content:attr(chord);
-  position:absolute;
-  font-weight: bold;
-  bottom: .2em;
-  padding-right: 0.0em;
-  text-align:left;
-  color:grey;
+.chord-space::before {
+	content: attr(chord);
+	position: absolute;
+	font-weight: bold;
+	bottom: 10px;
+	padding-right: 5px;
+	text-align: left;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
 }
