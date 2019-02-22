@@ -31,6 +31,7 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openskies.songbook.printer.elements.ChordElement;
+import org.openskies.songbook.printer.elements.SongElementType;
 import org.openskies.songbook.printer.parser.RenderMode;
 import org.openskies.songbook.printer.parser.Song;
 import org.openskies.songbook.printer.parser.SongParserException;
@@ -153,11 +154,11 @@ public class Songs {
 		sb.append("<body>");
 
 		for (Song ws : getSongs(comparator)) {
-
 			sb.append(ws.render(RenderMode.WEB_NO_HEADER));
-			sb.append("<p style=\"page-break-after: always;\">&nbsp;</p>\n"
-					+ "<p style=\"page-break-before: always;\">&nbsp;</p>");
-
+			if (ws.count(SongElementType.LINEBREAK) <= 28) {
+				sb.append("<p style=\"page-break-after: auto;\">&nbsp;</p>\n"
+						+ "<p style=\"page-break-before: auto;\">&nbsp;</p>");
+			}
 		}
 
 		sb.append("</body>");
@@ -180,41 +181,32 @@ public class Songs {
 
 	}
 
-	/*public void writePdf2(String filename, Comparator<Song> cómparator) {
-		ITextRenderer renderer = new ITextRenderer();
-		try {
-			String s = new String();
-			for (Song ws : getSongs(cómparator)) {
-
-				try {
-					// LOGGER.debug(ws.getTitle());
-					renderer.setDocumentFromString(ws.render());
-				s += ws.render();
-				} catch (Exception e) {
-					LOGGER.error("Error in generated html-file '" + ws.getId() + ") " + ws.getTitle()
-							+ "'.  Change source-song.", e);
-				}
-			}
-
-			renderer = new ITextRenderer();
-			renderer.setDocumentFromString(s);
-			renderer.layout();
-			OutputStream outputStream = new FileOutputStream(filename);
-			renderer.createPDF(outputStream);
-			outputStream.close();
-
-		} catch (FileNotFoundException e) {
-			LOGGER.error(e);
-//			LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle() + "'. Change source-song.");
-		} catch (DocumentException e) {
-			LOGGER.error(e);
-//			LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle() + "'.  Change source-song.");
-		} catch (IOException e) {
-			LOGGER.error(e);
-//			LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle() + "'.  Change source-song.");
-		}
-
-	}*/
+	/*
+	 * public void writePdf2(String filename, Comparator<Song> cómparator) {
+	 * ITextRenderer renderer = new ITextRenderer(); try { String s = new String();
+	 * for (Song ws : getSongs(cómparator)) {
+	 * 
+	 * try { // LOGGER.debug(ws.getTitle());
+	 * renderer.setDocumentFromString(ws.render()); s += ws.render(); } catch
+	 * (Exception e) { LOGGER.error("Error in generated html-file '" + ws.getId() +
+	 * ") " + ws.getTitle() + "'.  Change source-song.", e); } }
+	 * 
+	 * renderer = new ITextRenderer(); renderer.setDocumentFromString(s);
+	 * renderer.layout(); OutputStream outputStream = new
+	 * FileOutputStream(filename); renderer.createPDF(outputStream);
+	 * outputStream.close();
+	 * 
+	 * } catch (FileNotFoundException e) { LOGGER.error(e); //
+	 * LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle()
+	 * + "'. Change source-song."); } catch (DocumentException e) { LOGGER.error(e);
+	 * // LOGGER.error("Error in generated html-file '" +
+	 * ws.getId()+") "+ws.getTitle() + "'.  Change source-song."); } catch
+	 * (IOException e) { LOGGER.error(e); //
+	 * LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle()
+	 * + "'.  Change source-song."); }
+	 * 
+	 * }
+	 */
 
 	/**
 	 * Write pdf.
