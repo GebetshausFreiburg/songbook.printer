@@ -22,6 +22,54 @@
 	padding-left: 20px;
 }
 
+.chord {
+	position: relative;
+}
+
+.chord::before {
+	content: attr(chord);
+	position: absolute;
+	font-weight: bold;
+	bottom: 10px;
+	text-align: left;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
+}
+
+.chord-block {
+	position: relative;
+}
+
+.chord-block::before {
+	content: attr(chord);
+	position: relative;
+	font-weight: bold;
+	bottom: 18.3px;
+	text-align: left;
+	display: inline-block;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
+}
+
+.chord-space {
+	position: relative;
+	padding-right: 5px;
+}
+
+.chord-space::before {
+	content: attr(chord);
+	position: absolute;
+	font-weight: bold;
+	bottom: 10px;
+	padding-right: 5px;
+	text-align: left;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
+}
+
 #songpart {
 	line-height: 1.2em;
 	font-weight: 600;
@@ -72,50 +120,20 @@
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
-.chord {
-	position: relative;
-}
-
-.chord::before {
-	content: attr(chord);
-	position: absolute;
-	font-weight: bold;
-	bottom: 10px;
-	text-align: left;
-	color: grey;
-	padding-top: 0.2em;
-	font-size: 95%;
-}
-
-.chord-block {
-	position: relative;
-}
-
-.chord-block::before {
-	content: attr(chord);
-	position: relative;
-	font-weight: bold;
-	bottom: 18.3px;
-	text-align: left;
-	display: inline-block;
-	color: grey;
-	padding-top: 0.2em;
-	font-size: 95%;
-}
-
-.chord-space {
-	position: relative;
-	padding-right: 5px;
-}
-
-.chord-space::before {
-	content: attr(chord);
-	position: absolute;
-	font-weight: bold;
-	bottom: 10px;
-	padding-right: 5px;
-	text-align: left;
-	color: grey;
-	padding-top: 0.2em;
-	font-size: 95%;
+@media print {
+	@page {
+		size: portrait;
+	}
+	.song {
+		-ms-transform: scale(0.65); /* IE 9 */
+		-webkit-transform: scale(0.65); /* Chrome, Safari, Opera */
+		transform: scale(0.65);
+		transform-origin: top left;
+		-webkit-column-break-inside: avoid !important;
+		break-inside: avoid !important;
+		page-break-inside: avoid !important;
+		page-break-after: avoid !important;
+		page-break-before: avoid !important;
+		display: inline-block;
+	}
 }
