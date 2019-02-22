@@ -1,5 +1,6 @@
-{title: So voller Leben (A007)}
+﻿{title: So voller Leben (A007)}
 {artist: Simon Schlittenhardt, Vinyard Enztal}
+key: D
  
 [D]  Denn du bist so gut zu mir und 
 [A/C#]  alles was ich bin, liegt in [Bm]dir verborgen 
@@ -18,12 +19,11 @@ Denn in dir finde ich Freiheit[D]
  {eoc}
  
  
- 
- 
 Bridge: 
 Und ich [Em/C#]geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir. 
 Ja ich [Em/C#]geh' auf dem Pfad, meinem [Bm7]Weg, mit Dir. 
 Ja ich [Em/C#]geh' immer weiter, weil ich [Bm7]deine Augen seh' 
-und [Em/C#]alles in mir will [G]aufsteigen mit [A7sus4]dir. 
+und [Em/C#]alles in mir will [G]aufsteigen mit [A7sus4]dir.
+ 
 {copyright: (c) 2006 Simon Schlittenhardt, Vineyard Enztal} 
 

@@ -1,5 +1,6 @@
 {title: Ich liebe Deine Nähe (A052)}
 {artist: Unbekannt}
+key: E
 
 [E]Ich liebe Deine [A]Nähe, König des [E/G#]Himmels,
 ich sehn mich nach dem [A]Ort an dem Du [E]wohnst.
@@ -7,9 +8,9 @@ Ein Tag in Deinem [A]Heiligtum ist [C#m/G#]besser
 als Tausende [A]sonst. (x2)
 
 {soc}
-  [E]Alles was ich brauch und [E/H]das, was ich liebe, 
+  [E]Alles was ich brauch und [E/B]das, was ich liebe, 
   [C#m7]Alles was ich brauch, [A]find ich bei Dir. 
-  [E]Alles was ich brauch, für mein [E/H]ganzes Leben, 
+  [E]Alles was ich brauch, für mein [E/B]ganzes Leben, 
   [C#m7]Alles was ich brauch, [A]find ich hier[E]. 
  {eoc}
 
@@ -18,4 +19,5 @@ Ich blicke auf das Kreuz und auf meinen Erlöser,
 ich stehe an dem Ort, wo er für mich starb.
 Das Tor zum Himmel offen für mich, den Sünder.
 Noch an diesem Tag.
+
 {copyright: (c) Unknown}

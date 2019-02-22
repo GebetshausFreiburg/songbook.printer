@@ -1,12 +1,12 @@
 {title: Der König lebt (A064)}
 {artist: Billy Funk, Albert Frey}
-
+key: G
 
 {soc}
-  [G]Der König [C/G]lebt, [D/G] [G]preist ihn, den [C/E]Aufer[C]stand'[D]nen. 
-  [G]Er hat den [C/G]Tod [G]besiegt für [G/D]alle [D]Zeit.[F] [Am7] [D] 
-  [G]Der König [C/G]lebt, [D/G] [G]preist ihn, der [C/E]uns be[C]frei[D]te. 
-  [D/F#]Er re[G]giert in [C]alle [D]Ewig[G]keit. 
+ [G]  Der König [C/G]lebt, [D/G] [G]preist ihn, den [C/E]Aufer[C]stand'[D]nen. 
+ [G]  Er hat den [C/G]Tod [G]besiegt für [G/D]alle [D]Zeit.[F] [Am7] [D] 
+ [G]  Der König [C/G]lebt, [D/G] [G]preist ihn, der [C/E]uns be[C]frei[D]te. 
+ [D/F#]Er re[G]giert in [C]alle [D]Ewig[G]keit. 
  {eoc}
 
 
@@ -20,5 +20,6 @@ Denn Jesus [D/C]lebt, [Bm7]sein Grab ist [Em]leer,
 [Em]und jeder [Em/D]Mund wird Gott [D/C]prei[C]sen.
 Denn Jesus [D/C]lebt, [Bm7]sein Grab ist [Em]leer,
 [D/F#]er über[G]wand des Todes [B]Macht, er ist [C]Herr der [D]Herrn.
+
 {copyright: (c) 1988 Integrity's Hosanna! Music}
 {ccli: 5301751}

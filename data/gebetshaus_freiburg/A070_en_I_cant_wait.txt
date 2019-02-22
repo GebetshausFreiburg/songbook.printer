@@ -1,5 +1,6 @@
 {title: I can't wait (A070)}
 {artist: Marcus Meier, Tim Reimherr}
+key: D
 
 1. There's a place I've [D]been [Dsus]
 More [D]real that what I [Dsus]see
@@ -7,7 +8,7 @@ You led me by the h[D]and [Dsus]
 In[D]to the chamber of the [Dsus]King
 
 
-Prechorus
+Pre-Chorus:
 Take me [G]away to the [D/F#]place
 That I ne[Em]ver want to leave
 
@@ -17,16 +18,17 @@ Of a [D]love that's better than [Dsus]wine
 Come to me my [D]Lord, [Dsus]
 only [D]you can satis[Dsus]fy
 
-{soc}
- I can't [D]wait[A/C#]for our [Bm]wedding day to c[G]ome 
- Let me see your [D]face,[A/C#]let me [Bm]feel your arms of l[G]ove 
- {eoc}
 
+{soc}
+ I can't [D]wait[A/C#]  for our [Bm]wedding day to c[G]ome 
+ Let me see your [D]face,[A/C#]  let me [Bm]feel your arms of l[G]ove 
+ {eoc}
 
 
 3 . I have been be[D]trothed [Dsus]
 To the [D]King above all [Dsus]Kings
 I am not my [D]own [Dsus]
 And you [D]pledged yourself to [Dsus]me﻿
+
 {copyright: (c) 2004 Tim Reimherr, Forerunner Music}
 {ccli: 5640773}

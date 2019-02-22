@@ -1,6 +1,6 @@
 {title: Siehe, ich habe dir geboten (A067)}
 {artist: Kommunität Gnadenthal}
-
+key: C
 
 {soc}
   [C]Siehe, ich [G/B]habe dir ge[Am]boten,
@@ -20,4 +20,5 @@ so [F]hat dich Gott er[G]wählt.
 
 3. [F]Denn tief in [C]dir lebt
 der [F]Gott und Herr der [G]Welt.
+
 {copyright: (c) 1997 Kommunität Gnadenthal}

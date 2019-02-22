@@ -1,5 +1,6 @@
-{title: Zu deinem Thron (A010)}
+﻿{title: Zu deinem Thron (A010)}
 {artist: Outbreakband}
+key: A
 
 1.[A]  Weder ein Hoch noch Tief
 [F#m]  Leben noch Tod hält mich von [E]Dir

@@ -1,11 +1,14 @@
 {title: Es ist die Kraft des Herrn (A059)}
 {artist: Christine Morgenstern}
+key: Em
 
 Es ist die [Em]Kraft des Herrn, die auf uns kommt,
 es ist die [Am]Hand des Herrn, die auf uns ruht,
 es ist die [B7]Macht des Höchsten, die uns übersc[Em]hattet. (x2)
 
+
 Denn wo der [D]Geist des Herrn ist, ist keine [G]Furcht;
 denn wo der [B7]Geist des Herrn ist, da ist [Em]Freiheit! (x2)
+
 {copyright: (c) 1985 Christine Morgenstern, JmeM}
 {ccli: 4671729}

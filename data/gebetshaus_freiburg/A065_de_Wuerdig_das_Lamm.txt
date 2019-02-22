@@ -1,17 +1,18 @@
 {title: Würdig das Lamm (A065)}
-{subtitle: Kanon}
 {artist: Beat Schmid}
 {capo: 2}
+key: A
 
 [A]Würdig das [E/G#]Lamm, das ge[F#m]opfert [C#m]ist;
-[Dmaj7]würdig das [Amaj7]Lamm, zu [E4]nehmen[E];
+[Dmaj7]würdig das [Amaj7]Lamm, zu [E4]neh[E]men;
 [A]würdig das [E/G#]Lamm, das ge[F#m]opfert [C#m]ist;
-[Dmaj7]würdig das [Amaj7]Lamm, zu [E4]nehmen[E]:
+[Dmaj7]würdig das [Amaj7]Lamm, zu [E4]neh[E]men: 
 
 
 [A]Macht und [E/G#]Reichtum, [F#m]Weisheit und [C#m]Stärke,
 [Dmaj7]Ehre und [Amaj7]Ruhm und [E4]Lob  - [E]preis,
 [A]Macht und [E/G#]Reichtum, [F#m]Weisheit und [C#m]Stärke,
 [Dmaj7]Ehre und [Amaj7]Ruhm und [E4]Lob  - [E]preis.
+
 {copyright: (c) 1985 Oncken Verlag, Wuppertal}
 {ccli: 4327774}

@@ -1,6 +1,7 @@
-{title: Groß und wunderbar (A002)}
+﻿{title: Groß und wunderbar (A002)}
 {artist: Stuart Dauermann, Gitta Leuschner}
 {capo: 5}
+key: Dm
 
 1.[Dm]  Groß und w[G]underbar [Dm]  sind all' D[G]eine Werke,
 [Dm]O Herr [C7]Gott, allm[F]ächt'ger Sc[A7]höpfer.
@@ -22,5 +23,6 @@
 La la la [A]la la la la la [Dm]la la la la la la [C7]la la la la la
 [F]la la la la la la [Gm]la la la la la [Dm]la la la la la la
 [A]la la la la la la la [Dm]la.
+
 {copyright: (c) 1972 Lillenas Publishing Co., USA}
 {ccli: 5374087}

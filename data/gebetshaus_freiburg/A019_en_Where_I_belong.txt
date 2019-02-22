@@ -1,4 +1,4 @@
-{title: Where I belong (A019)}
+﻿{title: Where I belong (A019)}
 {artist: Cory Asbury, Anna Asbury, Seth Yates}
 key: C
 
@@ -29,5 +29,6 @@ Del[F]ight in [C/E]me, de[G]light in me
 
 H[F]ere in Your p[C/E]resence, God, [G]I find my [Am]rest
 H[F]ere in Your p[C/E]resence, God[G]
+
 {copyright: (c) Cory Asbury, Anna Asbury, and Seth Yates}
 {ccli: 5629598}

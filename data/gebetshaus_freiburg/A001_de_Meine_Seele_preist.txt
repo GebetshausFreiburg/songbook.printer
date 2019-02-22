@@ -1,5 +1,6 @@
-{title: Meine Seele preist (A001)}
+﻿{title: Meine Seele preist (A001)}
 {artist: Albert Frey}
+key: Em
 
 1. Meine [Em]Seele preist die [D/E]Größe des Herrn,
 es [Cmaj7]jubelt mein Geist über [G/D]Gott, meinen R[D]etter.
@@ -18,5 +19,6 @@ für [Cmaj7]alle Zeit preisen mich [G/D]selig alle Geschl[D]echter.
 stürzt die [Cmaj7]Stolzen vom Thron, richtet [G/D]auf die Unterdr[D]ückten.
 Er macht [Em]Hungernde satt, schickt die [D/E]Reichen fort.
 Er [Cmaj7]denkt an sein Volk, so wie [G/D]er es verh[D]eißen.
+
 {copyright: (c) 1997 SCM Hänssler, Immanuel Music}
 {ccli: 4895866}

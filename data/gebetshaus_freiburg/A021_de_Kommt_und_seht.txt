@@ -1,4 +1,4 @@
-{title: Kommt und seht (A021)}
+﻿{title: Kommt und seht (A021)}
 {artist: Graham Kendrick}
 key: C
 
@@ -27,5 +27,6 @@ und die St[Dm]rafe [A/C#]lag auf [F]ihm z[G]u [Am]unserm H[A#]eil. [F/G] [G]
 Voller [Dm]Ehrfurcht [A/C#]beugen w[F]ir [G]uns [Am]nun vor D[A#]ir. [F/G] [G]
 Weil Du st[C]arbst, leben [G/B]wir, und Dein [A#6]Opfer macht uns h[A4]eil, [A]
 Deine [Dm]Aufers[A/C#]tehungskr[F]aft g[G]ibt [Am]uns den S[A#]ieg. [F/G] [G]
+
 {copyright: (c) 1989 Make Way Music, Great Britain}
 {ccli: 5160002}

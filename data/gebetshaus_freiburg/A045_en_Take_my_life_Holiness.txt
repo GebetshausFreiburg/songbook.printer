@@ -2,16 +2,16 @@
 {artist: Scott Underwood}
 {capo: 5}
 
-1.[G]Holin[C]ess, holin[D]ess is what I l[C]ong for.
-[G]Holin[C]ess is what I n[D]eed. [C]
-[G]Holin[C]ess, holin[D]ess is what you w[C]ant from m[G]e. [C] [D]
+1.[G]  Holin[C]ess, holin[D]ess is what I l[C]ong for
+[G]  Holin[C]ess is what I n[D]eed [C]
+[G]  Holin[C]ess, holin[D]ess is what you w[C]ant from m[G]e  [C] [D]
 
 
 {soc}
- Take my h[G]eart [C]and f[D]orm it.[C] 
- Take my m[G]ind, transf[D]orm it.[C] 
- Take my w[G]ill, [C]conf[D]orm it [C] 
- to y[G]ours, to y[C]ours, oh L[D]ord. 
+ Take my h[G]eart [C]  and f[D]orm it[C] 
+ Take my m[G]ind, [C]  transf[D]orm it[C] 
+ Take my w[G]ill, [C]  conf[D]orm it [C] 
+ To y[G]ours, to y[C]ours, oh L[D]ord
  {eoc}
 
 
@@ -19,5 +19,6 @@
 
 
 3. Righteousness ...
+
 {copyright: (c) Scott Underwood}
 {ccli: 1617154}

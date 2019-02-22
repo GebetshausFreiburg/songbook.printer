@@ -1,23 +1,23 @@
 {title: Klatscht in die Hände (A058)}
 {artist: Werner Schroll}
-
-
-1. [Em]Er hat ent[D]waffnet den [Em]Fürst dieser [B]Welt und hat
-[C]über die [D]Mächte triump[Em]hiert. [C] [D]
+key: Em
 
 
 {soc}
-  [Em]Klatscht in die Hände und [G]jauchzt, 
-  [A]König ist [Em]unser Gott. 
-  [Em]Klatscht in die Hände und [G]jauchzt, 
-  [A]König ist [Em]unser Gott, 
+ [Em]Klatscht in die Hände und [G]jauchzt, 
+ [A]König ist [Em]unser Gott[C].[D7] 
+ [Em]Klatscht in die Hände und [G]jauchzt, 
+ [A]König ist [Em]unser Gott, 
  denn er [C]sitzt auf dem [D]Thron und re[Em]giert, 
  denn er [C]sitzt auf dem [D]Thron und re[Em]giert. 
  {eoc}
 
 
+1. [Em]Er hat ent[D]waffnet den [Em]Fürst dieser [B]Welt 
+und hat [C]über die [D]Mächte trium[Em]phiert.[C] [D7]
+
 
 2. [Em]Ehre, Macht und [D]Herrlichkeit ge[Em]hört ihm al[B]lein.
-[C]Halle[D]lu-[Em]ja! [C] [D]
+[C]Halle[D]lu - [Em]ja![C] [D7]
 {copyright: (c) Werner Schroll}
 {ccli: 4327578}

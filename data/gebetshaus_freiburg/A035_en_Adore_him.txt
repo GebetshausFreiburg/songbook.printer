@@ -1,28 +1,30 @@
 {title: Adore him (A035)}
 {artist: Samuel Lane}
+key: Am
 
-1. [Am]It is by gr[F]ace that we are s[C]aved
-[Am]Through f[F]aith and not by w[C]orks
-[Am]For it is through J[F]esus that we have l[C]ife
-[Am]To live is a bl[F]essing, to live is Ch[C]rist
+1. [Am] It is by gr[F]ace that we are s[C]aved
+[Am]  Through f[F]aith and not by w[C]orks
+[Am]  For it is through J[F]esus that we have l[C]ife
+[Am]  To live is a bl[F]essing, to live is Ch[C]rist
 
 
 {soc}
  C[Am]ome, let [Fmaj7]us ad[C]ore Him 
  C[Am]ome, let [Fmaj7]us ad[C]ore Him 
-  [Am]O-o-[F]oh a[C]dore Him 
-  [Am]O-o-[F]oh a[C]dore Him 
+ [Am]O-o-[F]oh a[C]dore Him 
+ [Am]O-o-[F]oh a[C]dore Him 
  {eoc}
 
 
-2. [Am]So we've been r[F]aised with Jesus Ch[C]rist
-[Am]Let's set our h[F]earts on things ab[C]ove
-[Am]That we may be f[F]illed with the fullness of G[C]od
-[Am]And walk in the fr[F]eedom He's given us[C]
+2. [Am]  So we've been r[F]aised with Jesus Ch[C]rist
+[Am]  Let's set our h[F]earts on things ab[C]ove
+[Am]  That we may be f[F]illed with the fullness of G[C]od
+[Am]  And walk in the fr[F]eedom He's given us[C]
 
 
 Bridge:
-[F]To our God, [G]to our Father
-[Am]Be the glory, [C]forever and [Csus]ever
+[F]   To our God, [G]  to our Father
+[Am]  Be the glory, [C]   forever and [Csus]ever
+
 {copyright: (c) 2010 Vineyard Songs (UK/Eire)}
 {ccli: 6002891}

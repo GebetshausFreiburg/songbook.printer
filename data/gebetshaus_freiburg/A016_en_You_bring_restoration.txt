@@ -1,5 +1,6 @@
 {title: You bring restoration (A016)}
 {artist: David Brymer}
+key: E
 
 You've taken my [E]pain
 called me by a [G#m]new name
@@ -21,4 +22,5 @@ and in it's [E/G#]place, You give me [B]joy
 
 Halle[A/E]lu - j[E]ah, Halle[A/E]lu - j[E]ah
 You make [B]all things new, all things new (2x)
+
 {copyright: (c) David Brymer}

@@ -1,8 +1,10 @@
 {title: Deinen Tod, o Herr (A083)}
 {artist: Unbekannt}
+key: D
 
 Deinen [D]Tod, o Herr, ver[G]künden [D]wir.
 Deine Auferstehung preisen [A7]wir.
 [D]Deine Wiederkunft erw[G]arten [D]wir,
 [Em]bis Du [D]kommst in [A7]Herrlich[D]keit.
+
 {copyright: (c) Unbekannt}

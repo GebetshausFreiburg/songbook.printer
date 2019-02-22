@@ -1,5 +1,6 @@
 {title: Make your home in me (A026)}
 {artist: Helen Frye, Michael Frye}
+key: D
 
 1. [D]I have sung my songs of praise, thanksgiving on my lips
 Bowed [G]down and worshipped [F#m]you
@@ -15,10 +16,10 @@ For the [G]veil is torn in [A]two
  {eoc}
 
 
-
 2. I feel so safe with you, acceptance in your voice
 You whisper tenderly
 You are my beloved, chosen one my friend
 You're so precious to me
+
 {copyright: (c) 1999 Vineyard Songs (UK/Eire)}
 {ccli: 2650405}

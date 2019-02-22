@@ -1,17 +1,18 @@
 {title: Pledge (A043)}
 {artist: Marcus Meier, Misty Edwards}
+key: G
 
-1. [G]Come let us t[C]urn to the [G/B]Lord, for he's c[Em]alled us [C]each his [G]own
-[G]Come let us l[C]ove for he [G]said, 'You have r[Em]avished [C]me my b[G]ride
+1. [G]  Come let us t[C]urn to the [G/B]Lord, for he's c[Em]alled us [C]each his [G]own
+[G]  Come let us l[C]ove for he [G]said, 'You have r[Em]avished [C]me my b[G]ride
 I am y[Em]ours and y[C]ou are m[G]ine'
 
 {soc}
- T[G]his is my prayer,  it’s [D]my solemn vow 
+ T[G]his is my prayer, it’s [D]my solemn vow 
  With [Em]all that I am with [C]all that I have 
- I will l[G/B]ove you, [D]I will l[Em]ove you [C] 
+ I will l[G/B]ove you, [D]  I will l[Em]ove you [C] 
  With [G]all of my heart, my [D]soul and my mind 
  I [Em]pour out an offering of w[C]orship and cry 
- I will l[G/B]ove you, [D]I will [Em]love you [C] 
+ I will l[G/B]ove you, [D]  I will [Em]love you [C] 
  {eoc}
 
 
@@ -20,11 +21,11 @@ I am y[Em]ours and y[C]ou are m[G]ine'
 'turn and [Em]leave your [C]fathers [G]home; come and [Em]cling to [C]me al[G]one'
 
 
-Bridge: 
-J[G]esus, [Bm7]I am [Em]yours, and for[C]ever
+Bridge: J[G]esus, [Bm7]I am [Em]yours, and for[C]ever
 [G]I want [Bm7]nothing [Em]more than to [C]be with you
 
 
-Oh to [G]be with you...[Bm7]Oh to [Em]be with you... [C](2x)
+Oh to [G]be with you...[Bm7]  Oh to [Em]be with you... [C](2x)
+
 {copyright: (c) 2007 Forerunner Music}
 {ccli: 5540938}

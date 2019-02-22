@@ -1,5 +1,6 @@
 {title: Lord, you have my heart (A029)}
 {artist: Martin Smith}
+key: D
 
 1. [Bm]Lord, you have my h[G]eart, and
 [G]I will s[D/F#]earch for Y[A4]ours, [A]
@@ -21,5 +22,6 @@
 2. [Bm]Lord, you have my h[G]eart, and
 [G]I will s[D/F#]earch for Y[A4]ours, [A]
 [Bm]let me be to Y[G]ou a s[A]acrif[D]ice.
+
 {copyright: (c) 1992 Thankyou Music, aus Feiert Jesus 1}
 {ccli: 1108735}

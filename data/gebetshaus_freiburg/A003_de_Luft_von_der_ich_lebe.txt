@@ -1,5 +1,6 @@
-{title: Luft, von der ich lebe (A003)}
+﻿{title: Luft, von der ich lebe (A003)}
 {artist: Johannes Hartl}
+key: E
 
 Luft von der ich l[E]ebe, [Esus]Boden der mich tr[E]ägt.
 Du hast mich ersc[C#m]haffen, [Amaj7]wolltest dass ich le[C#m]b.

@@ -1,5 +1,6 @@
 {title: Ich will singen (A063)}
 {artist: Donya Brockway, Gerhard Schnitter}
+key: D
 
 [D]Ich [Dmaj7]will [D6]sin[Dmaj7]gen dem [G]Herrn mein Leben [D]lang,
 Loblieder [Em7]bringen meinem [A7]Gott, so lange ich [D]bin. [Dmaj7] [D6] [Dmaj7]

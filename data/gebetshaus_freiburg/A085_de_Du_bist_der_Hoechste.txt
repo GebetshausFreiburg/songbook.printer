@@ -1,16 +1,15 @@
 {title: Du bist der Höchste (A085)}
 {artist: Pete Sanchez, Gitta Leuschner}
 {capo: 4}
+key: E
 
 [E]Du bist der [F#m]Höchste, o [B7]Herr, über allen [E]Er - [C#m]den.
 Du bist er[F#m]hoben über [B7]alle Gött[E]er. (x2)
 
 {soc}
- Ich er[E]hebe Dich. 
- Ich er[B7]hebe Dich. 
+ Ich er[E]hebe Dich, ich er[B7]hebe Dich. 
  Ich er[A]hebe Dich, o [E]Herr[B7]! 
- Ich er[E]hebe Dich. 
- Ich er[B7]hebe Dich. 
+ Ich er[E]hebe Dich, ich er[B7]hebe Dich. 
  Ich er[A]hebe Dich, o [E]Herr! 
  {eoc}
 

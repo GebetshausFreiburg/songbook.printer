@@ -1,22 +1,23 @@
 {title: Finally I surrender (A039)}
 {artist: Casandra Campbell, Misty Edwards}
+key: D
 
-1. [Dsus]All [D]I n[Bm]eed is y[G]ou to have your w[D]ay.
-[Dsus]You [D]are the p[Bm]otter and [G]I am the cl[D]ay
-[Dsus]All [D]I n[Bm]eed is y[G]ou to have your w[D]ay
-[Dsus]You [D]are cre[Bm]ator and [G]I'm what you [D]made.
+1. [Dsus]All [D]I [Bm]need is [G]you to have your [D]way.
+[Dsus]You [D]are the [Bm]potter and [G]am the [D]clay
+[Dsus]All [D]I [Bm]need is [G]you to have your [D]way
+[Dsus]You [D]are [Bm]creator and [G]I'm what you [D]made.
 
 
 {soc}
- Finally I surr[Dsus]en-[D]-d[Bm]er 
- Finally I surr[G]end[D]er 
- Finally I surr[Dsus]en-[D]-d[Bm]er 
- Finally I surr[G]end[D]er 
+ Finally I [Dsus]surren[D] -  [Bm]der 
+ Finally I sur[G]ren[D]der 
+ Finally I [Dsus]surren[D] -  [Bm]der 
+ Finally I sur[G]ren[D]der. 
  {eoc}
 
 
+Bridge:
+You are [Dsus]God, [D]I am [Bm]man; You are sou[G]ve[D]reign.
 
-2. You are [Dsus]God, [D]I am m[Bm]an, You are s[G]over[D]eign.
-You are [Dsus]God, [D]I am m[Bm]an, You are s[G]over[D]eign.
 {copyright: (c) 2006 Forerunner Worship}
 {ccli: 5382127}

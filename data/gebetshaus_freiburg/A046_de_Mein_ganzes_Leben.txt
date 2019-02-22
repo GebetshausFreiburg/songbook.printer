@@ -1,20 +1,22 @@
 {title: Mein ganzes Leben (A046)}
 {artist: Marc James}
+key: E
 
-1. [G]Ich gebe dir mein H[D]erz und alles, was ich bin[C].
-Um deinetw[D]illen, H[Em]err, leg ich alles [D/F#]vor dich h[G]in.
-Das, was ich mir ertr[D]äum, was meine Rechte w[C]är'n,
-ich gebe [D]alles [Em]auf für ein neues L[D/F#]eben, H[G]err.
+1. [E]  Ich gebe dir mein [B]Herz und alles, was ich [A]bin
+Um deinetw[B]illen, [C#m]Herr, leg ich alles [B/D#]vor dich h[E]in
+Das, was ich mir ertr[B]äum, was meine Rechte w[A]är'n,
+ich gebe [B]alles [C#m]auf für ein neues [B/D#]Leben, H[E]err
 
 {soc}
- Mein [Em]ganz[D/F#]es L[G]eben g[C]eb ich d[G]ir, g[Em7]eb ich dir[D]. [C] 
- Mein [Em]ganz[D/F#]es L[G]eben g[C]eb ich d[G]ir, g[Em7]eb ich dir[D]. [C] 
+ Mein [C#m]gan [B/D#]-  zes [E]Leben [A]geb ich [E]dir, [C#m7]geb ich dir[B]  [A] 
+ Mein [C#m]gan [B/D#]-  zes [E]Leben  [A]geb ich d[E]ir, [C#m7]geb ich dir[B]  [A] 
  {eoc}
 
 
-2.[G]Ich sing dir dieses L[D]ied. Ich warte vor dem Kr[C]euz,
-und was die W[D]elt sich w[Em]ünscht, verliert all [D/F#]seinen R[G]eiz.
-Ich will dich kennen, H[D]err, und Deine Herrlichk[C]eit,
-die Freude, d[D]ie du t[Em]eilst sogar in d[D/F#]einem L[G]eid.
+2.[E]  Ich sing dir dieses [B]Lied, ich warte vor dem [A]Kreuz,
+uUnd was die [B]Welt sich [C#m]wünscht, verliert all [B/D#]seinen [E]Reiz
+Ich will dich kennen, [B]Herr, und Deine Herrlichk[A]eit
+Die Freude, [B]die du [C#m]teilst sogar in [B/D#]deinem [E]Leid
+
 {copyright: (c) Marc James}
 {ccli: 3033179}

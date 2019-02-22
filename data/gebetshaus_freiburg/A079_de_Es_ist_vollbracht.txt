@@ -1,5 +1,6 @@
 {title: Es ist vollbracht (A079)}
 {artist: Catharina Akerhielm, Ulrike Nagel}
+key: Em
 
 Es ist voll[Em]bracht er hat den [Am]Sieg!
 [D]Satan ist besiegt, die Macht des [G]Todes niederliegt.
@@ -7,15 +8,14 @@ Je[B]sus ist [Em]Herr, o Halle[Am]luja,
 König der [B]Könige ist er in Ewig[Em]keit. (x2)
 
 {soc}
- Lei, lei, lei,
+  Lei, lei, lei,
   [Am]lei, lei, lei, lei, lei, lei, 
   [Em]lei, lei, lei, lei, lei, lei, 
   [B]lei, lei, lei, lei, lei, lei, 
   [Em]lei, lei, lei, lei, 
   [Am]lei, lei, lei, lei, lei, lei, 
   [Em]lei, lei, lei, lei, lei, lei, 
-  [B]lei, lei, lei, lei, lei, lei, 
-  [Em]lei. (x2) 
+  [B]lei, lei, lei, lei, lei, lei, [Em]lei. (x2) 
  {eoc}
 
 {copyright: (c) Catharina Akerhielm}

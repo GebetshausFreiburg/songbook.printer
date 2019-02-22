@@ -1,23 +1,23 @@
 {title: Starker Gott (A076)}
 {artist: Leonard Jones}
+key: G
 
-1. [G]Starker [C]Gott, herrlicher [D]Herr,
-[G]mit allen [Em]Engeln singen [D]wir:
-Alle [Am]Reiche dieser [Em]Welt
-sie gehö[G]ren unserm [D]Gott.
-[F]Er re[Am]giert in Ewig[D]keit.
+1. [G]  Starker [C]Gott, herrlicher [D]Herr,
+[G]  mit allen [Em]Engeln singen [D]wir: 
+Alle [Am]Reiche dieser [Em]Welt, sie gehö[G]ren unserm [D]Gott.
+[F]  Er re[Am]giert in Ewig[D]keit.
 
 {soc}
-  [G]Unser [C]Gott allein re[D]giert, 
-  [G]gebt ihm die [Em]Ehre die nur [Am]Ihm [D]gebührt, 
-  [G]betet ihn [C]an, Er ist es [D]wert. 
-  [Am]Unser [Em]Gott allein re[C] [D]giert, er re[G]giert[C] [D]. 
+ [G]  Unser [C]Gott allein re[D]giert, 
+ [G]  gebt ihm die [Em]Ehre die nur [Am]Ihm [D]gebührt, 
+ [G]  betet ihn [C]an, Er ist es [D]wert. 
+ [Am]  Unser [Em]Gott allein re[C]giert,[D]  er re[G]giert.[C] [D]
  {eoc}
 
 
-2. Jeder beugt die Knie,
-jeder Mund bekennt:
-Jesus ist der Herr,
-zur Verherrlichung des Vaters
-und jeder wird es seh'n.
+2.[G]  Jeder [C]beugt die [D]Knie,
+[G]  jeder [C]Mund be[D]kennt: 
+[Am]Jesus ist der [Em]Herr zur Ver[G]herrlichung des [D]Vaters
+[F]  und jeder wird es [D]seh'n.
+
 {copyright: (c) 1996 EagleStar Productions}

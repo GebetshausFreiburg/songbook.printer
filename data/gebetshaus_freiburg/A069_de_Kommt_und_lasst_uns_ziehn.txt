@@ -1,6 +1,6 @@
 {title: Kommt und laßt uns zieh'n (A069)}
 {artist: Bill Quigley, Mary Anne Quigley, Gitta Leuschner}
-{capo: 2}
+key: D
 
 
 {soc}
@@ -10,7 +10,8 @@
 
 
 Und [G]er wird uns [A7]seine [Em7/A]Wahrheit [D]lehr'n,[D7]
-und [G]Weisung wird [A7]ausgeh'n von [D]Zi - [F#7]- [Bm7]on und
+und [G]Weisung wird [A7]ausgeh'n von [D]Zi   [F#7]- [Bm7]on und
 das [Em7]Wort unsres [A7]Herrn von Jerusa[D]lem.
+
 {copyright: (c) 1976 Scripture in Song / Integrity's Hosanna! Music}
 {ccli: 5873595}

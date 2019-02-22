@@ -46,7 +46,7 @@ public class SongbookPrinter {
 
 		// Write songs
 		LOGGER.info("Write Songs (Merged File)");
-		Songs.getInstance().writeHtml("Songs.html", Comparators.TITLE);
+		Songs.getInstance().writeHtml("Songs.html", Comparators.LENGTH_INVERTED);
 
 		// Write index
 		LOGGER.info("Write Index");

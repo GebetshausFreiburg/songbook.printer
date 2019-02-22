@@ -1,4 +1,4 @@
-{title: Du bist der Schöpfer des Universums (A018)}
+﻿{title: Du bist der Schöpfer des Universums (A018)}
 {artist: Bene Müller}
 key: G
 
@@ -21,5 +21,6 @@ du bist der H[C]irte, der s[D]eine Sc[Em7]hafe beim N[C]amen n[D]ennt. [C] [D]
 3. Du bist die H[C]ilfe, die n[D]ie zu spät kommt,
 du bist der R[C]etter in gr[D]oßer Not,
 du bist der V[C]ater, der s[D]eine [Em7]Kinder n[C]ie verl[D]ässt. [C] [D]
+
 {copyright: (c) 1997 Basileia Music, Postfach 108, CH - 3000 Bern 22}
 {ccli: 4330077}

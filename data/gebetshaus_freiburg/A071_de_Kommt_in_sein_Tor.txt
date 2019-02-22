@@ -1,9 +1,9 @@
 {title: Kommt in sein Tor (A071)}
 {artist: Nina Lee Hopper, Agape-Gemeinschaft München}
-
+key: Am
 
 {soc}
-  [Am]Kommt in sein Tor mit [Dm]dankbarem [Am]Herzen, 
+ [Am]Kommt in sein Tor mit [Dm]dankbarem [Am]Herzen, 
  kommt in den [G]Vorhof mit Lobge[Am]sang! 
  {eoc}
 
@@ -12,5 +12,6 @@ Er[Am]freut euch am [G]Herrn, [Em]unserem [Am]Schöpfer,
 erfreut euch am [G]Herrn, dem [Em]Vater des [Am]Lichts,
 erfreut euch am [G]Herrn, [Em]unserm Er[Am]retter,
 erfreut euch am [G]Herrn, dem [Em]ewigen [Am]Gott!
+
 {copyright: (c) 1974 Psalm of Life, USA}
 {ccli: 5376047}

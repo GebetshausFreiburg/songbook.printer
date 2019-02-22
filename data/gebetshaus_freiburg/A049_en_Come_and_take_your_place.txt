@@ -1,14 +1,15 @@
 {title: Come and take your place (A049)}
 {artist: Jon Thurlow}
-
-Come and [Bm]take your pl[G]ace
-in the c[D]entre of our h[A]earts.
-Come and [Bm]take your pl[G]ace. [D] [A]
+key: Am
 
 {soc}
-  [Bm]My s[G]oul [D]longs [A]for 
-  [Bm]you, [G]Lord, [D]in [A]a 
-  [Bm]dry [G]and w[D]ear[A]y [Bm]land. [G] [D] [A] 
+ Come and [Am]take your [F]place in the [C]centre of our [G]hearts
+ Come and [Am]take your [F]place[C] [G]
  {eoc}
+
+
+[Am]My [F]soul [C]longs [G]for [Am]you, [F]Lord 
+[C]in [G]a [Am]dry [F]and [C]wea[G]ry [Am]land
+ 
 
 {copyright: (c) Jon Thurlow}

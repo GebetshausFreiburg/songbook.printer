@@ -1,5 +1,6 @@
 {title: Let me love you more (A017)}
 {artist: Misty Edwards}
+key: Am
 
 I'm in [Am]love with a Man [F]  I'm in [C]love with a [G]Stranger
 I'm in [Am]love with my M[F]aker whom [C]I have never [G]seen
@@ -25,5 +26,6 @@ I have [Am]one life to live and [F]all I have to give to Y[C]ou is l[G]ove (2x)
 [Am]  Just hearing [F]  those words [C]  is enough is en[G]ough to satisf[Am]y [F]
 [C]  You do You do [G]  You satisf[Am]y [F] [C]I couldn't leave [G]even if I tried
 [Am]  I must have You [F]  I must have You [C]  I must have You [G]
+
 {copyright: (c) Misty Edwards}
 {ccli: 4339906}

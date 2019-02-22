@@ -1,4 +1,4 @@
-{title: Heaven is here now (A014)}
+﻿{title: Heaven is here now (A014)}
 {artist: Jesus Culture}
 key: Am
 
@@ -29,5 +29,6 @@ key: Am
 Bridge:
 Heaven is h[F]ere now, He’s all ar[C]ound us [G]
 Heaven is J[F]esus, it´s the moment we m[C]eet [G]
+
 {copyright: (c) 2009 Jesus Culture}
 {ccli: 5786156}

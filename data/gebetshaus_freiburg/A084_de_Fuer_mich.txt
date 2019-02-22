@@ -1,15 +1,19 @@
 {title: Für mich (A084)}
 {artist: Rainer Harter}
+key: D
 
-Intro[D] [A/D]
+Intro:
+[D] [A/D]
 
-1.[D]Ich in Dir, Du in [A/D]mir:
+1. [D]Ich in Dir, Du in [A/D]mir: 
 [D]Du bist mein, ich gehöre [A/D]Dir.
 [G]Wen hab ich auf dieser [D]Welt[A/D],
 [G]der mich führt und der mich [D]hält?[A/D]
+
+
 {soc}
   [D]Du ziehst mich hinauf zu [A/D]Dir: 
-  [D]Ich spür: Mein Leben gehört nicht mehr [A/D]mir. 
+  [D]Ich spür]mir. 
   [G]Ich gehöre Deinem [D]Soh[A/D]n. 
   [G]Seine Nähe ist mein Trost und mein [D]Loh[A/D]n. 
  {eoc}
@@ -17,8 +21,9 @@ Intro[D] [A/D]
 
 2. In [G]meinem Herz erstrahlt Dein helles [D]Licht[A/D]
 und [G]schaue ich hinein in Dein [D]Ges[A/D]icht,
-wird mir [G]klar:
+wird mir [G]klar: 
 Nur Du vertreibst meine [Bm]Finsternis.
 Du bist mein [G]Gott und [D]Du bist [A/D]für mich.
+
 {copyright: (c) 2008 Rainer Harter, Lied auf CD "Deine Liebe"}
 {ccli: 0}

@@ -1,6 +1,7 @@
-{title: Ströme der Heilung (A027)}
+﻿{title: Ströme der Heilung (A027)}
 {artist: Martin Pepper}
 {capo: 5}
+key: F
 
 Str[F]öme der Heilung f[F/A]ließen von Deinem Thr[Bb]on
 oh [Bb/C]himmlischer Vater

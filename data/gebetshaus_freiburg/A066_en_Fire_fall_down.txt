@@ -1,35 +1,39 @@
 {title: Fire fall down (A066)}
 {artist: Matt Crocker}
-{capo: 9}
+key: D
 
-1. [D]You bought my life with the blood that you shed on the [G]cross
+1. [D]  You bought my life with the blood that you shed on the [G]cross
 When you died for the sins of men and you [A]let out a cry
 Crucified - now alive in [D]me.
 
 
-2. [D]These hands are yours, teach them to serve as you p[G]lease.
-And I'll reach out desperate to see all the g[A]reatness of God.
-May my soul rest assured in [D]you.
+2. [D]  These hands are yours, teach them to serve as you p[G]lease
+And I'll reach out desperate to see all the g[A]reatness of God
+May my soul rest assured in [D]you
 
-Pre-Chorus: [G]I'll never be the [A]same. [G]No, I'll never be the [A]same.
+Pre-Chorus:
+[G]  I'll never be the [A]same; [G]  no, I'll never be the [A]same
 
 {soc}
- Cause I [D]know that you're a[G]live. 
- You came to [D]fix my broken [G]life. 
- And I'll [D]sing to glorif[G]y. 
- Your Holy [Bm]Name, Jesus [G]Christ. 
+ Cause I [D]know that you're a[G]live
+ You came to [D]fix my broken [G]life 
+ And I'll [D]sing to glorif[G]y
+ Your Holy [Bm]Name, Jesus [G]Christ
  {eoc}
 
 
-3. [D]You changed it all. You broke down the wall
-When I s[G]poke and confessed, in you I am blessed.
-Now I [A]walk in the light, in victorious sight of [D]you.
+3. [D]  You changed it all, You broke down the wall
+When I [G]spoke and confessed, in you I am blessed
+Now I [A]walk in the light, in victorious sight of [D]you
 
 
-Bridge 1: [D]Fire fall down,[G]fire fall [Bm]down on us we [G]pray.
-As we [D]seek you, fire fall [G]down, your fire fall [Bm]down on us, we [G]pray.
+Bridge 1:
+[D]  Fire fall down,[G]  fire fall [Bm]down on us we [G]pray
+As we [D]seek you, fire fall [G]down, your fire fall [Bm]down on us, we [G]pray
 
 
-Bridge 2: [D]Show me your [G]heart. Show me your [Bm]way. Show me your [G]glory.
+Bridge 2:
+[D]  Show me your [G]heart, show me your [Bm]way, show me your [G]glory
+
 {copyright: (c) 2005 Matt Crocker / Hillsong Publishing}
 {ccli: 4705200}

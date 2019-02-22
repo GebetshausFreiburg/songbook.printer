@@ -1,4 +1,4 @@
-{title: Ich lege meine Krone (A011)}
+﻿{title: Ich lege meine Krone (A011)}
 {artist: Johannes Hartl}
 key: G
 
@@ -28,5 +28,6 @@ als Kn[D]echt und wurdest [A]arm.
 Bridge: 
 Würdig ist das [Em]Lamm,[C]
 Würdig ist das L[G]amm auf dem Thr[D]on. (4x)
+
 {copyright: (c) 2006 Johannes Hartl}
 {ccli: 6242785}

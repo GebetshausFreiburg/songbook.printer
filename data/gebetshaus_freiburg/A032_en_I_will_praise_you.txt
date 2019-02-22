@@ -1,53 +1,34 @@
-{title: I will praise you (A032)}
-{artist: David Brymer}
+{title:I will praise you (A032)}
+{subtitle:David Brymer / Deutsch: Rainer Harter}
+{key:A}
 
-Key: [A]
-
-Vers 1:
-It was from the [F#m]depths that you grabbed me
-you've [C#m]called me and pulled me [D]up from the miry [A]clay
-It was from the [F#m]depths that you grabbed me
+1. It was from the [F#m]depths that you grabbed me
 you've [C#m]called me and pulled me [D]up from the miry [A]clay
 
-Vers 1:
-Du hast mich aus Tiefen gehoben
-Aus Schlamm mich gezogen, du hast gerufen nach mir
 
 PreChorus:
-It took the [D]blood of [E]one. The [F#m]pure and [E]spotless [D]lamb
-It took the [D]blood of [E]one. The man from [D]heaven [E]
-
-PreChorus:
-Und nur dein Blut genügt. Das reine Gotteslamm
-Und nur dein Blut genügt. Du kamst vom Himmel
+It took the [D]blood of [E]one, the [F#m]pure and [E]spotless [D]lamb
+It took the [D]blood of [E]one, the man from [D]heaven [E]
 
 
-Chorus:
-And I will [Asus]praise [A]you. I will [G/B]love you with all my heart
-And I will [D]thank [A]you for[Esus]ever and [E]ever
-
-Chorus:
-Ich will dich preisen. Von ganzem Herzen dich lieben, Herr
-Ich will dir danken, jetzt und für immer
+{soc}
+ And I will [Asus]praise [A]you. I will [G/B]love you with all my heart
+ And I will [D]thank [A]you for[Esus]ever and [E]ever
+ {eoc}
 
 
-Vers 2:
-It was when I was undeserving and rightfully earning eternal seperation from you
-It was when I was underserving and rightfully earning eternal seperation from you
-
-Vers 2:
-Ich hatte deine Gnade nicht verdient
-und zurecht hiess das Urteil: Ewige Trennung von dir
-Ich hatte deine Gnade nicht verdient
-und zurecht hiess das Urteil: Ewige Trennung von dir
-
-Bridge:
-As I [A/C#]see the height from [D]which you reign and the [A/C#]depths to which you [Bm]came
-And as I [A/C#]see the height to [F#m]which you brought me and the [Esus]depth from which you [E]saved
+2. It was when [F#m]I was undeserving 
+and [C#m]rightfully earning e[D]ternal separation from [A]you
 
 
 Bridge:
-Welche Höhe aus der du regierst, welche Tiefe in die du kamst
-Welche Höhe auf die du mich führtest, welche Tiefe aus der du mich nahmst
+As I [A/C#]see the height from [D]which you reign 
+and the [A/C#]depths to which you [Bm]came
+And as I [A/C#]see the height to [F#m]which you brought me 
+and the [Esus]depth from which you [E]saved
 
 {copyright: (c) David Brymer}
+
+
+
+

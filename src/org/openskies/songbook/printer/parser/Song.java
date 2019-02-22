@@ -727,8 +727,24 @@ public class Song implements IRenderer {
 				sb.append("<body>");
 			}
 
-			sb.append("<div class=\"song\">");
+			int length = count(SongElementType.LINEBREAK);
+		
+			float scale = (float) 1.0;
+			if (length > 28) {
+				scale = (float) -0.4f * (length - 28.0f) / 20.0f + 0.96f;
+				scale = (scale * 100) / 100f;
+			}
 			
+			String s = "scale"+scale+"";
+			s = s.replace(".", "");
+			
+			sb.append("<style>" + "@media print {" + "  #"+s+" {" + " -ms-transform: scale(" + scale
+					+ ");\n" + " -webkit-transform: scale(" + scale + ");\n"
+					+ " transform: scale(" + scale + ");\n" + " transform-origin: top left;\n" + "	}" + "}"
+					+ "</style>");
+
+			sb.append("<div class=\"song\" id=\""+s+"\">");
+
 			// create key of song
 			if (this.getKey() != null) {
 				if (!this.getKey().equals("")) {
@@ -768,7 +784,7 @@ public class Song implements IRenderer {
 			sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
 
 			sb.append("</div>");
-			
+
 			if (mode != RenderMode.WEB_NO_HEADER) {
 				// create html-footer
 				sb.append("</body>");
@@ -787,6 +803,17 @@ public class Song implements IRenderer {
 		}
 
 		return s;
+	}
+
+	public int count(SongElementType type) {
+		int counter = 0;
+		for (SongElement songElement : elements) {
+			if (songElement.getType() == type) {
+				counter++;
+			}
+		}
+
+		return counter;
 	}
 
 }

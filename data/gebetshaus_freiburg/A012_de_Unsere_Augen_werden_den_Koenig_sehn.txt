@@ -1,4 +1,4 @@
-{title: Unsere Augen werden den König sehn (A012)}
+﻿{title: Unsere Augen werden den König sehn (A012)}
 {artist: Lilo Keller}
 key: D
 
@@ -11,7 +11,7 @@ in [Em]herrlichem G[A4]lanz,
 die Br[D]aut wird dem Bräut'gam entg[G]egen gehn
 mit [Em]Jubel und T[D]anz.
 
-{comment: Pre-Chorus}
+Prechorus:
 Ge[D/A]lobt sei, der kommt im [G/A]Namen des [A4]Herrn! (3x)
 
 {soc}
@@ -22,5 +22,6 @@ Ge[D/A]lobt sei, der kommt im [G/A]Namen des [A4]Herrn! (3x)
 
 
 M[D2]aranatha!
+
 {copyright: (c) 1996 Schleife Verlag, CH - 8411 Winterthur}
 {ccli: 4682646}

@@ -1,5 +1,6 @@
 {title: Wonderful Savior (A020)}
 {artist: Tim Reimherr}
+key: A
 
 1. [A]  I bring a sacrifice of [Amaj7]praise
 [F#m]  With all my heart my hands to You I raise
@@ -9,7 +10,7 @@ And I [D]  say what a w[E]onderful Savior You [F#m]are   [C#m]
 and I [D]  say what a w[E]onderful Savior You [F#m]are  [C#m]
 
 
-Pre-Chorus
+Pre-Chorus:
 All I [F#m]am is because of You, [E]  is because of your [Bm]blood
 All I [F#m]am is because of You, [E]  is because of Your l[D]ove  [E]
 
@@ -25,5 +26,6 @@ And I [D]  say what a w[E]onderful Savior You [F#m]are  [C#m]
 [A]  Risen Lord, Most High [Amaj7]King
 [F#m]Coming with the clouds, and every eye will see
 And I [D]  say what a w[E]onderful Savior You [F#m]are  [C#m]
+
 {copyright: (c) Tim Reimherr / Forerunner Music}
 {ccli: 4798011}

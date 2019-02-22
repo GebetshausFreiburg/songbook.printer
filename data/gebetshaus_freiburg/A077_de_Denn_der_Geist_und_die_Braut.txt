@@ -1,9 +1,10 @@
 {title: Denn der Geist und die Braut (A077)}
 {artist: Unbekannt}
 {capo: 3}
+key: Gm
 
-Denn der Geist und die [Gm]Braut, sie sprechen: [Cm]Komm!
-Und wer es [F7]hört, der spreche: [Gm]Komm!
+Denn der Geist und die [Gm]Braut, sie sprechen]Komm!
+Und wer es [F7]hört, der spreche]Komm!
 Und wen da [Eb]dürstet, der komme her[Cm]zu
 und nehme das [D7]Wasser des Lebens um[Gm]sonst!
 

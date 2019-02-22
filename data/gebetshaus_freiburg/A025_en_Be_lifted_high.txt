@@ -1,5 +1,6 @@
 {title: Be lifted high (A025)}
 {artist: Brian Johnson, Tim Hughes}
+key: Em
 
 1. [Em] You're the King of all the ages, [C] You're the author of salvation
 [G] You're the reason why we're singing [D]for Your glory

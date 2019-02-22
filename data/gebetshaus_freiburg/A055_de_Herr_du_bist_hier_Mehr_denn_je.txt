@@ -1,9 +1,11 @@
 {title: Herr, du bist hier / Mehr denn je (A055)}
 {artist: Stefan Dennenmoser}
+key: E
 
 [E]Herr, du bist [A]hier, tief in [B]mir spür' ich deine N[A]ähe.
 [E]Herr, alles in [B]mir hat Sehnsucht nach [C#m7]dir,
 dass d[A]u dich offen[B]barst.
+
 
 {soc}
  Mehr denn [E]je, Herr, [A]komm mit deiner Kra[B]ft. 

@@ -1,16 +1,17 @@
 {title: Voller Dankbarkeit (A082)}
 {artist: Rainer Harter}
+key: F
 
-[F]Voller Dankbar[Gm]keit denke ich da[Bb]ran,
+[F]  Voller Dankbar[Gm]keit denke ich da[Bb]ran,
 was Du für mich ge[C]tan hast
-[F]Du hast mich ge[Gm]heilt, Du hast mich er[Bb]löst,
+[F]  Du hast mich ge[Gm]heilt, Du hast mich er[Bb]löst,
 Du hast mich be[C]freit.
 
 
-[Eb]Was könnt` ich sagen, Herr, als [Bb]Antwort darauf,
-[Eb]dass Du für mich starbst am [Gm]Kreuz?
-[Eb]Ich knie nieder und ich [Bb]schaue auf:
-Ich [Gm]bete an, [C]Gottes Lamm!
+[Eb]  Was könnt` ich sagen, Herr, als [Bb]Antwort darauf,
+[Eb]   dass Du für mich starbst am [Gm]Kreuz?
+[Eb]  Ich knie nieder und ich [Bb]schaue auf: 
+Ich [Gm]bete an [C]Gottes Lamm!
 
 
 [F]Ehre sei dem Lamm auf dem Thron!

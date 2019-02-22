@@ -1,6 +1,6 @@
 {title: Besser ist ein Tag in deiner Gegenwart (A057)}
 {artist: Matthias Schyra}
-{capo: 2}
+key: G
 
 Besser ist [G]ein Tag in Deiner [D/F#]Gegenwart.
 Besser ist [Am7]ein Tag bei Dir als [C]tausend andere[D].
@@ -12,7 +12,8 @@ Besser ist [Am7]ein Tag bei Dir als [C]tausend andere[D].
  {eoc}
 
 
-{comment: Bridge}
+Bridge:
 [G]Komm, Herr Jesus, [D/F#]komm.
 [Am7]Komm, Geist Gottes, [C]komm. [D]
+
 {copyright: (c) Matthias Schyra}

@@ -1,6 +1,6 @@
-{title: Seven Stars (A013)}
-{subtitle: Doxology}
+{title: Seven Stars (Doxology)(A013)}
 {artist: Luke Wood}
+key: G
 
 {comment: Verse}
 [G]  Now to You

@@ -1,28 +1,30 @@
-{title: Wer bei Dir sich birgt (A031)}
-{artist: Johannes Hartl}
-
-W[E]er bei Dir sich birgt steht [A]fest auf einem Berg
-denn [C#m]Du bist seine Burg sein [A]fester Turm.
-
-
-[E]Meine Augen richten [A]sich auf Dich allein
-denn [C#m]Du bist meine Burg mein [A]fester Turm.
-
-
+{title:Wer bei Dir sich birgt (A031)}
+{subtitle:Johannes Hartl}
+{key:D}
+ 
+W[D]er bei Dir sich birgt, steht [G]fest auf einem Berg 
+Denn [Bm]Du bist seine Burg, sein [G]fester Turm. 
+ 
+ 
+[D]Meine Augen richten [G]sich auf Dich allein 
+Denn [Bm]Du bist meine Burg, mein [G]fester Turm. 
+ 
+ 
 {soc}
-  [E]Ich vertrau auf Deinen Namen, oh Herr[A] 
-  [C#m]und ich preise Deinen Namen oh Herr,[A] 
- nur Du bist für mich Sonne und Sch[E]ild. [zur Bridge B] 
+  [D]  Ich vertrau auf Deinen Namen, oh H[G]err
+  [Bm]  Und ich preise Deinen Namen oh H[G]err
+ Nur Du bist für mich Sonne und Sch[D]ild [zur Bridge] [A] 
  {eoc}
+ 
+ 
+ 
+Bridge: 
+[A]  Und so hoch der Himmel [E]ist
+Ist Deine Gnade über [Bm]mir, 
+Ist Deine Gnade über m[D]ir. 
+[A]  Wenn mein Herz voll Schatten [E]ist 
+Strahlt Dein Lächeln über [Bm]mir 
+Strahlt Dein Lächeln über m[D]ir
 
-
-
-Bridge
-[B]Und so hoch der Himmel [F#]ist,
-ist Deine Gnade über [C#m]mir,
-ist Deine Gnade über m[E]ir.
-[B]Wenn mein Herz voll Schatten [F#]ist
-strahlt Dein Lächeln über [C#m]mir
-strahlt Dein Lächeln über m[E]ir.
-{copyright: (c) 2009 Johannes Hartl, Gebetshaus Augsburg}
-{ccli: 6478793}
+{copyright: (c) 2009 Johannes Hartl, Gebetshaus Augsburg} 
+{ccli: 6478793} 

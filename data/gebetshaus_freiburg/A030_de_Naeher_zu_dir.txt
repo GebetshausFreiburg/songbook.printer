@@ -1,7 +1,6 @@
-{title: Näher zu dir (A030)}
+﻿{title: Näher zu dir (A030)}
 {artist: Lothar Kosse}
 key: Em
-
 
 1. [Em]  Man sagt, Du w[G]ohnst auf h[A2]ohen B[C]ergen.
 [Em]  Man sagt, Du thr[G]onst weit [A2]überm M[C]eer.
@@ -31,5 +30,6 @@ key: Em
 [Em]  die Sehnsucht l[G]ässt mich n[A2]ie mehr g[C]ehn!
 [Em]  Wie könnt ich j[G]emals v[A2]on dir l[C]assen,
 [D]  Und dein Gesicht nicht v[C]or mir sehn?
+
 {copyright: (c) Lothar Kosse}
 {ccli: 4904544}

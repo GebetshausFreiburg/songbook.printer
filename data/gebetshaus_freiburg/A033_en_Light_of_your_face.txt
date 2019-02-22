@@ -1,19 +1,25 @@
 {title: Light of your face (A033)}
 {artist: Misty Edwards}
+key: C
 
-Oh Lord bl[F]ess me and k[C]eep me,
-C[G]ause your face to s[Am]hine on me.
-Lord be gr[F]acious, lift the light of your c[C]ountenance.
-G[G]ive me peace.
 
+Oh Lord bl[G]ess me and k[D]eep me
+C[A]ause your face to s[Bm]hine on me
+Lord be gr[G]acious, lift the light of your c[D]ountenance
+G[A]ive me peace
+ 
 {soc}
- For [Dm]I live [Am]only 
- to s[G]ee your face, so shine on me. (2x) 
+ For [Em]I live [Bm]only 
+ to s[A]ee your face, so shine on me (2x) 
  {eoc}
+ 
+ 
+Let the [Em]light of your face 
+shine d[Bm]own on my heart and 
+[Asus4]let m[A]e [Asus4]feel [A]it
+
+{copyright: (c) 2007 Misty Edwards} 
+{ccli: 5291005} 
 
 
-Let the [Dm]light of your face
-shine d[Am]own on my heart and
-[Gsus4]let m[G]e [Gsus4]feel [G]it.
-{copyright: (c) 2007 Misty Edwards}
-{ccli: 5291005}
+

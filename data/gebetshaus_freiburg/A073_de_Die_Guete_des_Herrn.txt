@@ -1,11 +1,12 @@
 {title: Die Güte des Herrn (A073)}
-{artist: Edith McNeill}
-{capo: 4}
+{artist: Edith McNeill, dt. Mirjana Angelina}
+key: E
 
-Die [E]Gü[B]te des [E]Herrn hat kein [A]Ende, kein [E]Ende.
-Sein Er[E]ba-[B]-rm[E]en hört [A]niemals [B4]auf. [B7]
-Es ist [A]neu jeden [B7]Morgen, [G#m]neu jeden [C#m]Morgen.
-[A]Groß ist Deine [E]Tre[B7]u   - [E]e, oh [E7]Herr!
-[A]Groß ist Deine [E]Tre[B7]u   - [E]e.
-{copyright: (c) 1974 Celebration Services / Kingsway's Thankyou Music}
+Die [E]Gü[B]te des [E]Herrn hat kein [A]Ende, kein [E/B]End[B]e.
+Sein Er[E]bar[B] - [E]men hört [A]niemals [B4]auf[B].
+Es ist [A]neu jeden [B]Morgen, [G#m]neu jeden [C#m]Morgen.
+[A]Groß ist Deine [E]Treu[B] - [E]e, oh [E]Herr!
+[A]Groß ist Deine [E]Treu[B] - [E]e.
+
+{copyright: (c) 1974, 1975 Celebration}
 {ccli: 5300226}

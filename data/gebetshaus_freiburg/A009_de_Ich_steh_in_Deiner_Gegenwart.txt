@@ -1,6 +1,7 @@
-{title: Ich steh' in Deiner Gegenwart (A009)}
+﻿{title: Ich steh' in Deiner Gegenwart (A009)}
 {artist: Martin Pepper}
 {capo: 5}
+key: F
 
 Ich [F2]steh' in Deiner [Bb/F]Gegenwart und [C/F]bete an[F].
 Ich [F2]hebe meine [Bb/D]Hände auf zu [Eb]Dir. [Bb/C] [C]

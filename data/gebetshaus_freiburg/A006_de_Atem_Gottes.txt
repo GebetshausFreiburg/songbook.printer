@@ -1,6 +1,7 @@
-{title: Atem Gottes (A006)}
+﻿{title: Atem Gottes (A006)}
 {artist: Albert Frey}
 {capo: 2}
+key: Bm
 
 Heiliger [Bm]Geist, komm, [D]wirke [F#m]unter [Bm]uns,
 mit [D]Freiheit [E]und mit [Gmaj7]Macht,
