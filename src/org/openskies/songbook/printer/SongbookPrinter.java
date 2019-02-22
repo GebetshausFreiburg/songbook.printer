@@ -21,6 +21,8 @@ import org.openskies.songbook.printer.webserver.Webserver;
  */
 public class SongbookPrinter {
 
+	final static public int UNSCALED_SONG_LENGTH = 28;
+	
 	/** The Constant LOGGER. */
 	final static Logger LOGGER = LogManager.getLogger(SongbookPrinter.class);
 

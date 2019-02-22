@@ -15,6 +15,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openskies.songbook.printer.SongbookPrinter;
 import org.openskies.songbook.printer.elements.ChordElement;
 import org.openskies.songbook.printer.elements.ChordproElement;
 import org.openskies.songbook.printer.elements.ChordproSubtype;
@@ -730,8 +731,8 @@ public class Song implements IRenderer {
 			int length = count(SongElementType.LINEBREAK);
 		
 			float scale = (float) 1.0;
-			if (length > 28) {
-				scale = (float) -0.4f * (length - 28.0f) / 20.0f + 0.96f;
+			if (length > SongbookPrinter.UNSCALED_SONG_LENGTH) {
+				scale = (float) -0.4f * (length - SongbookPrinter.UNSCALED_SONG_LENGTH) / 20.0f + 0.96f;
 				scale = (scale * 100) / 100f;
 			}
 			
