@@ -727,6 +727,8 @@ public class Song implements IRenderer {
 				sb.append("<body>");
 			}
 
+			sb.append("<div class=\"song\">");
+			
 			// create key of song
 			if (this.getKey() != null) {
 				if (!this.getKey().equals("")) {
@@ -765,6 +767,8 @@ public class Song implements IRenderer {
 			// add copyright
 			sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
 
+			sb.append("</div>");
+			
 			if (mode != RenderMode.WEB_NO_HEADER) {
 				// create html-footer
 				sb.append("</body>");
