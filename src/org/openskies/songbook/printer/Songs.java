@@ -181,33 +181,6 @@ public class Songs {
 
 	}
 
-	/*
-	 * public void writePdf2(String filename, Comparator<Song> cómparator) {
-	 * ITextRenderer renderer = new ITextRenderer(); try { String s = new String();
-	 * for (Song ws : getSongs(cómparator)) {
-	 * 
-	 * try { // LOGGER.debug(ws.getTitle());
-	 * renderer.setDocumentFromString(ws.render()); s += ws.render(); } catch
-	 * (Exception e) { LOGGER.error("Error in generated html-file '" + ws.getId() +
-	 * ") " + ws.getTitle() + "'.  Change source-song.", e); } }
-	 * 
-	 * renderer = new ITextRenderer(); renderer.setDocumentFromString(s);
-	 * renderer.layout(); OutputStream outputStream = new
-	 * FileOutputStream(filename); renderer.createPDF(outputStream);
-	 * outputStream.close();
-	 * 
-	 * } catch (FileNotFoundException e) { LOGGER.error(e); //
-	 * LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle()
-	 * + "'. Change source-song."); } catch (DocumentException e) { LOGGER.error(e);
-	 * // LOGGER.error("Error in generated html-file '" +
-	 * ws.getId()+") "+ws.getTitle() + "'.  Change source-song."); } catch
-	 * (IOException e) { LOGGER.error(e); //
-	 * LOGGER.error("Error in generated html-file '" + ws.getId()+") "+ws.getTitle()
-	 * + "'.  Change source-song."); }
-	 * 
-	 * }
-	 */
-
 	/**
 	 * Write pdf.
 	 *
@@ -237,37 +210,12 @@ public class Songs {
 					s += ws.render();
 				}
 
-//				LOGGER.debug(s);
-
 				// parse html to pdf
 				XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 
 				InputStream is = new ByteArrayInputStream(s.getBytes(StandardCharsets.UTF_8));
 
 				if (RenderMode.WEB_WITH_HEADER == mode) {
-
-//						CSSResolver cssResolver = new StyleAttrCSSResolver();
-//						CssFile cssFile = XMLWorkerHelper.getCSS(new ByteArrayInputStream(("web" + File.separatorChar + "styles.css").getBytes()));
-//						cssResolver.addCss(cssFile);
-//
-//						XMLWorkerFontProvider fontProvider = new XMLWorkerFontProvider(
-//								XMLWorkerFontProvider.DONTLOOKFORFONTS);
-//						fontProvider.register("ressources/fonts/open-sans/OpenSans-Regular.ttf");
-//
-//						CssAppliers cssAppliers = new CssAppliersImpl(fontProvider);
-//						HtmlPipelineContext htmlContext = new HtmlPipelineContext(cssAppliers);
-//						htmlContext.setTagFactory(Tags.getHtmlTagProcessorFactory());
-//
-//						PdfWriterPipeline pdf = new PdfWriterPipeline(document, writer);
-//						HtmlPipeline html = new HtmlPipeline(htmlContext, pdf);
-//						CssResolverPipeline css = new CssResolverPipeline(cssResolver, html);
-//
-//						XMLWorker w = new XMLWorker(css, true);
-//						    XMLParser p = new XMLParser(w);
-//						    ByteArrayInputStream stream = new ByteArrayInputStream(s.getBytes("UTF-8"));
-//						       
-//						    p.parse(stream, Charset.forName("UTF-8"));
-
 					FileInputStream css = new FileInputStream(new File("web" + File.separatorChar + "styles.css"));
 					worker.parseXHtml(writer, document, is, css, Charset.forName("UTF-8"));
 				}
@@ -349,7 +297,6 @@ public class Songs {
 	 */
 	public void writeIndex() {
 		StringBuilder sb = new StringBuilder();
-
 		Path idx = Paths.get("web" + File.separatorChar + "index.html");
 
 		// create html-header
@@ -360,15 +307,11 @@ public class Songs {
 		sb.append("<meta charset=\"utf-8\">");
 		sb.append("</head>");
 		sb.append("<body>\n");
-
 		sb.append("<ul>\n");
 		List<Song> songs = Songs.getInstance().getSongs();
 		for (Song ws : songs) {
-			// Path p = ws.getFilenameHtml();
-
 			String s = ws.getFilename();
 			File f = new File(s);
-
 			sb.append("<li><a href=\"" + f.getName().replace(".txt", ".html") + "\">" + ws.getTitle() + "</a></li>\n");
 		}
 		sb.append("</ul>\n");

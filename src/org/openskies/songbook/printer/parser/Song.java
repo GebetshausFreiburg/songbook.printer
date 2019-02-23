@@ -224,15 +224,6 @@ public class Song implements IRenderer {
 		for (SongElement element : getElements()) {
 			if (element.getType() == SongElementType.ONSONG) {
 				OnsongElement ose = (OnsongElement) element;
-//				if (ose.getSubtype() == OnsongSubtype.BRIDGE) {
-//					if (ose.getContent() != null) {
-//						if (!ose.getContent().equals("")) {
-//							throw new SongParserException("Bridge at line '" + ose.getLine()
-//									+ "' must be a single line in file '" + file.getName() + "'",
-//									new Throwable("Bridge not in single line"));
-//						}
-//					}
-//				}
 				// check if all elements which indicate to be onsong are known from application
 				if (ose.getSubtype() == null) {
 					throw new SongParserException(
@@ -330,36 +321,7 @@ public class Song implements IRenderer {
 	 */
 	public String getContent() {
 		StringBuilder sb = new StringBuilder();
-
-//		for (SongElement songElement : elements) {
-//			if ((songElement.getType() == SongElementType.WORD)
-//					|| (songElement.getType() == SongElementType.WHITESPACE)) {
-//				sb.append(songElement.getContent());
-//			}
-//			if ((songElement.getType() == SongElementType.LINEBREAK)) {
-//				sb.append("<br/>");
-//			}
-//
-//		}
-//		
-//		this.render(RenderMode.PLAIN);
-
 		sb.append(this.render(RenderMode.PLAIN));
-
-//		for (int i = 0; i < 10; i++) {
-//			String x = Utils.addSpace("", i, ' ');
-//			
-//			String ending = "<br/>"+x+"<br/>";
-//			while (sb.toString().contains(ending)) {
-//				s = s.replace(ending, "<br/>");
-//			}
-//		}
-
-//		s = s.replace("   ", " ");
-//		s = s.replace("  ", " ");
-//		s = s.replace("<br/><br/><br/>", "<br/>");
-//		s = s.replace("<br/><br/>", "<br/>");
-
 		return sb.toString();
 	}
 
@@ -707,13 +669,6 @@ public class Song implements IRenderer {
 	 */
 	@Override
 	public String render(RenderMode mode) {
-
-//		if (this.getId().contains("007")) {
-//			for (SongElement songElement : elements) {
-//				System.out.println(songElement);
-//			}
-//		}
-
 		StringBuilder sb = new StringBuilder();
 
 		if (mode != RenderMode.PLAIN) {
@@ -728,23 +683,29 @@ public class Song implements IRenderer {
 				sb.append("<body>");
 			}
 
+			// count linebreak-elements
 			int length = count(SongElementType.LINEBREAK);
-		
-			float scale = (float) 1.0;
-			if (length > SongbookPrinter.UNSCALED_SONG_LENGTH) {
-				scale = (float) -0.4f * (length - SongbookPrinter.UNSCALED_SONG_LENGTH) / 20.0f + 0.96f;
-				scale = (scale * 100) / 100f;
-			}
-			
-			String s = "scale"+scale+"";
-			s = s.replace(".", "");
-			
-			sb.append("<style>" + "@media print {" + "  #"+s+" {" + " -ms-transform: scale(" + scale
-					+ ");\n" + " -webkit-transform: scale(" + scale + ");\n"
-					+ " transform: scale(" + scale + ");\n" + " transform-origin: top left;\n" + "	}" + "}"
-					+ "</style>");
 
-			sb.append("<div class=\"song\" id=\""+s+"\">");
+			float scale = (float) 1.0;
+			
+			// Scaling 100% if song has length smaller than 28 lines.
+			// If length is greater, then downscale song by linear equation.
+			if (length > SongbookPrinter.UNSCALED_SONG_LENGTH) {
+				// linear equation. Maximum length is 48 linebreaks and need 60% scale.
+				scale = (float) -0.4f * (length - SongbookPrinter.UNSCALED_SONG_LENGTH) / 20.0f + 0.96f;
+			}
+
+			// created css-id for calculated scale
+			String s = ("scale" + scale + "").replace(".", "");
+			
+			// add css-style for scaled print
+			sb.append("<style>" + "@media print {" + "  #" + s + " {" + " -ms-transform: scale(" + scale + ");"
+					+ " -webkit-transform: scale(" + scale + ");" + " transform: scale(" + scale + ");"
+					+ " transform-origin: top left;" + "	}" + "}" + "</style>");
+
+			// open div of type "song". Is needed to make inline-content inside a boxed
+			// element to avoid linebreak in scaled songs
+			sb.append("<div class=\"song\" id=\"" + s + "\">");
 
 			// create key of song
 			if (this.getKey() != null) {
@@ -784,6 +745,7 @@ public class Song implements IRenderer {
 			// add copyright
 			sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
 
+			// close div of id "song"
 			sb.append("</div>");
 
 			if (mode != RenderMode.WEB_NO_HEADER) {
@@ -806,6 +768,12 @@ public class Song implements IRenderer {
 		return s;
 	}
 
+	/**
+	 * Count songelement of given type
+	 *
+	 * @param type the type of the songelement
+	 * @return the amount of counted elements
+	 */
 	public int count(SongElementType type) {
 		int counter = 0;
 		for (SongElement songElement : elements) {
