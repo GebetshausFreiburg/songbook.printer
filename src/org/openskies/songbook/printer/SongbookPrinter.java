@@ -27,7 +27,7 @@ public class SongbookPrinter {
 	final static Logger LOGGER = LogManager.getLogger(SongbookPrinter.class);
 
 	/**
-	 * The main method.
+	 * The main method of the songbook-creator
 	 *
 	 * @param args the arguments
 	 */
