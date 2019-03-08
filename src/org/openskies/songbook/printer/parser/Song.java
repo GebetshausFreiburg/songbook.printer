@@ -459,6 +459,12 @@ public class Song implements IRenderer {
 				if (elem.getSubtype() == ChordproSubtype.TITLE) {
 					ignore = true;
 				}
+				if (elem.getSubtype() == ChordproSubtype.CAPO) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == ChordproSubtype.KEY) {
+					ignore = true;
+				}
 				if (elem.getSubtype() == ChordproSubtype.ARTIST) {
 					ignore = true;
 				}
@@ -475,6 +481,12 @@ public class Song implements IRenderer {
 					ignore = true;
 				}
 				if (elem.getSubtype() == OnsongSubtype.ARTIST) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == OnsongSubtype.CAPO) {
+					ignore = true;
+				}
+				if (elem.getSubtype() == OnsongSubtype.KEY) {
 					ignore = true;
 				}
 				if (elem.getSubtype() == OnsongSubtype.CCLI) {
@@ -671,7 +683,7 @@ public class Song implements IRenderer {
 	public String render(RenderMode mode) {
 		StringBuilder sb = new StringBuilder();
 
-		if (mode != RenderMode.PLAIN) {
+		if (!mode.name().toLowerCase().startsWith("plain")) {
 			if (mode != RenderMode.WEB_NO_HEADER) {
 				// create html-header
 				sb.append("<!DOCTYPE html>");
@@ -687,7 +699,7 @@ public class Song implements IRenderer {
 			int length = count(SongElementType.LINEBREAK);
 
 			float scale = (float) 1.0;
-			
+
 			// Scaling 100% if song has length smaller than 28 lines.
 			// If length is greater, then downscale song by linear equation.
 			if (length > SongbookPrinter.UNSCALED_SONG_LENGTH) {
@@ -697,7 +709,7 @@ public class Song implements IRenderer {
 
 			// created css-id for calculated scale
 			String s = ("scale" + scale + "").replace(".", "");
-			
+
 			// add css-style for scaled print
 			sb.append("<style>" + "@media print {" + "  #" + s + " {" + " -ms-transform: scale(" + scale + ");"
 					+ " -webkit-transform: scale(" + scale + ");" + " transform: scale(" + scale + ");"
@@ -724,6 +736,29 @@ public class Song implements IRenderer {
 				}
 			}
 
+		}
+
+		if (RenderMode.PLAIN_WITH_TITLE == mode) {
+			sb.append("<div class=\"song\" id=\"scale100\">");
+
+			// create title of song
+			sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
+
+			// create artist of song
+			if (this.getArtist() != null) {
+				if (!this.getArtist().equals("")) {
+					sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
+				}
+			}
+		}
+
+		for (SongElement songElement : getContentElements()) {
+			if (songElement.getType() == SongElementType.LINEBREAK
+					|| songElement.getType() == SongElementType.WHITESPACE) {
+				songElement.setEnabled(false);
+			} else {
+				break;
+			}
 		}
 
 		// shrink whitespaces and linebreak after title to one single line (not more)

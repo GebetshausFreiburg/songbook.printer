@@ -43,15 +43,19 @@ public class SongbookPrinter {
 //		Songs.getInstance().writePdf("Songs_byId.pdf", Comparators.ID);
 
 		// Write songs
-		LOGGER.info("Write Songs (Single Files)");
+		LOGGER.info("Write Songs (Single Html-Files)");
 		Songs.getInstance().writeSongs();
 
 		// Write songs
-		LOGGER.info("Write Songs (Merged File)");
-		Songs.getInstance().writeHtml("Songs.html", Comparators.LENGTH_INVERTED);
+		LOGGER.info("Write Songs (Merged Html-File with Chords)");
+		Songs.getInstance().writeHtml("Songs_with_Chords.html", Comparators.LENGTH_INVERTED);
 
+		// Write songs
+		LOGGER.info("Write Songs (Merged Html-File without Chords)");
+		Songs.getInstance().writeHtmlPlain("Songs_without_Chords.html", Comparators.ID);
+		
 		// Write index
-		LOGGER.info("Write Index");
+		LOGGER.info("Write Index-Html-File");
 		Songs.getInstance().writeIndex();
 
 		// Start server

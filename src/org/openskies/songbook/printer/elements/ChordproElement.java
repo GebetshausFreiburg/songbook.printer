@@ -81,11 +81,11 @@ public class ChordproElement extends SongElement {
 
 	@Override
 	public String render(RenderMode mode) {
-
-		if (mode==RenderMode.PLAIN) {
+	
+		if (mode == RenderMode.PLAIN) {
 			return "";
 		}
-		
+
 		if (getSubtype() == ChordproSubtype.SOC) {
 			return "<div class=\"chorus\"><div class=\"chorus-text\">";
 		}
@@ -93,9 +93,10 @@ public class ChordproElement extends SongElement {
 			return "</div></div>";
 		}
 
-		/*if (getSubtype() == ChordproSubtype.CAPO) {
-			return "<i>Kapo: " + this.getContent() + "</i>";
-		}*/
+		/*
+		 * if (getSubtype() == ChordproSubtype.CAPO) { return "<i>Kapo: " +
+		 * this.getContent() + "</i>"; }
+		 */
 
 		return this.getContent();
 	}

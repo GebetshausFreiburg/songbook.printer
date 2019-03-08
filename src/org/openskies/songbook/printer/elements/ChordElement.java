@@ -59,12 +59,15 @@ public class ChordElement extends SongElement {
 	@Override
 	public String render(RenderMode mode) {
 		
-		if (mode==RenderMode.PLAIN) {
-			return "";
-		}
-		
 		// look for element after actual chord
 		SongElement afterElement = this.getSong().getElementAfter(this);
+		
+		if (mode==RenderMode.PLAIN||mode==RenderMode.PLAIN_WITH_TITLE) {
+			if (afterElement!=null) {
+			    afterElement.setEnabled(true);
+			}
+			return "";
+		}
 		
 		boolean whitespaceflag = false;
 		boolean chordflag = false;

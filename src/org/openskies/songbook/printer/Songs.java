@@ -180,6 +180,45 @@ public class Songs {
 		}
 
 	}
+	
+	public void writeHtmlPlain(String filename, Comparator<Song> comparator) {
+
+		StringBuilder sb = new StringBuilder();
+		sb.append("<!DOCTYPE html>");
+		sb.append("<html>");
+		sb.append("<head>");
+		sb.append("<link rel=\"stylesheet\" href=\"web/stylestextonly.css\"/>");
+		sb.append("<meta charset=\"utf-8\"/>");
+		sb.append("</head>");
+		sb.append("<body>");
+
+		for (Song ws : getSongs(comparator)) {
+			sb.append(ws.render(RenderMode.PLAIN_WITH_TITLE));
+//			if (ws.count(SongElementType.LINEBREAK) <= SongbookPrinter.UNSCALED_SONG_LENGTH) {
+//				sb.append("<p style=\"page-break-after: auto;\">&nbsp;</p>\n"
+//						+ "<p style=\"page-break-before: auto;\">&nbsp;</p>");
+//			}
+		}
+
+		sb.append("</body>");
+		sb.append("</html>");
+
+		Path p = Paths.get("." + File.separatorChar + filename);
+
+		try {
+			Files.createDirectories(p.getParent());
+			if (Files.exists(p)) {
+				Files.delete(p);
+			}
+			Files.createFile(p);
+			BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
+			writer.write(sb.toString());
+			writer.close();
+		} catch (IOException e) {
+			LOGGER.error(e);
+		}
+
+	}
 
 	/**
 	 * Write pdf.

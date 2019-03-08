@@ -97,6 +97,12 @@ public class LinebreakElement extends SongElement {
 			}
 		}
 
+//		if (mode==RenderMode.PLAIN_WITH_TITLE) {
+//			if (countLinebreaksBefore(this)>=1) {
+//				return "";
+//			}
+//		}
+		
 		// if linesbreaks before this line, then skip linebreak
 		if (countLinebreaksBefore(this)>1) {
 			return "";
