@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	font-family: "Open Sans", Century Gothic, Apple Gothic, sans-serif;
+	line-height: 1.3em;
+}
+
+#title {
+	font-size: large;
+	font-weight: bold;
+	line-height: 2em;
+}
+
+.chorus-text {
+	padding: 10px;
+	border-radius: 7px;
+	border: 3px solid #DCDCDC;
+	display: inline-block;
+}
+
+.chorus {
+	padding-left: 20px;
+}
+
+.chord {
+	position: relative;
+}
+
+.chord::before {
+	content: attr(chord);
+	position: absolute;
+	font-weight: bold;
+	bottom: 10px;
+	text-align: left;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
+}
+
+.chord-block {
+	position: relative;
+}
+
+.chord-block::before {
+	content: attr(chord);
+	position: relative;
+	font-weight: bold;
+	bottom: 18.3px;
+	text-align: left;
+	display: inline-block;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
+}
+
+.chord-space {
+	position: relative;
+	padding-right: 5px;
+}
+
+.chord-space::before {
+	content: attr(chord);
+	position: absolute;
+	font-weight: bold;
+	bottom: 10px;
+	padding-right: 5px;
+	text-align: left;
+	color: grey;
+	padding-top: 0.2em;
+	font-size: 95%;
+}
+
+#songpart {
+	line-height: 1.2em;
+	font-weight: 600;
+	font-style: italic;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 85%;
+}
+
+#songpart::after {
+	content: ":";
+}
+
+#copyright::before {
+	content: "\00a9 ";
+}
+
+#copyright {
+	font-size: x-small;
+	line-height: 1.2 !important;
+        padding-bottom: 30px;
+}
+
+#ccli::before {
+	content: "CCLI: ";
+}
+
+#ccli {
+	font-size: x-small;
+	line-height: 1.2 !important
+}
+
+#key::before {
+	content: "Tonart: "
+}
+
+#key {
+	line-height: 2em;
+	float: right;
+}
+
+#artist {
+	font-size: small;
+	line-height: 1em;
+	padding-bottom: 10px;
+}
+
+.lyrics {
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+@media print {
+	@page {
+		size: portrait;
+	}
+	.song {
+		-webkit-column-break-inside: avoid !important;
+		break-inside: avoid !important;
+		page-break-inside: avoid !important;
+		page-break-after: avoid !important;
+		page-break-before: avoid !important;
+                padding: 0px;
+		
+	}
+}
