@@ -16,6 +16,7 @@ import java.util.List;
 
 import org.openskies.songbook.printer.elements.ChordElement;
 import org.openskies.songbook.printer.elements.ChordproElement;
+import org.openskies.songbook.printer.elements.FakebreakElement;
 import org.openskies.songbook.printer.elements.LinebreakElement;
 import org.openskies.songbook.printer.elements.OnsongElement;
 import org.openskies.songbook.printer.elements.SongElement;
@@ -196,10 +197,10 @@ class LexicalSongParser {
 
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\2\1\1\3\1\4\2\5\1\0"+
-    "\1\6\1\0\1\7\4\0\1\10\1\0";
+    "\1\6\1\0\1\7\4\0\1\10\2\0\1\11\1\0";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[19];
+    int [] result = new int[22];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -224,12 +225,12 @@ class LexicalSongParser {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\16\0\34\0\52\0\70\0\106\0\106\0\124"+
-    "\0\16\0\52\0\16\0\70\0\16\0\142\0\160\0\176"+
-    "\0\214\0\232\0\250";
+    "\0\0\0\16\0\34\0\52\0\70\0\106\0\124\0\142"+
+    "\0\16\0\52\0\16\0\70\0\16\0\160\0\176\0\214"+
+    "\0\232\0\16\0\250\0\266\0\304\0\322";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[19];
+    int [] result = new int[22];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -255,13 +256,15 @@ class LexicalSongParser {
     "\1\2\1\3\1\4\1\2\1\5\1\2\1\6\1\7"+
     "\1\10\1\2\3\3\1\11\17\0\1\3\10\0\3\3"+
     "\1\0\3\12\1\13\12\12\5\14\1\15\10\14\4\16"+
-    "\1\0\15\16\1\0\2\16\1\17\6\16\11\0\2\20"+
-    "\3\0\4\16\1\0\4\16\2\20\3\16\11\0\2\20"+
-    "\1\21\1\22\12\0\2\23\1\21\1\22\1\0\6\22"+
-    "\3\0\5\22\11\0\2\23\1\0\1\22\1\0";
+    "\1\0\15\16\1\0\10\16\1\17\4\16\1\0\2\16"+
+    "\1\20\5\16\1\17\11\0\2\21\12\0\2\22\2\21"+
+    "\2\0\1\23\4\16\1\0\4\16\2\21\3\16\11\0"+
+    "\2\21\1\24\1\25\10\0\2\22\4\0\1\23\11\0"+
+    "\2\26\1\24\1\25\1\0\6\25\3\0\5\25\11\0"+
+    "\2\26\1\0\1\25\1\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[182];
+    int [] result = new int[224];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -300,10 +303,10 @@ class LexicalSongParser {
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
     "\1\0\1\11\6\1\1\11\1\0\1\11\1\0\1\11"+
-    "\4\0\1\1\1\0";
+    "\4\0\1\11\2\0\1\1\1\0";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[19];
+    int [] result = new int[22];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -781,35 +784,39 @@ class LexicalSongParser {
           case 1: 
             { /*Do nothing*/
             }
-          case 9: break;
+          case 10: break;
           case 2: 
             { songElements.add(new WordElement(yyline, yycolumn, yytext()));
             }
-          case 10: break;
+          case 11: break;
           case 3: 
             { System.out.print(yytext());
             }
-          case 11: break;
+          case 12: break;
           case 4: 
             { songElements.add(new LinebreakElement(yyline, yycolumn, "\n"));
             }
-          case 12: break;
+          case 13: break;
           case 5: 
             { songElements.add(new SongElement(SongElementType.WHITESPACE, yyline, yycolumn, " "));
             }
-          case 13: break;
+          case 14: break;
           case 6: 
             { songElements.add(new ChordElement(yyline, yycolumn, yytext().replace("[", "").replace("]", "")));
             }
-          case 14: break;
+          case 15: break;
           case 7: 
             { songElements.add(new ChordproElement(yyline, yycolumn, yytext().replace("{", "").replace("}", "")));
             }
-          case 15: break;
+          case 16: break;
           case 8: 
+            { songElements.add(new FakebreakElement(yyline, yycolumn, " "));
+            }
+          case 17: break;
+          case 9: 
             { songElements.add(new OnsongElement(yyline, yycolumn, yytext().trim()));
             }
-          case 16: break;
+          case 18: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

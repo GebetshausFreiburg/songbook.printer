@@ -12,7 +12,6 @@ public class SongParserException extends Exception {
 	 */
 	public SongParserException() {
 		super();
-
 	}
 
 	/**

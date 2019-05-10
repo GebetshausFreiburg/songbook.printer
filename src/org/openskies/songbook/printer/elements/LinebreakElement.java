@@ -1,6 +1,7 @@
 package org.openskies.songbook.printer.elements;
 
 import org.openskies.songbook.printer.parser.RenderMode;
+import org.openskies.songbook.printer.parser.SongParserException;
 
 /**
  * The Class LinebreakElement.
@@ -81,6 +82,9 @@ public class LinebreakElement extends SongElement {
 		}
 		return false;
 	}
+	
+		
+
 
 	/* (non-Javadoc)
 	 * @see org.openskies.songbook.printer.SongElement#render()
@@ -98,7 +102,7 @@ public class LinebreakElement extends SongElement {
 		}
 
 //		if (mode==RenderMode.PLAIN_WITH_TITLE) {
-//			if (countLinebreaksBefore(this)>=1) {
+//			if (countLi{nebreaksBefore(this)>=1) {
 //				return "";
 //			}
 //		}

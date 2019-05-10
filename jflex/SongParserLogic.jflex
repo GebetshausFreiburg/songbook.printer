@@ -71,7 +71,7 @@ CHORDPRO=\{[^\}]*\}
 ONSONG=(\R[^\{](\w+)(-*)(\w*)\:)(.)*
 WHITE_SPACE_CHAR=[\ \t\r]
 NEWLINE_CHAR=[\n]
-
+LINEBREAK_FAKE=[\n\r][\ \t]+[\n\r]
 %%
 
 /**
@@ -84,4 +84,5 @@ NEWLINE_CHAR=[\n]
 {WHITE_SPACE_CHAR} { songElements.add(new SongElement(SongElementType.WHITESPACE, yyline, yycolumn, " ")); }
 {NEWLINE_CHAR} { songElements.add(new LinebreakElement(yyline, yycolumn, "\n")); }
 {ONSONG} { songElements.add(new OnsongElement(yyline, yycolumn, yytext().trim())); }
+{LINEBREAK_FAKE} { songElements.add(new FakebreakElement(yyline, yycolumn, " ")); }
 .  { /*Do nothing*/ }

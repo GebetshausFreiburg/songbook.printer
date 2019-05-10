@@ -59,8 +59,10 @@ public class Song implements IRenderer {
 	/**
 	 * Instantiates a new song.
 	 *
-	 * @param path the path
-	 * @throws SongParserException the song parser exception
+	 * @param path
+	 *            the path
+	 * @throws SongParserException
+	 *             the song parser exception
 	 */
 	public Song(Path path) throws SongParserException {
 		// get file from path
@@ -96,6 +98,13 @@ public class Song implements IRenderer {
 					new Throwable("Invalid id"));
 		}
 
+		// Check whether filename is valid. No ß,ä,ü,ö
+		boolean isValidFilename = filename.toString().matches("\\p{ASCII}+");
+		if (!isValidFilename) {
+			throw new SongParserException("Contains not-ASCII character: '" + file.getName() + "'",
+					new Throwable("Invalid filename"));
+		}
+
 		// Check if enabled language exists (at the moment german, english). i8n
 		// possible
 		if (SongLanguage.isLanguage(language)) {
@@ -110,13 +119,13 @@ public class Song implements IRenderer {
 
 		// Validate song-content. Throws exception if something is wrong
 		validateSongContent(file);
-
 	}
 
 	/**
 	 * Gets the element after the actual element.
 	 *
-	 * @param element the element after the actual
+	 * @param element
+	 *            the element after the actual
 	 * @return the element after
 	 */
 	public SongElement getElementAfter(SongElement element) {
@@ -125,7 +134,7 @@ public class Song implements IRenderer {
 
 		// if index of element is last element return null, because no element after
 		// this exists
-		if (index >= elements.size()) {
+		if (index + 1 >= elements.size()) {
 			return null;
 		}
 
@@ -136,7 +145,8 @@ public class Song implements IRenderer {
 	/**
 	 * Gets the element before.
 	 *
-	 * @param element the element
+	 * @param element
+	 *            the element
 	 * @return the element before
 	 */
 	public SongElement getElementBefore(SongElement element) {
@@ -153,7 +163,7 @@ public class Song implements IRenderer {
 		return elements.get(index - 1);
 	}
 
-	/**
+	/*
 	 * Gets the encoding of the first word-element. Expected UTF-8.
 	 *
 	 * @return the encoding
@@ -190,9 +200,12 @@ public class Song implements IRenderer {
 	/**
 	 * Validate song content.
 	 *
-	 * @param file the file of the song
-	 * @throws SongParserException the song parser exception
+	 * @param file
+	 *            the file of the song
+	 * @throws SongParserException
+	 *             the song parser exception
 	 */
+
 	private void validateSongContent(File file) throws SongParserException {
 
 		// check title in chordpro-format exists (mandatory)
@@ -209,7 +222,7 @@ public class Song implements IRenderer {
 
 		// check if all elements which indicate to be chord-pro are known from
 		// application
-		for (SongElement element : getElements()) {
+		for (SongElement element : elements) {
 			if (element.getType() == SongElementType.CHORDPRO) {
 				ChordproElement ose = (ChordproElement) element;
 				if (ose.getSubtype() == null) {
@@ -229,9 +242,18 @@ public class Song implements IRenderer {
 					throw new SongParserException(
 							"Onsong-Syntax '" + ose.getContent() + "' is unkown in file '" + file.getName() + "'",
 							new Throwable("Unknown Onsong-Syntax"));
+
 				}
 			}
 		}
+
+		for (SongElement element : elements) {
+			if (element.getType() == SongElementType.FAKEBREAK) {
+				throw new SongParserException("Whitespace problem in " + element.getSong().getFilename() + " line: "
+						+ (element.getLine() + 2), new Throwable("Fake linebreak"));
+			}
+		}			
+
 	}
 
 	/**
@@ -430,7 +452,8 @@ public class Song implements IRenderer {
 	/**
 	 * Gets the onsong element.
 	 *
-	 * @param subtype the subtype
+	 * @param subtype
+	 *            the subtype
 	 * @return the onsong element
 	 */
 	private OnsongElement getOnsongElement(OnsongSubtype subtype) {
@@ -507,7 +530,8 @@ public class Song implements IRenderer {
 	/**
 	 * Gets the chordpro element.
 	 *
-	 * @param subtype the subtype
+	 * @param subtype
+	 *            the subtype
 	 * @return the chordpro element
 	 */
 	private ChordproElement getChordproElement(ChordproSubtype subtype) {
@@ -596,7 +620,8 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the source-path of the song.
 	 *
-	 * @param source the new source
+	 * @param source
+	 *            the new source
 	 */
 	public void setSource(String source) {
 		this.source = source;
@@ -614,7 +639,8 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the id.
 	 *
-	 * @param id the new id
+	 * @param id
+	 *            the new id
 	 */
 	public void setId(String id) {
 		this.id = id;
@@ -632,7 +658,8 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the book.
 	 *
-	 * @param book the new book
+	 * @param book
+	 *            the new book
 	 */
 	public void setBook(String book) {
 		this.book = book;
@@ -659,7 +686,8 @@ public class Song implements IRenderer {
 	/**
 	 * Sets the language.
 	 *
-	 * @param language the new language
+	 * @param language
+	 *            the new language
 	 */
 	public void setLanguage(String language) {
 		this.language = language;
@@ -806,7 +834,8 @@ public class Song implements IRenderer {
 	/**
 	 * Count songelement of given type
 	 *
-	 * @param type the type of the songelement
+	 * @param type
+	 *            the type of the songelement
 	 * @return the amount of counted elements
 	 */
 	public int count(SongElementType type) {

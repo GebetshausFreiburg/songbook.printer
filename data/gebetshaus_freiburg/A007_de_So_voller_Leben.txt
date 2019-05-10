@@ -1,7 +1,7 @@
 ﻿{title: So voller Leben (A007)}
 {artist: Simon Schlittenhardt, Vinyard Enztal}
 key: D
- 
+
 [D]  Denn du bist so gut zu mir und 
 [A/C#]  alles was ich bin, liegt in [Bm]dir verborgen 
 und alles was ich hab' bist [G]du 
@@ -10,7 +10,7 @@ die mich aufhebt und aufnimmt, wie ich b[A/C#]in
 und Gott, du bist die Freude damit ich s[Bm]ing
 von dir mein Gott, für alle Z[G]eit 
 Denn in dir finde ich Freiheit[D] 
- 
+
 {soc}
   [D]  So voller Leben und 
   [A/C#]  so voller Schönheit und 
