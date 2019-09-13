@@ -5,14 +5,17 @@
 	line-height: 2.3em;
 }
 
+
+
 #title {
 	font-size: large;
 	font-weight: bold;
 	line-height: 2em;
+	margin-top: -1.7em;
 }
 
 .chorus-text {
-	padding: 10px;
+	padding: 10px 5px 0px 5px;
 	border-radius: 7px;
 	border: 3px solid #DCDCDC;
 	display: inline-block;
@@ -77,6 +80,7 @@
 	padding-top: 15px;
 	padding-bottom: 15px;
 	font-size: 85%;
+	
 }
 
 #songpart::after {
@@ -101,14 +105,29 @@
 	line-height: 1.2 !important
 }
 
+.textonly {
+	line-height: 2.3em;
+	margin-top: -1em;
+	
+}
+
+.smallbreak {
+	display: block;
+	margin: 0.2em 0;
+}
+
+
 #key::before {
-	content: "Tonart: "
+	content: "Tonart: ";
 }
 
 #key {
 	line-height: 2em;
-	float: right;
+	width: 100%;
+	text-align: right;
+	display: inline-block;
 }
+
 
 #artist {
 	font-size: small;
@@ -117,19 +136,36 @@
 }
 
 .lyrics {
-	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	display: inline-block;
 }
+
+.keyTitleArtistSong {
+	display: inline-block;
+	width: 100%;
+}
+
+
 
 @media print {
 	@page {
 		size: portrait;
 	}
+	
 	.song {
 		-webkit-column-break-inside: avoid !important;
 		break-inside: avoid !important;
 		page-break-inside: avoid !important;
-		page-break-after: avoid !important;
-		page-break-before: avoid !important;
 		display: inline-block;
 	}
+	
+	.keyTitleArtistSong {
+	-webkit-column-break-inside: avoid !important;
+		break-inside: avoid !important;
+		page-break-inside: avoid !important;
+		page-break-before: always;
+	}
+	
+	
+	
 }
+

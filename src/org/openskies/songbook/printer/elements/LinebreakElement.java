@@ -92,6 +92,7 @@ public class LinebreakElement extends SongElement {
 	@Override
 	public String render(RenderMode mode) {
 		SongElement beforeElement = this.getSong().getElementBefore(this);
+		SongElement afterElement = this.getSong().getElementAfter(this);
 
 		// if element before whitespace is chordpro or onsong, then not break line
 		if (beforeElement.getType() == SongElementType.WHITESPACE) {
@@ -116,9 +117,14 @@ public class LinebreakElement extends SongElement {
 		if (beforeElement.getType() == SongElementType.CHORDPRO||beforeElement.getType() == SongElementType.ONSONG) {
 			return "";
 		}
+		
+		if(beforeElement.getType() == SongElementType.TEXTONLY) {
+			return "<br class=\"smallbreak\">";
+		}
+		
 
 		// return html-linebreak
-		return "<br/>";
+		return "</br>";
 	}
 
 }

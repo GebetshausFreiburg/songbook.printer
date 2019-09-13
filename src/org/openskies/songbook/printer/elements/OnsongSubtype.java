@@ -9,6 +9,10 @@ public enum OnsongSubtype {
 	KEY,
 	/** The bridge. */
 	BRIDGE,
+	
+	BRIDGE_1("Bridge 1"),
+	BRIDGE_2("Bridge 2"),
+	
 	/** The tag. */
 	TAG,
 	/** The artist. */
@@ -21,6 +25,16 @@ public enum OnsongSubtype {
 	/** The prechorus. */
 	PRECHORUS("Prechorus", "Pre-Chorus"),
 	
+	PRECHORUS_1("Prechorus 1", "Pre-Chorus 1"),
+	
+	PRECHORUS_2("Prechorus 2", "Pre-Chorus 2"),
+	
+	PRECHORUS_3("Prechorus 3", "Pre-Chorus 3"),
+	
+	POSTCHORUS("Postchorus", "Post-Chorus"),
+	
+	REPRISE,
+	
 	/** The ending. */
 	ENDING,
 
@@ -32,6 +46,8 @@ public enum OnsongSubtype {
 
 	/** The chorus. */
 	CHORUS,
+	
+	CHORUS_2("Chorus 2"),
 
 	/** The author. */
 	AUTHOR,

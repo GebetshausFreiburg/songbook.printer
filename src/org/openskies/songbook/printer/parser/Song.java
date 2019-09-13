@@ -52,6 +52,7 @@ public class Song implements IRenderer {
 
 	/** The book. */
 	private String book;
+	
 
 	/** The elements. */
 	private List<SongElement> elements;
@@ -85,18 +86,22 @@ public class Song implements IRenderer {
 
 		// song-language should be second element in song-title
 		language = n[1];
-
+		
+	
 		// Check if book exists
 		if (book.trim().equalsIgnoreCase("data")) {
 			throw new SongParserException("No directory/songbook set which contains song '" + file.getName() + "'");
 		}
-
+		
+		
+		
 		// Check if id is correct. Only upper-case letter with three-digits are allowed
 		boolean isCorrectId = id.matches("([A-Z]{1})+((?!000)([0-9]{3}))");
 		if (!isCorrectId) {
 			throw new SongParserException("Invalid id in filename '" + file.getName() + "'",
 					new Throwable("Invalid id"));
 		}
+		
 
 		// Check whether filename is valid. No ß,ä,ü,ö
 		boolean isValidFilename = filename.toString().matches("\\p{ASCII}+");
@@ -115,6 +120,10 @@ public class Song implements IRenderer {
 		} else {
 			throw new SongParserException("No valid language in filename '" + file.getName() + "'",
 					new Throwable("Invalid language"));
+		}
+		
+		if (this.getKey() == null) {
+			System.err.println("Key is missing '" + this.getTitle() + "'");		
 		}
 
 		// Validate song-content. Throws exception if something is wrong
@@ -207,6 +216,7 @@ public class Song implements IRenderer {
 	 */
 
 	private void validateSongContent(File file) throws SongParserException {
+		
 
 		// check title in chordpro-format exists (mandatory)
 		ChordproSubtype[] values = { ChordproSubtype.TITLE };
@@ -254,6 +264,9 @@ public class Song implements IRenderer {
 			}
 		}			
 
+		
+		
+		
 	}
 
 	/**
@@ -570,6 +583,7 @@ public class Song implements IRenderer {
 			return oelement.getContent();
 		}
 		return null;
+
 	}
 
 	/**
@@ -722,6 +736,23 @@ public class Song implements IRenderer {
 				sb.append("</head>");
 				sb.append("<body>");
 			}
+			sb.append("<div class=\"keyTitleArtistSong\">");
+			
+			if (this.getKey() != null) {
+				if (!this.getKey().equals("")) {
+					sb.append("<div id=\"key\">" + this.getKey() + "</div>\n");
+				}
+			}else {
+				sb.append("<div id=\"key\">"+ "?" + "</div>\n");
+			}
+			
+			sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
+			
+			if (this.getArtist() != null) {
+				if (!this.getArtist().equals("")) {
+					sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
+				}
+			}
 
 			// count linebreak-elements
 			int length = count(SongElementType.LINEBREAK);
@@ -737,7 +768,8 @@ public class Song implements IRenderer {
 
 			// created css-id for calculated scale
 			String s = ("scale" + scale + "").replace(".", "");
-
+			
+			
 			// add css-style for scaled print
 			sb.append("<style>" + "@media print {" + "  #" + s + " {" + " -ms-transform: scale(" + scale + ");"
 					+ " -webkit-transform: scale(" + scale + ");" + " transform: scale(" + scale + ");"
@@ -746,23 +778,16 @@ public class Song implements IRenderer {
 			// open div of type "song". Is needed to make inline-content inside a boxed
 			// element to avoid linebreak in scaled songs
 			sb.append("<div class=\"song\" id=\"" + s + "\">");
-
+			
 			// create key of song
-			if (this.getKey() != null) {
-				if (!this.getKey().equals("")) {
-					sb.append("<div id=\"key\">" + this.getKey() + "</div>\n");
-				}
-			}
+			
+			
 
 			// create title of song
-			sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
+			
 
 			// create artist of song
-			if (this.getArtist() != null) {
-				if (!this.getArtist().equals("")) {
-					sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
-				}
-			}
+			
 
 		}
 
@@ -810,6 +835,10 @@ public class Song implements IRenderer {
 
 			// close div of id "song"
 			sb.append("</div>");
+			
+			//close div of class "keyTitleArtistSong"
+			sb.append("</div>");
+			
 
 			if (mode != RenderMode.WEB_NO_HEADER) {
 				// create html-footer

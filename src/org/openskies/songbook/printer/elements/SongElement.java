@@ -10,6 +10,7 @@ package org.openskies.songbook.printer.elements;
 
 import org.openskies.songbook.printer.parser.RenderMode;
 import org.openskies.songbook.printer.parser.Song;
+import org.openskies.songbook.printer.util.Utils;
 
 /**
  * 
@@ -175,7 +176,23 @@ public class SongElement implements IRenderer {
 	 */
 	@Override
 	public String render(RenderMode mode) {
-
+		
+		if (this.getType()==SongElementType.TEXTONLY && this.getType()==SongElementType.ONSONG) {
+				OnsongElement osel = (OnsongElement)this;
+				if (osel.getSubtype()==OnsongSubtype.KEY)  {
+					return "<div id=\"key\"></div>";
+				}else {
+			return "<div class=\"textonly\">" + this.getContent() + "</div>";
+		}
+		}
+		
+		if (this.getType()==SongElementType.TEXTONLY) {
+			return "<div class=\"textonly\">" + this.getContent() + "</div>";
+		}
+		
+		
+		
+		
 		if (this.isEnabled()) {
 			return this.getContent();
 		} else {
@@ -184,5 +201,6 @@ public class SongElement implements IRenderer {
 
 		}
 	}
-
+	
+	
 }

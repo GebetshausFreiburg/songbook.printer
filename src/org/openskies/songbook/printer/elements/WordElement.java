@@ -1,5 +1,6 @@
 package org.openskies.songbook.printer.elements;
 
+import org.openskies.songbook.printer.parser.RenderMode;
 import org.openskies.songbook.printer.util.Utils;
 
 /**
@@ -38,5 +39,6 @@ public class WordElement extends SongElement {
 	public WordElement(SongElementType type, int line, int column, String content) {
 		super(type, line, column, content);
 	}
-
+	
+	
 }

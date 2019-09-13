@@ -49,6 +49,7 @@ public class SongbookPrinter {
 		// Write songs
 		LOGGER.info("Write Songs (Merged Html-File with Chords)");
 		Songs.getInstance().writeHtml("Songs_with_Chords.html", Comparators.LENGTH_INVERTED);
+		//Songs.getInstance().writeHtml("Songs_with_Chords.html", Comparators.ID);
 
 		// Write songs
 		LOGGER.info("Write Songs (Merged Html-File without Chords)");

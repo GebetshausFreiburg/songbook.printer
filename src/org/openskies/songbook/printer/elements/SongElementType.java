@@ -11,10 +11,15 @@ public enum SongElementType {
 	WORD,
 	/** The whitespace. */
 	WHITESPACE,
+	
 	WHITEONLY,
 	/** The linebreak. */
+	
 	LINEBREAK,
+	
 	FAKEBREAK,
+	
+	TEXTONLY,
 	/** The chord. */
 	CHORD,
 	/** The onsong. */

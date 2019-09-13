@@ -80,6 +80,7 @@ public class OnsongElement extends SongElement {
 
 	}
 
+
 	/* (non-Javadoc)
 	 * @see org.openskies.songbook.printer.SongElement#render()
 	 */
@@ -104,7 +105,7 @@ public class OnsongElement extends SongElement {
 			//return "<b>" + Utils.beautify(this.getSubtype().name()) +": "+this.getContent()+ "</b><br/>";
 			return "<div id=\"songpart\">" + Utils.beautify(this.getSubtype().name()) + "</div>";
 		}
-
-	}
-
+		
+	
+}
 }

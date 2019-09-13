@@ -68,10 +68,11 @@ import java.util.*;
 WORD=[a-zA-Z\x21-\x40\xA1-\xFF]+
 CHORD=\[[^\]]*\]
 CHORDPRO=\{[^\}]*\}
-ONSONG=(\R[^\{](\w+)(-*)(\w*)\:)(.)*
+ONSONG=([\n\r][^\{](\w+)(-*)(\w*)[ ]?[123]?\:)[ ]?[A-H#bm]*
 WHITE_SPACE_CHAR=[\ \t\r]
-NEWLINE_CHAR=[\n]
+NEWLINE_CHAR=[\n\r]
 LINEBREAK_FAKE=[\n\r][\ \t]+[\n\r]
+TEXTONLY=[\n\r][^\{\}\[\]\n\r]+[\n\r]
 %%
 
 /**
@@ -85,4 +86,5 @@ LINEBREAK_FAKE=[\n\r][\ \t]+[\n\r]
 {NEWLINE_CHAR} { songElements.add(new LinebreakElement(yyline, yycolumn, "\n")); }
 {ONSONG} { songElements.add(new OnsongElement(yyline, yycolumn, yytext().trim())); }
 {LINEBREAK_FAKE} { songElements.add(new FakebreakElement(yyline, yycolumn, " ")); }
+{TEXTONLY} { songElements.add(new TextOnlyLine(yyline, yycolumn, yytext())); }
 .  { /*Do nothing*/ }
