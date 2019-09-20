@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+	font-family: "Open Sans", Century Gothic, Apple Gothic, sans-serif;
+}
+
+#contentsheading {
+	color: #54585a;
+	font-weight: bold;	
+	line-height: 1em;
+}
+
+#letter {
+	color: #A5A9AB;
+	font-weight: bold;
+	text-shadow: 0.8px 0.8px 0.8px #000;
+	line-height: 1em;
+ 
+}
+
+.contentsline {
+	text-shadow: none;
+	color: black;
+	font-size: medium;
+	line-height: 1.3em;
+	font-weight: normal;
+	margin-left: 1em;
+}
+
+.contentsid {
+	color: #76797A;
+	font-weight: bold;
+	line-height: 1.3em;
+	font-style: italic;
+	margin-right: 1em;
+	display: inline;
+	
+}
+
+.nopagebreak{
+	color: blue;
+}
+
+@media print {
+	@page {
+		size: portrait;
+	}
+		
+	#contentsheading {
+	page-break-before: always;
+	}
+	
+	
+}
+

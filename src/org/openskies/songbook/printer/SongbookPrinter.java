@@ -48,8 +48,8 @@ public class SongbookPrinter {
 
 		// Write songs
 		LOGGER.info("Write Songs (Merged Html-File with Chords)");
-		Songs.getInstance().writeHtml("Songs_with_Chords.html", Comparators.LENGTH_INVERTED);
-		//Songs.getInstance().writeHtml("Songs_with_Chords.html", Comparators.ID);
+		//Songs.getInstance().writeHtml("Songs_with_Chords.html", Comparators.LENGTH_INVERTED);
+		Songs.getInstance().writeHtml("Songs_with_Chords.html", Comparators.ID);
 
 		// Write songs
 		LOGGER.info("Write Songs (Merged Html-File without Chords)");
@@ -57,8 +57,10 @@ public class SongbookPrinter {
 		
 		// Write index
 		LOGGER.info("Write Index-Html-File");
-		Songs.getInstance().writeIndex();
-
+		Songs.getInstance().writeHtmlPlainIndex("Songs_index.html");
+		Songs.getInstance().writeLinkIndex();
+//		Songs.getInstance().createPrintableIndex();
+		
 		// Start server
 //		LOGGER.info("Start Webserver through Launcher");
 //		Webserver server = new Webserver();

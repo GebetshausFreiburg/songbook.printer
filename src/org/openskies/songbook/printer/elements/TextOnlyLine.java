@@ -8,10 +8,8 @@ public class TextOnlyLine extends SongElement {
 		super(SongElementType.TEXTONLY, line, column, content);
 	}
 
-	
 	public TextOnlyLine(SongElementType type, int line, int column, String content) {
 		super(type, line, column, content);
 	}
-	
-	
+
 }

@@ -15,7 +15,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openskies.songbook.printer.SongbookPrinter;
+import org.openskies.songbook.printer.Songs;
 import org.openskies.songbook.printer.elements.ChordElement;
 import org.openskies.songbook.printer.elements.ChordproElement;
 import org.openskies.songbook.printer.elements.ChordproSubtype;
@@ -38,6 +41,8 @@ import org.openskies.songbook.printer.util.SongKey;
  */
 public class Song implements IRenderer {
 
+	final static Logger LOGGER = LogManager.getLogger(Song.class);
+	
 	/** The source. */
 	private String source;
 
@@ -123,7 +128,7 @@ public class Song implements IRenderer {
 		}
 		
 		if (this.getKey() == null) {
-			System.err.println("Key is missing '" + this.getTitle() + "'");		
+			LOGGER.error("Key is missing '" + this.getTitle() + "'");		
 		}
 
 		// Validate song-content. Throws exception if something is wrong
@@ -262,8 +267,7 @@ public class Song implements IRenderer {
 				throw new SongParserException("Whitespace problem in " + element.getSong().getFilename() + " line: "
 						+ (element.getLine() + 2), new Throwable("Fake linebreak"));
 			}
-		}			
-
+		}		
 		
 		
 		
@@ -576,10 +580,12 @@ public class Song implements IRenderer {
 	public String getKey() {
 		ChordproElement celement = getChordproElement(ChordproSubtype.KEY);
 		if (celement != null) {
+			
 			return celement.getContent();
 		}
 		OnsongElement oelement = getOnsongElement(OnsongSubtype.KEY);
 		if (oelement != null) {
+			
 			return oelement.getContent();
 		}
 		return null;
@@ -612,15 +618,28 @@ public class Song implements IRenderer {
 	public String getCopyright() {
 		ChordproElement chordproElement = getChordproElement(ChordproSubtype.COPYRIGHT);
 		if (chordproElement != null) {
-			return chordproElement.getContent();
+			String copyright = chordproElement.getContent().trim();
+			if (copyright.startsWith("(c)")){
+				copyright = " " + copyright.substring(3, copyright.length()).trim();
+			}
+			
+			return copyright;
 		}
 
 		OnsongElement onsongElement = getOnsongElement(OnsongSubtype.COPYRIGHT);
 		if (onsongElement != null) {
-			return onsongElement.getContent();
+			String copyright = onsongElement.getContent().trim();
+			if (copyright.startsWith("(c)")){
+				copyright = " " + copyright.substring(3, copyright.length()).trim();
+			}
+			
+			return copyright;
 		}
+		
 		return null;
 	}
+	
+	
 
 	/**
 	 * Gets the source-path of the song.
@@ -831,6 +850,13 @@ public class Song implements IRenderer {
 			}
 
 			// add copyright
+			/*if(this.getCopyright().contains("(c)")) {
+				String twoCopyright = this.getCopyright();
+				twoCopyright.substring(2, twoCopyright.length());
+				twoCopyright = twoCopyright.replace("(c)", "");
+			}*/
+			
+			
 			sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");
 
 			// close div of id "song"

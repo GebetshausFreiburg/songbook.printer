@@ -52,7 +52,8 @@ public class SongElement implements IRenderer {
 	/**
 	 * Sets the song.
 	 *
-	 * @param song the new song
+	 * @param song
+	 *            the new song
 	 */
 	public void setSong(Song song) {
 		this.song = song;
@@ -61,10 +62,14 @@ public class SongElement implements IRenderer {
 	/**
 	 * Instantiates a new song element.
 	 *
-	 * @param type    the type
-	 * @param line    the line
-	 * @param column  the column
-	 * @param content the content
+	 * @param type
+	 *            the type
+	 * @param line
+	 *            the line
+	 * @param column
+	 *            the column
+	 * @param content
+	 *            the content
 	 */
 	public SongElement(SongElementType type, int line, int column, String content) {
 		this.setType(type);
@@ -86,7 +91,8 @@ public class SongElement implements IRenderer {
 	/**
 	 * Sets the type of a element.
 	 *
-	 * @param type the new type
+	 * @param type
+	 *            the new type
 	 */
 	public void setType(SongElementType type) {
 		this.type = type;
@@ -131,7 +137,8 @@ public class SongElement implements IRenderer {
 	/**
 	 * Sets the enabled.
 	 *
-	 * @param enabled the new enabled
+	 * @param enabled
+	 *            the new enabled
 	 */
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
@@ -140,7 +147,8 @@ public class SongElement implements IRenderer {
 	/**
 	 * Sets the content of the element.
 	 *
-	 * @param content the new content
+	 * @param content
+	 *            the new content
 	 */
 	public void setContent(String content) {
 		this.content = content;
@@ -176,23 +184,22 @@ public class SongElement implements IRenderer {
 	 */
 	@Override
 	public String render(RenderMode mode) {
-		
-		if (this.getType()==SongElementType.TEXTONLY && this.getType()==SongElementType.ONSONG) {
-				OnsongElement osel = (OnsongElement)this;
-				if (osel.getSubtype()==OnsongSubtype.KEY)  {
-					return "<div id=\"key\"></div>";
-				}else {
-			return "<div class=\"textonly\">" + this.getContent() + "</div>";
+
+		if (this.getType() == SongElementType.TEXTONLY && this.getType() == SongElementType.ONSONG) {
+			OnsongElement osel = (OnsongElement) this;
+			if (osel.getSubtype() == OnsongSubtype.KEY) {
+				return "<div id=\"key\"></div>";
+			} else {
+				return "<div class=\"textonly\">" + this.getContent() + "</div>";
+			}
 		}
+
+		if (mode != RenderMode.PLAIN) {
+			if (this.getType() == SongElementType.TEXTONLY) {
+				return "<div class=\"textonly\">" + this.getContent() + "</div>";
+			}
 		}
-		
-		if (this.getType()==SongElementType.TEXTONLY) {
-			return "<div class=\"textonly\">" + this.getContent() + "</div>";
-		}
-		
-		
-		
-		
+
 		if (this.isEnabled()) {
 			return this.getContent();
 		} else {
@@ -201,6 +208,5 @@ public class SongElement implements IRenderer {
 
 		}
 	}
-	
-	
+
 }

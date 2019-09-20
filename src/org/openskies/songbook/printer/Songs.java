@@ -17,16 +17,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
+import java.util.Vector;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -94,7 +98,8 @@ public class Songs {
 	/**
 	 * Gets the songs.
 	 *
-	 * @param comparator the comparator
+	 * @param comparator
+	 *            the comparator
 	 * @return the songs
 	 */
 	public List<Song> getSongs(Comparator<Song> comparator) {
@@ -105,7 +110,8 @@ public class Songs {
 	/**
 	 * Gets the song.
 	 *
-	 * @param id the id
+	 * @param id
+	 *            the id
 	 * @return the song
 	 */
 	public List<Song> getSong(String id) {
@@ -139,66 +145,183 @@ public class Songs {
 	/**
 	 * Write html.
 	 *
-	 * @param filename   the filename
-	 * @param cómparator the cómparator
+	 * @param filename
+	 *            the filename
+	 * @param cómparator
+	 *            the cómparator
 	 */
 	public void writeHtml(String filename, Comparator<Song> comparator) {
 
-		StringBuilder sb = new StringBuilder();
-		sb.append("<!DOCTYPE html>");
-		sb.append("<html>");
-		sb.append("<head>");
-		sb.append("<link rel=\"stylesheet\" href=\"web/styles.css\"/>");
-		sb.append("<meta charset=\"utf-8\"/>");
-		sb.append("</head>");
-		sb.append("<body>");
+		String styles = "styles.css";
 
-		for (Song ws : getSongs(comparator)) {
-			sb.append(ws.render(RenderMode.WEB_NO_HEADER));
-			if (ws.count(SongElementType.LINEBREAK) <= SongbookPrinter.UNSCALED_SONG_LENGTH) {
-				sb.append("<p style=\"page-break-after: auto;\">&nbsp;</p>\n"
-						+ "<p style=\"page-break-before: auto;\">&nbsp;</p>");
+		List<Song> songs = getSongs(comparator);
+		for (int j = 1; j < (songs.size() / 100) + 2; j++) {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append("<!DOCTYPE html>");
+			sb.append("<html>");
+			sb.append("<head>");
+			sb.append("<link rel=\"stylesheet\" href=\"web/" + styles + "\"/>");
+			sb.append("<meta charset=\"utf-8\"/>");
+			sb.append("</head>");
+			sb.append("<body>");
+
+			for (int i = 0; i < songs.size(); i++) {
+				if (i > ((j - 1) * 100) && i <= (j * 100)) {
+					Song ws = songs.get(i);
+					sb.append(ws.render(RenderMode.WEB_NO_HEADER));
+					if (ws.count(SongElementType.LINEBREAK) <= SongbookPrinter.UNSCALED_SONG_LENGTH) {
+						sb.append("<p style=\"page-break-after: auto;\">&nbsp;</p>\n"
+								+ "<p style=\"page-break-before: auto;\">&nbsp;</p>");
+					}
+				}
 			}
+
+			// Hier der Index dazu
+			// sb.append(createPrintableIndex());
+
+			sb.append("</body>");
+			sb.append("</html>");
+
+			Path p = Paths.get("." + File.separatorChar + filename.replace(".html", "_" + j + ".html"));
+
+			try {
+				Files.createDirectories(p.getParent());
+				if (Files.exists(p)) {
+					Files.delete(p);
+				}
+				Files.createFile(p);
+				BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
+				writer.write(sb.toString());
+				writer.close();
+			} catch (IOException e) {
+				LOGGER.error(e);
+			}
+
 		}
 
-		sb.append("</body>");
-		sb.append("</html>");
-
-		Path p = Paths.get("." + File.separatorChar + filename);
-
-		try {
-			Files.createDirectories(p.getParent());
-			if (Files.exists(p)) {
-				Files.delete(p);
-			}
-			Files.createFile(p);
-			BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
-			writer.write(sb.toString());
-			writer.close();
-		} catch (IOException e) {
-			LOGGER.error(e);
-		}
+		// writeHtmlPlainIndex(filename, "stylescontents.css");
 
 	}
-	
-	public void writeHtmlPlain(String filename, Comparator<Song> comparator) {
+
+	public String createPrintableIndex() {
+		Map<String, Song> map = new HashMap<String, Song>();
+		for (Song song : getSongs()) {
+
+			String title = song.getTitle();
+			int idxBracket = title.indexOf("(");
+			if (idxBracket > 0) {
+				title = title.substring(0, idxBracket).trim();
+			}
+
+			if (song.getId().equals("A136")) {
+				map.put("Ueberall", song);
+			} else {
+				map.put(title, song);
+			}
+
+			String plainSong = song.render(RenderMode.PLAIN).trim();
+			if (plainSong.startsWith("1.")) {
+				plainSong = plainSong.substring(2, plainSong.length()).trim();
+			}
+
+			int posLinebreak = plainSong.indexOf("\n");
+			if (posLinebreak > 0) {
+				plainSong = plainSong.substring(0, posLinebreak).trim();
+			}
+
+			plainSong = plainSong.replace("   ", " ");
+			plainSong = plainSong.replace("  ", " ");
+			plainSong = plainSong.replace("(2x)", "");
+			plainSong = plainSong.replace(" - ", "");
+			plainSong = plainSong.replace("-", "");
+			plainSong = plainSong.replace("�", "Ae");
+			plainSong = plainSong.replace("�", "Ue");
+			plainSong = plainSong.replace("�", "Ue");
+			plainSong = plainSong.replace("�", "Oe");
+
+			if (plainSong.endsWith(",") || plainSong.endsWith(".") || plainSong.endsWith(";")) {
+				plainSong = plainSong.substring(0, plainSong.length() - 1);
+			}
+
+			// System.out.println(song.getId()+": "+plainSong);
+
+			map.put(plainSong, song);
+
+		}
+
+		List<String> keys = new ArrayList<String>(map.keySet());
+		Collections.sort(keys);
+
+		StringBuilder sbcon = new StringBuilder();
+
+		sbcon.append("<link rel=\"stylesheet\" href=\"web/stylescontents.css\"/>");
+
+		sbcon.append("<h2 id=\"contentsheading\">Inhaltsverzeichnis</h2>");
+
+		for (char c = 'A'; c <= 'Z'; c++) {
+			sbcon.append("<h1 id=\"letter\">" + c + "<br>");
+
+			StringBuilder sbABC = new StringBuilder(c);
+
+			for (int i = 0; i < keys.size(); i++) {
+				String key = keys.get(i);
+
+				if (c == key.charAt(0)) {
+
+					boolean write = false;
+					String keyAfter = null;
+					String id = map.get(key).getId();
+					String idAfter = null;
+
+					if (i + 1 < keys.size()) {
+						keyAfter = keys.get(i + 1);
+						idAfter = map.get(keyAfter).getId();
+
+						if (!id.equals(idAfter)) {
+							write = true;
+						}
+
+						if ((keyAfter.contains(key)) && (id.equals(idAfter))) {
+							write = true;
+							i++;
+						}
+					} else {
+						write = true;
+					}
+
+					if (write) {
+						sbABC.append("<div class=\"contentsline\">" + "<div class=\"contentsid\">"
+								+ map.get(key).getId() + ":" + "</div>" + key + "</div>");
+
+					}
+
+				}
+
+			}
+			sbcon.append(sbABC);
+			sbcon.append("</h2>");
+
+		}
+
+		return sbcon.toString();
+
+	}
+
+	public void writeHtmlPlainIndex(String filename) {
+
+		String styles = "stylescontents.css";
 
 		StringBuilder sb = new StringBuilder();
 		sb.append("<!DOCTYPE html>");
 		sb.append("<html>");
 		sb.append("<head>");
-		sb.append("<link rel=\"stylesheet\" href=\"web/stylestextonly.css\"/>");
+		sb.append("<link rel=\"stylesheet\" href=\"web/" + styles + "\"/>");
 		sb.append("<meta charset=\"utf-8\"/>");
 		sb.append("</head>");
 		sb.append("<body>");
 
-		for (Song ws : getSongs(comparator)) {
-			sb.append(ws.render(RenderMode.PLAIN_WITH_TITLE));
-//			if (ws.count(SongElementType.LINEBREAK) <= SongbookPrinter.UNSCALED_SONG_LENGTH) {
-//				sb.append("<p style=\"page-break-after: auto;\">&nbsp;</p>\n"
-//						+ "<p style=\"page-break-before: auto;\">&nbsp;</p>");
-//			}
-		}
+		sb.append(createPrintableIndex());
 
 		sb.append("</body>");
 		sb.append("</html>");
@@ -217,14 +340,73 @@ public class Songs {
 		} catch (IOException e) {
 			LOGGER.error(e);
 		}
+	}
+
+	public void writeHtmlPlain(String filename, Comparator<Song> comparator) {
+
+		String styles = "stylestextonly.css";
+
+		List<Song> songs = getSongs(comparator);
+		for (int j = 1; j < (songs.size() / 100) + 2; j++) {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append("<!DOCTYPE html>");
+			sb.append("<html>");
+			sb.append("<head>");
+			sb.append("<link rel=\"stylesheet\" href=\"web/" + styles + "\"/>");
+			sb.append("<meta charset=\"utf-8\"/>");
+			sb.append("</head>");
+			sb.append("<body>");
+
+			for (int i = 0; i < songs.size(); i++) {
+				if (i > ((j - 1) * 100) && i <= (j * 100)) {
+					Song ws = songs.get(i);
+					sb.append(ws.render(RenderMode.PLAIN_WITH_TITLE));
+				}
+			}
+
+			// for (Song ws : getSongs(comparator)) {
+			// sb.append(ws.render(RenderMode.PLAIN_WITH_TITLE));
+			// if (ws.count(SongElementType.LINEBREAK) <=
+			// SongbookPrinter.UNSCALED_SONG_LENGTH) {
+			// sb.append("<p style=\"page-break-after: auto;\">&nbsp;</p>\n"
+			// + "<p style=\"page-break-before: auto;\">&nbsp;</p>");
+			// }
+			// }
+
+			// sb.append(createPrintableIndex());
+
+			sb.append("</body>");
+			sb.append("</html>");
+
+			Path p = Paths.get("." + File.separatorChar + filename.replace(".html", "_" + j + ".html"));
+
+			try {
+				Files.createDirectories(p.getParent());
+				if (Files.exists(p)) {
+					Files.delete(p);
+				}
+				Files.createFile(p);
+				BufferedWriter writer = Files.newBufferedWriter(p, StandardCharsets.UTF_8);
+				writer.write(sb.toString());
+				writer.close();
+			} catch (IOException e) {
+				LOGGER.error(e);
+			}
+
+		}
+
+		// writeHtmlPlainIndex(filename, "stylescontents.css");
 
 	}
 
 	/**
 	 * Write pdf.
 	 *
-	 * @param filename   the filename
-	 * @param cómparator the cómparator
+	 * @param filename
+	 *            the filename
+	 * @param cómparator
+	 *            the cómparator
 	 */
 	public void writePdf(String filename, Comparator<Song> comparator) {
 
@@ -334,7 +516,7 @@ public class Songs {
 	/**
 	 * Write index.
 	 */
-	public void writeIndex() {
+	public void writeLinkIndex() {
 		StringBuilder sb = new StringBuilder();
 		Path idx = Paths.get("web" + File.separatorChar + "index.html");
 
