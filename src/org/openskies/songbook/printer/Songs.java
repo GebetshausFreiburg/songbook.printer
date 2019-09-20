@@ -167,7 +167,7 @@ public class Songs {
 			sb.append("<body>");
 
 			for (int i = 0; i < songs.size(); i++) {
-				if (i > ((j - 1) * 100) && i <= (j * 100)) {
+				if (i >= ((j - 1) * 100) && i < (j * 100)) {
 					Song ws = songs.get(i);
 					sb.append(ws.render(RenderMode.WEB_NO_HEADER));
 					if (ws.count(SongElementType.LINEBREAK) <= SongbookPrinter.UNSCALED_SONG_LENGTH) {
@@ -359,9 +359,10 @@ public class Songs {
 			sb.append("<body>");
 
 			for (int i = 0; i < songs.size(); i++) {
-				if (i > ((j - 1) * 100) && i <= (j * 100)) {
+				if (i >= ((j - 1) * 100) && i < (j * 100)) {
 					Song ws = songs.get(i);
 					sb.append(ws.render(RenderMode.PLAIN_WITH_TITLE));
+					//System.out.println(i + ws.getId());
 				}
 			}
 
