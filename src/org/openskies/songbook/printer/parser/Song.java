@@ -757,6 +757,7 @@ public class Song implements IRenderer {
 			}
 			sb.append("<div class=\"keyTitleArtistSong\">");
 			
+			// create key of song
 			if (this.getKey() != null) {
 				if (!this.getKey().equals("")) {
 					sb.append("<div id=\"key\">" + this.getKey() + "</div>\n");
@@ -765,8 +766,10 @@ public class Song implements IRenderer {
 				sb.append("<div id=\"key\">"+ "?" + "</div>\n");
 			}
 			
+			// create title of song
 			sb.append("<div id=\"title\">" + this.getTitle() + "</div>\n");
 			
+			// create artist of song
 			if (this.getArtist() != null) {
 				if (!this.getArtist().equals("")) {
 					sb.append("<div id=\"artist\">" + this.getArtist() + "</div>\n");
@@ -797,15 +800,6 @@ public class Song implements IRenderer {
 			// open div of type "song". Is needed to make inline-content inside a boxed
 			// element to avoid linebreak in scaled songs
 			sb.append("<div class=\"song\" id=\"" + s + "\">");
-			
-			// create key of song
-			
-			
-
-			// create title of song
-			
-
-			// create artist of song
 			
 
 		}
@@ -848,13 +842,6 @@ public class Song implements IRenderer {
 			if (this.getCCLI() != null) {
 				sb.append("<div id=\"ccli\">" + this.getCCLI() + "</div>\n");
 			}
-
-			// add copyright
-			/*if(this.getCopyright().contains("(c)")) {
-				String twoCopyright = this.getCopyright();
-				twoCopyright.substring(2, twoCopyright.length());
-				twoCopyright = twoCopyright.replace("(c)", "");
-			}*/
 			
 			
 			sb.append("<div id=\"copyright\">" + this.getCopyright() + "</div>");

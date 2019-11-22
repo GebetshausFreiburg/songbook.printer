@@ -12,7 +12,8 @@
 
 #letter {
 	color: #A5A9AB;
-	font-weight: bold;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
+	font-weight: 600;
 	text-shadow: 0.8px 0.8px 0.8px #000;
 	line-height: 1em;
  
@@ -29,7 +30,8 @@
 
 .contentsid {
 	color: #76797A;
-	font-weight: bold;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
+	font-weight: 600;
 	line-height: 1.3em;
 	font-style: italic;
 	margin-right: 1em;

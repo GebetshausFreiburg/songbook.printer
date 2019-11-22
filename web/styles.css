@@ -6,8 +6,9 @@
 }
 
 #title {
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
+	font-weight: 600;
 	font-size: large;
-	font-weight: bold;
 	line-height: 2em;
 	margin-top: -1.7em;
 }
@@ -30,7 +31,8 @@
 .chord::before {
 	content: attr(chord);
 	position: absolute;
-	font-weight: bold;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
+	font-weight: 600;
 	bottom: 10px;
 	text-align: left;
 	color: #54585A;
@@ -45,7 +47,8 @@
 .chord-block::before {
 	content: attr(chord);
 	position: relative;
-	font-weight: bold;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
+	font-weight: 600;
 	bottom: 18.3px;
 	text-align: left;
 	display: inline-block;
@@ -62,7 +65,8 @@
 .chord-space::before {
 	content: attr(chord);
 	position: absolute;
-	font-weight: bold;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
+	font-weight: 600;
 	bottom: 10px;
 	padding-right: 5px;
 	text-align: left;
@@ -73,6 +77,7 @@
 
 #songpart {
 	line-height: 1.2em;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
 	font-weight: 600;
 	font-style: italic;
 	padding-top: 15px;
@@ -102,14 +107,14 @@
 	line-height: 1.2 !important
 }
 
+
 .textonly {
-	line-height: 2.3em;
-	margin-top: -1em;
+	line-height: 1.3em;
 }
 
 .smallbreak {
 	display: block;
-	margin: 0.2em 0;
+	margin: 0.5em 0;
 }
 
 #key::before {
@@ -152,5 +157,6 @@
 		-webkit-column-break-inside: avoid !important;
 		break-inside: avoid !important;
 		page-break-inside: avoid !important;
+		page-break-before: always !important;
 	}
 }

@@ -7,7 +7,8 @@
 
 #title {
 	font-size: large;
-	font-weight: bold;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
+	font-weight: 600;
 	line-height: 2em;
 }
 
@@ -18,60 +19,11 @@
 	display: inline-block;
 }
 
-.chorus {
-	padding-left: 20px;
-}
 
-.chord {
-	position: relative;
-}
-
-.chord::before {
-	content: attr(chord);
-	position: absolute;
-	font-weight: bold;
-	bottom: 10px;
-	text-align: left;
-	color: grey;
-	padding-top: 0.2em;
-	font-size: 95%;
-}
-
-.chord-block {
-	position: relative;
-}
-
-.chord-block::before {
-	content: attr(chord);
-	position: relative;
-	font-weight: bold;
-	bottom: 18.3px;
-	text-align: left;
-	display: inline-block;
-	color: grey;
-	padding-top: 0.2em;
-	font-size: 95%;
-}
-
-.chord-space {
-	position: relative;
-	padding-right: 5px;
-}
-
-.chord-space::before {
-	content: attr(chord);
-	position: absolute;
-	font-weight: bold;
-	bottom: 10px;
-	padding-right: 5px;
-	text-align: left;
-	color: grey;
-	padding-top: 0.2em;
-	font-size: 95%;
-}
 
 #songpart {
 	line-height: 1.2em;
+	font-family: "Open Sans Semibold", Century Gothic, Apple Gothic, sans-serif;
 	font-weight: 600;
 	font-style: italic;
 	padding-top: 15px;
@@ -133,5 +85,10 @@
 		page-break-before: avoid !important;
                 padding: 0px;
 		
+	}
+	.keyTitleArtistSong {
+		-webkit-column-break-inside: avoid !important;
+		break-inside: avoid !important;
+		page-break-inside: avoid !important;
 	}
 }

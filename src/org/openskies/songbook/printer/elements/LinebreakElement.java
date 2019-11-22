@@ -127,17 +127,24 @@ public class LinebreakElement extends SongElement {
 		if (beforeElement.getType() == SongElementType.CHORDPRO || beforeElement.getType() == SongElementType.ONSONG) {
 			return "";
 		}
-
+		
 		if (mode != RenderMode.PLAIN) {
 			if (beforeElement.getType() == SongElementType.TEXTONLY) {
 				return "<br class=\"smallbreak\">";
+				
 			}
+		
 		} else {
 			return "\n";
 		}
 
+	
+
+
 		// return html-linebreak
 		return "</br>";
+		
 	}
-
+	
+	
 }

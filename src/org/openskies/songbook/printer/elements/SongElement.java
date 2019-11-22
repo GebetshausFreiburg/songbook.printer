@@ -185,6 +185,7 @@ public class SongElement implements IRenderer {
 	@Override
 	public String render(RenderMode mode) {
 
+		
 		if (this.getType() == SongElementType.TEXTONLY && this.getType() == SongElementType.ONSONG) {
 			OnsongElement osel = (OnsongElement) this;
 			if (osel.getSubtype() == OnsongSubtype.KEY) {
